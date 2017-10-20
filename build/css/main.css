@@ -1,0 +1,1653 @@
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+
+figcaption,
+figure,
+main { /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+
+a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+
+details, /* 1 */
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 9-.
+ */
+
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10-.
+ */
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  color: #333;
+  height: 100%;
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+body {
+  background-color: #fff;
+  line-height: 1.25rem;
+  height: 100%;
+}
+html,
+body,
+.page {
+  width: 100%;
+}
+.index-menu {
+  margin: 2rem 4rem;
+  font-size: 1.25rem;
+  background-color: #1f613b;
+  color: #fff;
+  padding: 2rem 4rem;
+  border-radius: .5em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.index-menu a {
+  text-decoration: underline;
+}
+.index-menu a:hover {
+  text-decoration: none;
+}
+.index-menu li {
+  margin-bottom: 10px;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.page {
+  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+  overflow-y: auto;
+}
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+.header {
+  margin-bottom: 4px;
+}
+.header-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 7.5rem;
+}
+.header-logo {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  height: 88px;
+  padding-left: 66px;
+  font-weight: 900;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  color: #1f613b;
+  text-transform: uppercase;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2074%2074%22%3E%3Ctitle%3EAsset%201%3C%2Ftitle%3E%3Cpolygon%20points%3D%2237%2058.99%2018%2048%2037%2037%2055%2048%2037%2058.99%22%20fill%3D%22%23ffbc00%22%2F%3E%3Cpolygon%20points%3D%2218%2026%2037%2014.99%2055%2026%2018%2026%22%20fill%3D%22%231f623c%22%2F%3E%3Cpolygon%20points%3D%2218%2037%2037%2037%2037%2026%2018%2037%22%20fill%3D%22%23ffbc00%22%2F%3E%3Cpolygon%20points%3D%2237%2037%2055%2037%2037%2026%2037%2037%22%20fill%3D%22%231f623c%22%2F%3E%3Cpath%20d%3D%22M61%2C37A24%2C24%2C0%2C0%2C1%2C37%2C61V74A37%2C37%2C0%2C0%2C0%2C74%2C37Z%22%20fill%3D%22%23ffbc00%22%2F%3E%3Cpath%20d%3D%22M37%2C0A37%2C37%2C0%2C0%2C0%2C0%2C37H13A24%2C24%2C0%2C0%2C1%2C37%2C13Z%22%20fill%3D%22%231f623c%22%2F%3E%3C%2Fsvg%3E") no-repeat left bottom;
+  background-size: 80px;
+}
+.header-contacts {
+  margin-left: auto;
+}
+.header-contacts__item {
+  display: inline-block;
+  vertical-align: top;
+  font-size: .875rem;
+  margin-left: 1.625rem;
+}
+.header-contacts__item > a {
+  color: #1f613b;
+  font-weight: bold;
+  transition: .3s;
+}
+.header-contacts__item > a:hover {
+  color: #35a664;
+}
+.header-contacts__item > span {
+  color: #808080;
+}
+.header-contacts__item > span > b {
+  color: #333;
+  font-size: 1rem;
+}
+.header-contacts__item:first-child {
+  margin-left: 0;
+}
+.header .ui-selectmenu-button.ui-button {
+  margin-left: 1rem;
+  border: none;
+  background: #fff;
+  outline: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1f613b;
+  width: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 0;
+  padding-top: 2px;
+  padding-bottom: 6px;
+}
+.header .ui-selectmenu-button.ui-button .ui-icon {
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%208%204%22%3E%3Ctitle%3Earrow%3C%2Ftitle%3E%3Cpath%20d%3D%22M0%2C0H8L4%2C4Z%22%20fill%3D%22%231f623c%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E") no-repeat center;
+  background-size: 8px 4px;
+  margin-top: 2px;
+  transition: .3s;
+}
+.header .ui-selectmenu-button.ui-button .ui-selectmenu-text {
+  margin-right: 0;
+}
+.header .ui-selectmenu-button.ui-button.ui-selectmenu-button-open .ui-icon {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.ui-selectmenu-menu .ui-widget.ui-widget-content {
+  border: 2px solid #1f613b;
+}
+.ui-selectmenu-menu .ui-menu {
+  overflow: hidden;
+  font-family: 'Museo Cyrl 700', sans-serif;
+  padding-bottom: 0;
+}
+.ui-selectmenu-menu .ui-menu .ui-state-focus,
+.ui-selectmenu-menu .ui-menu .ui-state-active {
+  margin: 0;
+}
+.ui-selectmenu-menu .ui-menu-item-wrapper {
+  border: none;
+}
+.ui-selectmenu-menu .ui-menu-item-wrapper.ui-state-active {
+  background: #ffbb00;
+  color: #333;
+}
+.ui-selectmenu-menu .ui-menu-item:first-child {
+  border-radius: 6px 6px 0 0;
+}
+.ui-selectmenu-menu .ui-menu-item:last-child {
+  border-radius: 0 0 6px 6px;
+}
+.menu {
+  background-color: #1f613b;
+}
+.menu > .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.menu__item {
+  display: block;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: .875rem;
+  font-weight: bold;
+  padding: 1.125rem 1rem 1rem;
+  transition: .3s;
+  white-space: nowrap;
+}
+.menu__item:first-child {
+  padding-left: 0;
+}
+.menu__item:last-child {
+  padding-right: 0;
+}
+.menu__item.active,
+.menu__item:hover {
+  color: #ffbb00;
+}
+.menu__item:hover {
+  cursor: pointer;
+}
+.menu__item.search {
+  padding: 1.5rem;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020.74%2020.74%22%3E%3Ctitle%3Emagnify%3C%2Ftitle%3E%3Cpath%20d%3D%22M20.74%2C19.33l-5.57-5.57a8.53%2C8.53%2C0%2C1%2C0-1.41%2C1.41l5.57%2C5.57ZM2%2C8.5A6.5%2C6.5%2C0%2C1%2C1%2C8.5%2C15%2C6.51%2C6.51%2C0%2C0%2C1%2C2%2C8.5Z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E%0A") no-repeat center;
+  background-size: 20px;
+}
+.menu__item.search:hover {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020.74%2020.74%22%3E%3Ctitle%3Emagnify%3C%2Ftitle%3E%3Cpath%20d%3D%22M20.74%2C19.33l-5.57-5.57a8.53%2C8.53%2C0%2C1%2C0-1.41%2C1.41l5.57%2C5.57ZM2%2C8.5A6.5%2C6.5%2C0%2C1%2C1%2C8.5%2C15%2C6.51%2C6.51%2C0%2C0%2C1%2C2%2C8.5Z%22%20fill%3D%22%23ffbb00%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E%0A");
+}
+.main-slider {
+  width: calc(100% - 22.875rem);
+  height: 100%;
+}
+.main-slider .swiper-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: no-repeat center;
+  background-size: cover;
+}
+.main-slider__wrap {
+  width: 100%;
+  height: 100%;
+}
+.main-slider__desc {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  color: #fff;
+  font-family: 'Museo Cyrl 900', sans-serif;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  padding: 0 4rem;
+  letter-spacing: 1px;
+}
+.main-slider-thumbs {
+  width: 22.375rem;
+  height: 100%;
+}
+.main-slider-thumbs .swiper-wrapper {
+  margin-top: calc(-50% - 10px);
+}
+.main-slider-thumbs .swiper-slide {
+  height: 122px;
+  background: no-repeat center;
+  background-size: cover;
+}
+.main-slider-thumbs .swiper-slide:hover {
+  cursor: pointer;
+}
+.main-slider-thumbs .swiper-slide.swiper-slide-active .main-slider__wrap {
+  background-color: #1f613b;
+}
+.main-sliders {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 31rem;
+  position: relative;
+  margin-bottom: 1.75rem;
+}
+.main-sliders:after {
+  content: '';
+  position: absolute;
+  left: -28px;
+  top: 100%;
+  width: 321px;
+  height: 380px;
+  background: url('../images/back-grey.svg') no-repeat center;
+}
+.main-news {
+  padding: 6.875rem 0 8rem;
+  background-color: #1f613b;
+  position: relative;
+}
+.main-news:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../images/news.png') no-repeat center 97%;
+  background-size: cover;
+  opacity: .2;
+  z-index: 1;
+}
+.main-news .wrapper {
+  position: relative;
+  z-index: 2;
+}
+.main-news-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.main-news__item {
+  display: block;
+  max-width: 22rem;
+  color: #fff;
+}
+.main-news__item .h1,
+.main-news__item .h3 {
+  color: inherit;
+}
+.main-news__item p {
+  margin: 0 0 1.75rem;
+  line-height: 1.5rem;
+}
+.main-news__item-date {
+  font-size: .875rem;
+  font-weight: bold;
+}
+.main-news:after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: -380px;
+  width: 321px;
+  height: 380px;
+  background: url('../images/back-gray.svg') no-repeat center;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+a.main-news__item {
+  display: block;
+}
+a.main-news__item .h3 {
+  transition: .3s;
+}
+a.main-news__item:hover .h3 {
+  color: #ffbb00;
+}
+.presentation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 86px 100px;
+  position: relative;
+  text-transform: uppercase;
+  line-height: 1.25rem;
+  margin-bottom: 2rem;
+}
+.presentation__name {
+  font-size: 1.125rem;
+  font-weight: 900;
+  color: #1f613b;
+}
+.presentation__desc > span {
+  display: block;
+  color: #1f613b;
+  font-weight: bold;
+}
+.presentation__desc > span > b {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: bold;
+}
+.presentation:before,
+.presentation:after {
+  content: '';
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  background: no-repeat center;
+  background-size: 100%;
+}
+.presentation:before {
+  left: 0;
+  top: 0;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20110%20110%22%3E%3Ctitle%3Esegment%3C%2Ftitle%3E%3Cpath%20d%3D%22M110%2C0A110%2C110%2C0%2C0%2C0%2C0%2C110H38.65A71.37%2C71.37%2C0%2C0%2C1%2C110%2C38.65Z%22%20fill%3D%22%231f623c%22%2F%3E%3C%2Fsvg%3E");
+}
+.presentation:after {
+  right: 0;
+  bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20110%20110%22%3E%3Ctitle%3Esegment%3C%2Ftitle%3E%3Cpath%20d%3D%22M110%2C0A110%2C110%2C0%2C0%2C0%2C0%2C110H38.65A71.37%2C71.37%2C0%2C0%2C1%2C110%2C38.65Z%22%20fill%3D%22%23ffbb00%22%2F%3E%3C%2Fsvg%3E%0A");
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.greeting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 7.5rem;
+}
+.greeting-left {
+  width: 18rem;
+  text-align: center;
+}
+.greeting-right {
+  width: calc(100% - 20rem);
+}
+.greeting-right p {
+  font-size: 15px;
+  line-height: 1.5rem;
+  margin: 0 0 1.25rem;
+}
+.greeting-right .h1 {
+  color: #1f613b;
+}
+.greeting__img {
+  max-width: 100%;
+  margin-bottom: 1.75rem;
+}
+.greeting__director {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 17px;
+  margin-bottom: 1.25rem;
+}
+.greeting__position {
+  color: #888;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.375rem;
+  margin-bottom: 1rem;
+}
+.button {
+  display: inline-block;
+  vertical-align: top;
+  background: #ffbb00;
+  border: 4px solid #ffbb00;
+  font-weight: bold;
+  font-size: .875rem;
+  padding: 1.25rem 2rem 1.125rem;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  white-space: nowrap;
+  transition: .3s;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
+.button.success {
+  background-color: #1caad9;
+  border-color: #1caad9;
+  color: #fff;
+  text-transform: none;
+  position: relative;
+  padding: 1rem 2rem 1rem 67px;
+}
+.button.success:hover {
+  cursor: default;
+  background-color: #1caad9;
+}
+.button.success:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 67px;
+  height: 100%;
+  background: no-repeat center;
+  background-size: 28px 24px;
+}
+.h1,
+.h2,
+.h3,
+.h4 {
+  font-family: 'Museo Cyrl 700', sans-serif;
+  margin: 0 0 2rem;
+}
+.h1 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+.h2 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+.h3 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+.h3 > span {
+  display: block;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+}
+.h4 {
+  font-size: 1rem;
+  line-height: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.footer {
+  margin-top: auto;
+  background-color: #161a1a;
+  padding: 2.375rem 0 3rem;
+  color: #ccc;
+  font-size: .875rem;
+}
+.footer-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 5.5rem;
+}
+.footer-left {
+  width: 80%;
+}
+.footer-left > p {
+  margin: 0 0 .5rem;
+}
+.footer-left > p > b {
+  color: #fff;
+}
+.footer-right {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.footer-bottom {
+  text-align: center;
+}
+.uw {
+  display: inline-block;
+  vertical-align: top;
+  width: 141px;
+  height: 43px;
+  background: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C!--%20Generator%3A%20Adobe%20Illustrator%2021.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200)%20%20--%3E%0D%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0D%0A%09%20viewBox%3D%220%200%20196.1%2059.4%22%20style%3D%22enable-background%3Anew%200%200%20196.1%2059.4%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cstyle%20type%3D%22text%2Fcss%22%3E%0D%0A%09.st0%7Bfill%3A%23FFFFFF%3B%7D%0D%0A%3C%2Fstyle%3E%0D%0A%3Ctitle%3Elogo%3C%2Ftitle%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M0%2C6.4V5.4L8.7%2C0l1.1%2C1.7L3%2C5.8l6.8%2C4l-1.1%2C1.7L0%2C6.4z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M25.6%2C12.2c-0.6%2C0-1.2-0.1-1.8-0.3c-0.5-0.2-0.9-0.6-1.2-1c-0.3-0.5-0.5-1-0.6-1.5c-0.2-0.7-0.3-1.3-0.3-2h-1%0D%0A%09v4.5h-2.8V0.6h2.7v4.2h1c0.1-0.7%2C0.2-1.3%2C0.4-1.9c0.1-0.5%2C0.4-1%2C0.7-1.4c0.3-0.4%2C0.8-0.7%2C1.2-0.9c0.5-0.2%2C1.1-0.3%2C1.7-0.3%0D%0A%09c0.7%2C0%2C1.4%2C0.1%2C2%2C0.4c0.5%2C0.3%2C0.9%2C0.7%2C1.1%2C1.2c0.3%2C0.6%2C0.5%2C1.2%2C0.6%2C1.9c0.1%2C0.8%2C0.2%2C1.6%2C0.2%2C2.4c0%2C0.8-0.1%2C1.7-0.2%2C2.5%0D%0A%09c-0.1%2C0.7-0.3%2C1.3-0.7%2C1.9c-0.3%2C0.5-0.7%2C0.9-1.3%2C1.2C26.9%2C12.1%2C26.3%2C12.2%2C25.6%2C12.2z%20M24.2%2C6.3c0%2C0.9%2C0.1%2C1.7%2C0.3%2C2.6%0D%0A%09c0.1%2C0.5%2C0.6%2C0.9%2C1.1%2C0.9c0.5%2C0%2C0.9-0.3%2C1-0.8c0.2-0.9%2C0.3-1.8%2C0.3-2.7c0-0.9-0.1-1.7-0.3-2.6c-0.1-0.5-0.5-0.9-1.1-0.8%0D%0A%09c-0.5%2C0-0.9%2C0.3-1%2C0.8C24.3%2C4.5%2C24.2%2C5.4%2C24.2%2C6.3z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M31.2%2C9.4h1.5V3.1h-1.5V0.6H42v4.5h-2.5v-2h-3.8v6.3h3.8v2.5h-8.3C31.2%2C11.9%2C31.2%2C9.4%2C31.2%2C9.4z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M43.7%2C6.3c0-0.9%2C0.1-1.7%2C0.4-2.5c0.5-1.4%2C1.7-2.5%2C3.1-3c0.8-0.3%2C1.6-0.4%2C2.4-0.4c0.9%2C0%2C1.7%2C0.1%2C2.5%2C0.4%0D%0A%09C52.9%2C1%2C53.5%2C1.5%2C54.1%2C2c0.5%2C0.5%2C0.9%2C1.2%2C1.2%2C1.9c0.3%2C0.8%2C0.4%2C1.6%2C0.4%2C2.4c0%2C0.9-0.1%2C1.7-0.4%2C2.5c-0.5%2C1.4-1.7%2C2.5-3.1%2C3%0D%0A%09c-0.8%2C0.3-1.6%2C0.4-2.4%2C0.4c-0.9%2C0-1.7-0.1-2.5-0.4c-0.7-0.3-1.3-0.7-1.9-1.2c-0.5-0.5-0.9-1.2-1.2-1.9C43.8%2C7.9%2C43.7%2C7.1%2C43.7%2C6.3z%0D%0A%09%20M46.7%2C6.3c0%2C0.5%2C0.1%2C0.9%2C0.2%2C1.4C47%2C8%2C47.2%2C8.4%2C47.5%2C8.7c0.2%2C0.3%2C0.6%2C0.6%2C0.9%2C0.7c0.4%2C0.2%2C0.8%2C0.3%2C1.2%2C0.3c0.8%2C0%2C1.6-0.3%2C2.1-0.8%0D%0A%09c0.6-0.7%2C0.9-1.7%2C0.8-2.6c0-0.9-0.2-1.8-0.8-2.5c-0.5-0.7-1.3-1-2.2-1c-0.4%2C0-0.8%2C0.1-1.1%2C0.2c-0.4%2C0.1-0.7%2C0.3-0.9%2C0.6%0D%0A%09c-0.3%2C0.3-0.5%2C0.7-0.6%2C1.1C46.8%2C5.2%2C46.7%2C5.7%2C46.7%2C6.3C46.7%2C6.3%2C46.7%2C6.3%2C46.7%2C6.3z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M55.9%2C0.6h3.8L60.1%2C2h0.1c0.9-1.2%2C2.3-1.8%2C3.8-1.7c0.6%2C0%2C1.3%2C0.1%2C1.9%2C0.3c0.6%2C0.2%2C1.1%2C0.6%2C1.5%2C1%0D%0A%09c0.5%2C0.5%2C0.8%2C1.1%2C1%2C1.8c0.2%2C0.8%2C0.3%2C1.7%2C0.2%2C2.6c0%2C0.9-0.1%2C1.8-0.4%2C2.6c-0.2%2C0.7-0.6%2C1.4-1.1%2C2c-0.5%2C0.5-1.1%2C1-1.8%2C1.2%0D%0A%09c-0.8%2C0.3-1.6%2C0.4-2.4%2C0.4c-0.5%2C0-0.9%2C0-1.4-0.1c-0.4-0.1-0.8-0.2-1.1-0.3v4.6h-2.9V3.1h-1.7L55.9%2C0.6L55.9%2C0.6z%20M63.1%2C2.8%0D%0A%09c-0.5%2C0-1.1%2C0.1-1.6%2C0.4c-0.5%2C0.3-0.8%2C0.7-1%2C1.3v4.7c0.3%2C0.2%2C0.6%2C0.3%2C0.9%2C0.4c0.4%2C0.1%2C0.8%2C0.1%2C1.2%2C0.1c0.4%2C0%2C0.8-0.1%2C1.2-0.2%0D%0A%09c0.4-0.1%2C0.7-0.4%2C0.9-0.7c0.3-0.3%2C0.5-0.8%2C0.6-1.2c0.2-0.6%2C0.2-1.1%2C0.2-1.7c0.1-0.8-0.2-1.6-0.7-2.3C64.4%2C3.1%2C63.8%2C2.8%2C63.1%2C2.8%0D%0A%09L63.1%2C2.8z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M81.2%2C10.8c-0.6%2C0.5-1.4%2C0.8-2.2%2C1c-0.8%2C0.2-1.7%2C0.4-2.6%2C0.4c-0.9%2C0-1.8-0.1-2.6-0.4c-0.7-0.3-1.3-0.6-1.9-1.2%0D%0A%09c-0.5-0.5-0.9-1.2-1.2-1.9c-0.3-0.8-0.4-1.6-0.4-2.4c0-0.9%2C0.1-1.7%2C0.5-2.5c0.3-0.7%2C0.7-1.3%2C1.3-1.9c0.6-0.5%2C1.3-0.9%2C2-1.2%0D%0A%09c0.8-0.3%2C1.6-0.4%2C2.4-0.4c0.8%2C0%2C1.6%2C0.1%2C2.3%2C0.3c0.6%2C0.1%2C1.1%2C0.3%2C1.7%2C0.6v3.9h-2.5V3.1c-0.5-0.1-0.9-0.2-1.4-0.2%0D%0A%09c-0.4%2C0-0.8%2C0.1-1.3%2C0.2c-0.4%2C0.1-0.8%2C0.3-1.1%2C0.6c-0.3%2C0.3-0.6%2C0.6-0.8%2C1c-0.2%2C0.5-0.3%2C1-0.3%2C1.5c0%2C0.5%2C0.1%2C0.9%2C0.3%2C1.3%0D%0A%09c0.3%2C0.8%2C1%2C1.5%2C1.8%2C1.8c0.5%2C0.2%2C1%2C0.3%2C1.5%2C0.3c0.7%2C0%2C1.4-0.1%2C2.1-0.3c0.4-0.2%2C0.8-0.4%2C1.2-0.6L81.2%2C10.8z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M88%2C7.4h-1.4v4.4h-2.9V0.6h2.9v4.6h1.2l3.7-4.6h3.3l-4.5%2C5.2l2.8%2C3.5h2v2.5h-3.4L88%2C7.4z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M104.1%2C6.8l0.1-1.6h-0.1l-5.4%2C6.7h-2.3V0.6h2.9V6l-0.1%2C1.5h0.1l5.4-6.9h2.3v11.2h-2.9L104.1%2C6.8L104.1%2C6.8z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M120%2C10.7c-0.2%2C0.2-0.5%2C0.4-0.8%2C0.5c-0.3%2C0.2-0.7%2C0.4-1.1%2C0.5c-0.4%2C0.2-0.9%2C0.3-1.4%2C0.4c-0.5%2C0.1-1%2C0.1-1.6%2C0.1%0D%0A%09c-0.9%2C0-1.7-0.1-2.6-0.4c-1.4-0.5-2.6-1.6-3.1-3c-0.3-0.8-0.4-1.6-0.4-2.5c0-0.9%2C0.1-1.8%2C0.5-2.6c0.3-0.7%2C0.7-1.3%2C1.3-1.9%0D%0A%09c0.5-0.5%2C1.2-0.9%2C1.9-1.1c1.3-0.4%2C2.8-0.5%2C4.1-0.1c0.6%2C0.1%2C1.2%2C0.4%2C1.7%2C0.8c0.5%2C0.4%2C1%2C0.9%2C1.3%2C1.5c0.3%2C0.7%2C0.5%2C1.5%2C0.5%2C2.3%0D%0A%09c0%2C0.7-0.1%2C1.4-0.2%2C2.1H112c0%2C0.4%2C0.1%2C0.8%2C0.3%2C1.2c0.2%2C0.3%2C0.4%2C0.6%2C0.7%2C0.8c0.3%2C0.2%2C0.7%2C0.4%2C1.1%2C0.5c0.4%2C0.1%2C0.8%2C0.2%2C1.3%2C0.1%0D%0A%09c0.7%2C0%2C1.5-0.1%2C2.2-0.3c0.5-0.2%2C1-0.4%2C1.4-0.8L120%2C10.7z%20M115.2%2C2.7c-0.4%2C0-0.7%2C0.1-1.1%2C0.2c-0.3%2C0.1-0.6%2C0.3-0.9%2C0.5%0D%0A%09c-0.3%2C0.2-0.5%2C0.5-0.7%2C0.8c-0.2%2C0.3-0.3%2C0.6-0.3%2C1h5.5c0-0.6-0.2-1.3-0.7-1.8C116.5%2C2.9%2C115.8%2C2.6%2C115.2%2C2.7L115.2%2C2.7z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M78%2C28.3l0.1-1.6h0l-5.4%2C6.7h-2.3V22.2h2.9v5.3L73.2%2C29h0.1l5.4-6.9H81v11.3h-3V28.3z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M91.1%2C29h-4.8v4.4h-2.9V22.2h2.9v4.2h4.8v-4.2H94v11.2h-2.9V29z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M97.3%2C30.9h2.9v-6.2h-1.8v1.9h-2.5v-4.5h11.5v4.5H105v-1.9h-1.8v6.2h2.9v2.5h-8.8V30.9z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M120%2C32.2c-0.2%2C0.2-0.5%2C0.4-0.8%2C0.5c-0.3%2C0.2-0.7%2C0.3-1.1%2C0.5c-0.4%2C0.2-0.9%2C0.3-1.4%2C0.4c-0.5%2C0.1-1%2C0.1-1.6%2C0.1%0D%0A%09c-0.9%2C0-1.7-0.1-2.6-0.4c-1.4-0.5-2.6-1.6-3.1-3c-0.3-0.8-0.4-1.6-0.4-2.5c0-0.9%2C0.1-1.8%2C0.5-2.6c0.3-0.7%2C0.7-1.3%2C1.3-1.9%0D%0A%09c0.6-0.5%2C1.2-0.9%2C1.9-1.1c1.3-0.4%2C2.8-0.5%2C4.1-0.1c0.6%2C0.1%2C1.2%2C0.4%2C1.7%2C0.8c0.5%2C0.4%2C1%2C0.9%2C1.3%2C1.5c0.3%2C0.7%2C0.5%2C1.5%2C0.5%2C2.3%0D%0A%09c0%2C0.7-0.1%2C1.4-0.2%2C2.1H112c0%2C0.4%2C0.1%2C0.8%2C0.3%2C1.2c0.2%2C0.3%2C0.4%2C0.6%2C0.7%2C0.8c0.3%2C0.2%2C0.7%2C0.4%2C1.1%2C0.5c0.4%2C0.1%2C0.8%2C0.2%2C1.3%2C0.1%0D%0A%09c0.7%2C0%2C1.5-0.1%2C2.2-0.3c0.5-0.2%2C1-0.4%2C1.4-0.8L120%2C32.2z%20M115.2%2C24.2c-0.4%2C0-0.7%2C0.1-1.1%2C0.2c-0.3%2C0.1-0.6%2C0.3-0.9%2C0.5%0D%0A%09c-0.3%2C0.2-0.5%2C0.5-0.7%2C0.8c-0.2%2C0.3-0.3%2C0.6-0.3%2C1h5.5c0.1-1.2-0.8-2.3-2-2.4C115.5%2C24.1%2C115.3%2C24.2%2C115.2%2C24.2L115.2%2C24.2z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M121%2C22.2h3.8l0.3%2C1.4h0.1c0.9-1.2%2C2.3-1.8%2C3.8-1.7c0.6%2C0%2C1.3%2C0.1%2C1.9%2C0.3c0.6%2C0.2%2C1.1%2C0.6%2C1.5%2C1%0D%0A%09c0.5%2C0.5%2C0.8%2C1.1%2C1%2C1.8c0.2%2C0.8%2C0.4%2C1.7%2C0.3%2C2.5c0%2C0.9-0.1%2C1.8-0.4%2C2.6c-0.2%2C0.7-0.6%2C1.4-1.1%2C2c-0.5%2C0.5-1.1%2C1-1.8%2C1.2%0D%0A%09c-0.8%2C0.3-1.6%2C0.4-2.4%2C0.4c-0.5%2C0-0.9%2C0-1.4-0.1c-0.4-0.1-0.8-0.2-1.1-0.3v4.6h-2.9V24.6H121V22.2z%20M128.1%2C24.3%0D%0A%09c-0.6%2C0-1.1%2C0.1-1.6%2C0.4c-0.5%2C0.3-0.8%2C0.7-1%2C1.3v4.7c0.3%2C0.2%2C0.6%2C0.3%2C0.9%2C0.4c0.4%2C0.1%2C0.8%2C0.1%2C1.2%2C0.1c0.4%2C0%2C0.8-0.1%2C1.2-0.2%0D%0A%09c0.4-0.1%2C0.7-0.4%2C0.9-0.7c0.3-0.3%2C0.5-0.8%2C0.6-1.2c0.2-0.6%2C0.2-1.1%2C0.2-1.7c0.1-0.8-0.2-1.6-0.7-2.3%0D%0A%09C129.5%2C24.6%2C128.8%2C24.3%2C128.1%2C24.3z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M143.1%2C29h-4.8v4.4h-2.9V22.2h2.9v4.2h4.8v-4.2h2.9v11.2h-2.9V29z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M159%2C32.2c-0.2%2C0.2-0.5%2C0.4-0.8%2C0.5c-0.3%2C0.2-0.7%2C0.3-1.1%2C0.5c-0.4%2C0.2-0.9%2C0.3-1.4%2C0.4c-0.5%2C0.1-1%2C0.1-1.6%2C0.1%0D%0A%09c-0.9%2C0-1.7-0.1-2.6-0.4c-1.4-0.5-2.6-1.6-3.1-3c-0.3-0.8-0.4-1.6-0.4-2.5c0-0.9%2C0.1-1.8%2C0.5-2.6c0.3-0.7%2C0.7-1.3%2C1.3-1.9%0D%0A%09c0.6-0.5%2C1.2-0.9%2C1.9-1.1c1.3-0.4%2C2.8-0.5%2C4.1-0.1c0.6%2C0.1%2C1.2%2C0.4%2C1.7%2C0.8c0.5%2C0.4%2C1%2C0.9%2C1.3%2C1.5c0.3%2C0.7%2C0.5%2C1.5%2C0.5%2C2.3%0D%0A%09c0%2C0.7-0.1%2C1.4-0.2%2C2.1H151c0%2C0.4%2C0.1%2C0.8%2C0.3%2C1.2c0.2%2C0.3%2C0.4%2C0.6%2C0.7%2C0.8c0.3%2C0.2%2C0.7%2C0.4%2C1.1%2C0.5c0.4%2C0.1%2C0.8%2C0.2%2C1.3%2C0.1%0D%0A%09c0.7%2C0%2C1.5-0.1%2C2.2-0.3c0.5-0.2%2C1-0.4%2C1.4-0.8L159%2C32.2z%20M154.1%2C24.2c-0.4%2C0-0.7%2C0.1-1.1%2C0.2c-0.3%2C0.1-0.6%2C0.3-0.9%2C0.5%0D%0A%09c-0.3%2C0.2-0.5%2C0.5-0.7%2C0.8c-0.2%2C0.3-0.3%2C0.6-0.3%2C1h5.5c0.1-1.2-0.8-2.3-2-2.4C154.5%2C24.2%2C154.3%2C24.2%2C154.1%2C24.2L154.1%2C24.2%0D%0A%09L154.1%2C24.2z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M162.3%2C30.9h2.9v-6.2h-1.8v1.9H161v-4.5h11.5v4.5h-2.5v-1.9h-1.8v6.2h2.9v2.5h-8.8L162.3%2C30.9%0D%0A%09C162.4%2C30.9%2C162.3%2C30.9%2C162.3%2C30.9z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M68.7%2C43.7h3.8l0.3%2C1.3h0.1c0.9-1.2%2C2.3-1.8%2C3.8-1.7c0.6%2C0%2C1.3%2C0.1%2C1.9%2C0.3c0.6%2C0.2%2C1.1%2C0.6%2C1.5%2C1%0D%0A%09c0.5%2C0.5%2C0.8%2C1.1%2C1%2C1.8c0.2%2C0.8%2C0.3%2C1.7%2C0.3%2C2.6c0%2C0.9-0.1%2C1.7-0.4%2C2.6c-0.2%2C0.7-0.6%2C1.4-1.1%2C2c-0.5%2C0.5-1.1%2C1-1.8%2C1.2%0D%0A%09c-0.8%2C0.3-1.6%2C0.4-2.4%2C0.4c-0.5%2C0-0.9%2C0-1.4-0.1c-0.4-0.1-0.8-0.2-1.1-0.3v4.6h-2.9V46.1h-1.7L68.7%2C43.7L68.7%2C43.7z%20M75.8%2C45.8%0D%0A%09c-0.6%2C0-1.1%2C0.1-1.6%2C0.4c-0.5%2C0.3-0.8%2C0.7-1%2C1.3v4.7c0.3%2C0.2%2C0.6%2C0.3%2C0.9%2C0.4c0.4%2C0.1%2C0.8%2C0.1%2C1.2%2C0.2c0.4%2C0%2C0.8-0.1%2C1.2-0.2%0D%0A%09c0.4-0.1%2C0.7-0.4%2C0.9-0.7c0.3-0.3%2C0.5-0.8%2C0.6-1.2c0.2-0.6%2C0.2-1.1%2C0.2-1.7c0.1-0.8-0.2-1.6-0.7-2.3C77.2%2C46.1%2C76.5%2C45.8%2C75.8%2C45.8%0D%0A%09C75.8%2C45.8%2C75.8%2C45.8%2C75.8%2C45.8z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M93.7%2C53.7c-0.2%2C0.2-0.5%2C0.4-0.8%2C0.5c-0.3%2C0.2-0.7%2C0.3-1.1%2C0.5c-0.4%2C0.2-0.9%2C0.3-1.4%2C0.4%0D%0A%09c-0.5%2C0.1-1%2C0.1-1.6%2C0.1c-0.9%2C0-1.7-0.1-2.6-0.4c-1.4-0.5-2.6-1.6-3.1-3c-0.3-0.8-0.4-1.6-0.4-2.5c0-0.9%2C0.1-1.8%2C0.5-2.6%0D%0A%09c0.3-0.7%2C0.7-1.3%2C1.3-1.8c0.6-0.5%2C1.2-0.9%2C1.9-1.1c1.3-0.4%2C2.8-0.5%2C4.1-0.2c0.6%2C0.1%2C1.2%2C0.4%2C1.7%2C0.8c0.5%2C0.4%2C1%2C0.9%2C1.3%2C1.5%0D%0A%09c0.3%2C0.7%2C0.5%2C1.5%2C0.4%2C2.3c0%2C0.7-0.1%2C1.4-0.2%2C2.1h-8c0%2C0.4%2C0.1%2C0.8%2C0.3%2C1.2c0.2%2C0.3%2C0.4%2C0.6%2C0.7%2C0.8c0.3%2C0.2%2C0.7%2C0.4%2C1.1%2C0.5%0D%0A%09c0.4%2C0.1%2C0.8%2C0.2%2C1.3%2C0.2c0.7%2C0%2C1.5-0.1%2C2.2-0.3c0.5-0.2%2C1-0.4%2C1.4-0.8L93.7%2C53.7z%20M88.8%2C45.7c-0.4%2C0-0.7%2C0.1-1.1%2C0.2%0D%0A%09c-0.3%2C0.1-0.6%2C0.3-0.9%2C0.5c-0.3%2C0.2-0.5%2C0.5-0.7%2C0.8c-0.2%2C0.3-0.3%2C0.6-0.3%2C1h5.5c0.1-1.2-0.8-2.3-2-2.4C89.2%2C45.7%2C89%2C45.7%2C88.8%2C45.7%0D%0A%09L88.8%2C45.7z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M95.4%2C54.9V43.7h2.7v8.6h2v-8.6h2.7v8.6h2v-8.6h2.7v11.2H95.4z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M119.7%2C53.7c-0.2%2C0.2-0.5%2C0.4-0.8%2C0.5c-0.3%2C0.2-0.7%2C0.3-1.1%2C0.5c-0.4%2C0.2-0.9%2C0.3-1.4%2C0.4%0D%0A%09c-0.5%2C0.1-1%2C0.1-1.6%2C0.1c-0.9%2C0-1.7-0.1-2.6-0.4c-1.4-0.5-2.6-1.6-3.1-3c-0.3-0.8-0.4-1.6-0.4-2.5c0-0.9%2C0.1-1.8%2C0.5-2.6%0D%0A%09c0.3-0.7%2C0.7-1.3%2C1.3-1.8c0.6-0.5%2C1.2-0.9%2C1.9-1.1c1.3-0.4%2C2.8-0.5%2C4.1-0.2c0.6%2C0.1%2C1.2%2C0.4%2C1.7%2C0.8c0.5%2C0.4%2C1%2C0.9%2C1.3%2C1.5%0D%0A%09c0.3%2C0.7%2C0.5%2C1.5%2C0.5%2C2.3c0%2C0.7-0.1%2C1.4-0.2%2C2.1h-8.1c0%2C0.4%2C0.1%2C0.8%2C0.3%2C1.2c0.2%2C0.3%2C0.4%2C0.6%2C0.7%2C0.8c0.3%2C0.2%2C0.7%2C0.4%2C1.1%2C0.5%0D%0A%09c0.4%2C0.1%2C0.8%2C0.2%2C1.3%2C0.2c0.7%2C0%2C1.5-0.1%2C2.2-0.3c0.5-0.2%2C1-0.4%2C1.4-0.8L119.7%2C53.7z%20M114.9%2C45.7c-0.4%2C0-0.7%2C0.1-1.1%2C0.2%0D%0A%09c-0.3%2C0.1-0.6%2C0.3-0.9%2C0.5c-0.3%2C0.2-0.5%2C0.5-0.7%2C0.8c-0.2%2C0.3-0.3%2C0.6-0.3%2C1h5.5c0.1-1.2-0.8-2.3-2-2.4%0D%0A%09C115.2%2C45.7%2C115%2C45.7%2C114.9%2C45.7L114.9%2C45.7z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M129.9%2C50.5h-4.8v4.4h-2.9V43.7h2.9v4.2h4.8v-4.2h2.9v11.2h-2.9L129.9%2C50.5L129.9%2C50.5z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M142.8%2C49.8l0.2-1.6h-0.1l-5.4%2C6.7h-2.3V43.7h2.9V49l-0.1%2C1.5h0.1l5.4-6.9h2.3v11.2h-2.9L142.8%2C49.8%0D%0A%09C142.9%2C49.8%2C142.8%2C49.8%2C142.8%2C49.8z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M147.8%2C52.4h1.7l1.1-1.7c-0.7-0.2-1.3-0.7-1.7-1.3c-0.4-0.7-0.6-1.4-0.5-2.2c-0.1-1.2%2C0.5-2.4%2C1.6-3%0D%0A%09c1.3-0.7%2C2.9-1.1%2C4.4-1c0.4%2C0%2C0.7%2C0%2C1.1%2C0l1.2%2C0.1c0.4%2C0%2C0.8%2C0%2C1.1%2C0.1l0.9%2C0.1v11.3h-2.9v-3.8h-2.2l-2.4%2C3.8h-3.3L147.8%2C52.4%0D%0A%09C147.8%2C52.4%2C147.8%2C52.4%2C147.8%2C52.4z%20M155.7%2C49v-3l-0.4-0.1h-0.5h-0.5h-0.4c-0.3%2C0-0.7%2C0-1%2C0.1c-0.3%2C0.1-0.6%2C0.2-0.8%2C0.3%0D%0A%09c-0.2%2C0.1-0.4%2C0.3-0.6%2C0.5c-0.1%2C0.2-0.2%2C0.5-0.2%2C0.8c0%2C0.2%2C0.1%2C0.5%2C0.2%2C0.7c0.1%2C0.2%2C0.3%2C0.3%2C0.5%2C0.4c0.3%2C0.1%2C0.5%2C0.2%2C0.8%2C0.2%0D%0A%09c0.4%2C0%2C0.8%2C0%2C1.1%2C0L155.7%2C49L155.7%2C49z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M174.5%2C41.6l1.8%2C0.8l-6.7%2C15.1l-1.8-0.9L174.5%2C41.6z%22%2F%3E%0D%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M187.3%2C54.5l-1.1-1.7l6.8-4l-6.8-4.1l1.1-1.7l8.7%2C5.4v0.9L187.3%2C54.5z%22%2F%3E%0D%0A%3C%2Fsvg%3E%0D%0A") no-repeat center;
+  background-size: 100%;
+  transition: .3s;
+}
+.uw:hover {
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3C!--%20Generator%3A%20Adobe%20Illustrator%2021.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200)%20%20--%3E%0A%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%0A%09%20viewBox%3D%220%200%20196.1%2059.4%22%20style%3D%22enable-background%3Anew%200%200%20196.1%2059.4%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cstyle%20type%3D%22text%2Fcss%22%3E%0A%09.st0%7Bfill%3A%23ffbb00%3B%7D%0A%3C%2Fstyle%3E%0A%3Ctitle%3Elogo%3C%2Ftitle%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M0%2C6.4V5.4L8.7%2C0l1.1%2C1.7L3%2C5.8l6.8%2C4l-1.1%2C1.7L0%2C6.4z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M25.6%2C12.2c-0.6%2C0-1.2-0.1-1.8-0.3c-0.5-0.2-0.9-0.6-1.2-1c-0.3-0.5-0.5-1-0.6-1.5c-0.2-0.7-0.3-1.3-0.3-2h-1%0A%09v4.5h-2.8V0.6h2.7v4.2h1c0.1-0.7%2C0.2-1.3%2C0.4-1.9c0.1-0.5%2C0.4-1%2C0.7-1.4c0.3-0.4%2C0.8-0.7%2C1.2-0.9c0.5-0.2%2C1.1-0.3%2C1.7-0.3%0A%09c0.7%2C0%2C1.4%2C0.1%2C2%2C0.4c0.5%2C0.3%2C0.9%2C0.7%2C1.1%2C1.2c0.3%2C0.6%2C0.5%2C1.2%2C0.6%2C1.9c0.1%2C0.8%2C0.2%2C1.6%2C0.2%2C2.4c0%2C0.8-0.1%2C1.7-0.2%2C2.5%0A%09c-0.1%2C0.7-0.3%2C1.3-0.7%2C1.9c-0.3%2C0.5-0.7%2C0.9-1.3%2C1.2C26.9%2C12.1%2C26.3%2C12.2%2C25.6%2C12.2z%20M24.2%2C6.3c0%2C0.9%2C0.1%2C1.7%2C0.3%2C2.6%0A%09c0.1%2C0.5%2C0.6%2C0.9%2C1.1%2C0.9c0.5%2C0%2C0.9-0.3%2C1-0.8c0.2-0.9%2C0.3-1.8%2C0.3-2.7c0-0.9-0.1-1.7-0.3-2.6c-0.1-0.5-0.5-0.9-1.1-0.8%0A%09c-0.5%2C0-0.9%2C0.3-1%2C0.8C24.3%2C4.5%2C24.2%2C5.4%2C24.2%2C6.3z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M31.2%2C9.4h1.5V3.1h-1.5V0.6H42v4.5h-2.5v-2h-3.8v6.3h3.8v2.5h-8.3C31.2%2C11.9%2C31.2%2C9.4%2C31.2%2C9.4z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M43.7%2C6.3c0-0.9%2C0.1-1.7%2C0.4-2.5c0.5-1.4%2C1.7-2.5%2C3.1-3c0.8-0.3%2C1.6-0.4%2C2.4-0.4c0.9%2C0%2C1.7%2C0.1%2C2.5%2C0.4%0A%09C52.9%2C1%2C53.5%2C1.5%2C54.1%2C2c0.5%2C0.5%2C0.9%2C1.2%2C1.2%2C1.9c0.3%2C0.8%2C0.4%2C1.6%2C0.4%2C2.4c0%2C0.9-0.1%2C1.7-0.4%2C2.5c-0.5%2C1.4-1.7%2C2.5-3.1%2C3%0A%09c-0.8%2C0.3-1.6%2C0.4-2.4%2C0.4c-0.9%2C0-1.7-0.1-2.5-0.4c-0.7-0.3-1.3-0.7-1.9-1.2c-0.5-0.5-0.9-1.2-1.2-1.9C43.8%2C7.9%2C43.7%2C7.1%2C43.7%2C6.3z%0A%09%20M46.7%2C6.3c0%2C0.5%2C0.1%2C0.9%2C0.2%2C1.4C47%2C8%2C47.2%2C8.4%2C47.5%2C8.7c0.2%2C0.3%2C0.6%2C0.6%2C0.9%2C0.7c0.4%2C0.2%2C0.8%2C0.3%2C1.2%2C0.3c0.8%2C0%2C1.6-0.3%2C2.1-0.8%0A%09c0.6-0.7%2C0.9-1.7%2C0.8-2.6c0-0.9-0.2-1.8-0.8-2.5c-0.5-0.7-1.3-1-2.2-1c-0.4%2C0-0.8%2C0.1-1.1%2C0.2c-0.4%2C0.1-0.7%2C0.3-0.9%2C0.6%0A%09c-0.3%2C0.3-0.5%2C0.7-0.6%2C1.1C46.8%2C5.2%2C46.7%2C5.7%2C46.7%2C6.3C46.7%2C6.3%2C46.7%2C6.3%2C46.7%2C6.3z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M55.9%2C0.6h3.8L60.1%2C2h0.1c0.9-1.2%2C2.3-1.8%2C3.8-1.7c0.6%2C0%2C1.3%2C0.1%2C1.9%2C0.3c0.6%2C0.2%2C1.1%2C0.6%2C1.5%2C1%0A%09c0.5%2C0.5%2C0.8%2C1.1%2C1%2C1.8c0.2%2C0.8%2C0.3%2C1.7%2C0.2%2C2.6c0%2C0.9-0.1%2C1.8-0.4%2C2.6c-0.2%2C0.7-0.6%2C1.4-1.1%2C2c-0.5%2C0.5-1.1%2C1-1.8%2C1.2%0A%09c-0.8%2C0.3-1.6%2C0.4-2.4%2C0.4c-0.5%2C0-0.9%2C0-1.4-0.1c-0.4-0.1-0.8-0.2-1.1-0.3v4.6h-2.9V3.1h-1.7L55.9%2C0.6L55.9%2C0.6z%20M63.1%2C2.8%0A%09c-0.5%2C0-1.1%2C0.1-1.6%2C0.4c-0.5%2C0.3-0.8%2C0.7-1%2C1.3v4.7c0.3%2C0.2%2C0.6%2C0.3%2C0.9%2C0.4c0.4%2C0.1%2C0.8%2C0.1%2C1.2%2C0.1c0.4%2C0%2C0.8-0.1%2C1.2-0.2%0A%09c0.4-0.1%2C0.7-0.4%2C0.9-0.7c0.3-0.3%2C0.5-0.8%2C0.6-1.2c0.2-0.6%2C0.2-1.1%2C0.2-1.7c0.1-0.8-0.2-1.6-0.7-2.3C64.4%2C3.1%2C63.8%2C2.8%2C63.1%2C2.8%0A%09L63.1%2C2.8z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M81.2%2C10.8c-0.6%2C0.5-1.4%2C0.8-2.2%2C1c-0.8%2C0.2-1.7%2C0.4-2.6%2C0.4c-0.9%2C0-1.8-0.1-2.6-0.4c-0.7-0.3-1.3-0.6-1.9-1.2%0A%09c-0.5-0.5-0.9-1.2-1.2-1.9c-0.3-0.8-0.4-1.6-0.4-2.4c0-0.9%2C0.1-1.7%2C0.5-2.5c0.3-0.7%2C0.7-1.3%2C1.3-1.9c0.6-0.5%2C1.3-0.9%2C2-1.2%0A%09c0.8-0.3%2C1.6-0.4%2C2.4-0.4c0.8%2C0%2C1.6%2C0.1%2C2.3%2C0.3c0.6%2C0.1%2C1.1%2C0.3%2C1.7%2C0.6v3.9h-2.5V3.1c-0.5-0.1-0.9-0.2-1.4-0.2%0A%09c-0.4%2C0-0.8%2C0.1-1.3%2C0.2c-0.4%2C0.1-0.8%2C0.3-1.1%2C0.6c-0.3%2C0.3-0.6%2C0.6-0.8%2C1c-0.2%2C0.5-0.3%2C1-0.3%2C1.5c0%2C0.5%2C0.1%2C0.9%2C0.3%2C1.3%0A%09c0.3%2C0.8%2C1%2C1.5%2C1.8%2C1.8c0.5%2C0.2%2C1%2C0.3%2C1.5%2C0.3c0.7%2C0%2C1.4-0.1%2C2.1-0.3c0.4-0.2%2C0.8-0.4%2C1.2-0.6L81.2%2C10.8z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M88%2C7.4h-1.4v4.4h-2.9V0.6h2.9v4.6h1.2l3.7-4.6h3.3l-4.5%2C5.2l2.8%2C3.5h2v2.5h-3.4L88%2C7.4z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M104.1%2C6.8l0.1-1.6h-0.1l-5.4%2C6.7h-2.3V0.6h2.9V6l-0.1%2C1.5h0.1l5.4-6.9h2.3v11.2h-2.9L104.1%2C6.8L104.1%2C6.8z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M120%2C10.7c-0.2%2C0.2-0.5%2C0.4-0.8%2C0.5c-0.3%2C0.2-0.7%2C0.4-1.1%2C0.5c-0.4%2C0.2-0.9%2C0.3-1.4%2C0.4c-0.5%2C0.1-1%2C0.1-1.6%2C0.1%0A%09c-0.9%2C0-1.7-0.1-2.6-0.4c-1.4-0.5-2.6-1.6-3.1-3c-0.3-0.8-0.4-1.6-0.4-2.5c0-0.9%2C0.1-1.8%2C0.5-2.6c0.3-0.7%2C0.7-1.3%2C1.3-1.9%0A%09c0.5-0.5%2C1.2-0.9%2C1.9-1.1c1.3-0.4%2C2.8-0.5%2C4.1-0.1c0.6%2C0.1%2C1.2%2C0.4%2C1.7%2C0.8c0.5%2C0.4%2C1%2C0.9%2C1.3%2C1.5c0.3%2C0.7%2C0.5%2C1.5%2C0.5%2C2.3%0A%09c0%2C0.7-0.1%2C1.4-0.2%2C2.1H112c0%2C0.4%2C0.1%2C0.8%2C0.3%2C1.2c0.2%2C0.3%2C0.4%2C0.6%2C0.7%2C0.8c0.3%2C0.2%2C0.7%2C0.4%2C1.1%2C0.5c0.4%2C0.1%2C0.8%2C0.2%2C1.3%2C0.1%0A%09c0.7%2C0%2C1.5-0.1%2C2.2-0.3c0.5-0.2%2C1-0.4%2C1.4-0.8L120%2C10.7z%20M115.2%2C2.7c-0.4%2C0-0.7%2C0.1-1.1%2C0.2c-0.3%2C0.1-0.6%2C0.3-0.9%2C0.5%0A%09c-0.3%2C0.2-0.5%2C0.5-0.7%2C0.8c-0.2%2C0.3-0.3%2C0.6-0.3%2C1h5.5c0-0.6-0.2-1.3-0.7-1.8C116.5%2C2.9%2C115.8%2C2.6%2C115.2%2C2.7L115.2%2C2.7z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M78%2C28.3l0.1-1.6h0l-5.4%2C6.7h-2.3V22.2h2.9v5.3L73.2%2C29h0.1l5.4-6.9H81v11.3h-3V28.3z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M91.1%2C29h-4.8v4.4h-2.9V22.2h2.9v4.2h4.8v-4.2H94v11.2h-2.9V29z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M97.3%2C30.9h2.9v-6.2h-1.8v1.9h-2.5v-4.5h11.5v4.5H105v-1.9h-1.8v6.2h2.9v2.5h-8.8V30.9z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M120%2C32.2c-0.2%2C0.2-0.5%2C0.4-0.8%2C0.5c-0.3%2C0.2-0.7%2C0.3-1.1%2C0.5c-0.4%2C0.2-0.9%2C0.3-1.4%2C0.4c-0.5%2C0.1-1%2C0.1-1.6%2C0.1%0A%09c-0.9%2C0-1.7-0.1-2.6-0.4c-1.4-0.5-2.6-1.6-3.1-3c-0.3-0.8-0.4-1.6-0.4-2.5c0-0.9%2C0.1-1.8%2C0.5-2.6c0.3-0.7%2C0.7-1.3%2C1.3-1.9%0A%09c0.6-0.5%2C1.2-0.9%2C1.9-1.1c1.3-0.4%2C2.8-0.5%2C4.1-0.1c0.6%2C0.1%2C1.2%2C0.4%2C1.7%2C0.8c0.5%2C0.4%2C1%2C0.9%2C1.3%2C1.5c0.3%2C0.7%2C0.5%2C1.5%2C0.5%2C2.3%0A%09c0%2C0.7-0.1%2C1.4-0.2%2C2.1H112c0%2C0.4%2C0.1%2C0.8%2C0.3%2C1.2c0.2%2C0.3%2C0.4%2C0.6%2C0.7%2C0.8c0.3%2C0.2%2C0.7%2C0.4%2C1.1%2C0.5c0.4%2C0.1%2C0.8%2C0.2%2C1.3%2C0.1%0A%09c0.7%2C0%2C1.5-0.1%2C2.2-0.3c0.5-0.2%2C1-0.4%2C1.4-0.8L120%2C32.2z%20M115.2%2C24.2c-0.4%2C0-0.7%2C0.1-1.1%2C0.2c-0.3%2C0.1-0.6%2C0.3-0.9%2C0.5%0A%09c-0.3%2C0.2-0.5%2C0.5-0.7%2C0.8c-0.2%2C0.3-0.3%2C0.6-0.3%2C1h5.5c0.1-1.2-0.8-2.3-2-2.4C115.5%2C24.1%2C115.3%2C24.2%2C115.2%2C24.2L115.2%2C24.2z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M121%2C22.2h3.8l0.3%2C1.4h0.1c0.9-1.2%2C2.3-1.8%2C3.8-1.7c0.6%2C0%2C1.3%2C0.1%2C1.9%2C0.3c0.6%2C0.2%2C1.1%2C0.6%2C1.5%2C1%0A%09c0.5%2C0.5%2C0.8%2C1.1%2C1%2C1.8c0.2%2C0.8%2C0.4%2C1.7%2C0.3%2C2.5c0%2C0.9-0.1%2C1.8-0.4%2C2.6c-0.2%2C0.7-0.6%2C1.4-1.1%2C2c-0.5%2C0.5-1.1%2C1-1.8%2C1.2%0A%09c-0.8%2C0.3-1.6%2C0.4-2.4%2C0.4c-0.5%2C0-0.9%2C0-1.4-0.1c-0.4-0.1-0.8-0.2-1.1-0.3v4.6h-2.9V24.6H121V22.2z%20M128.1%2C24.3%0A%09c-0.6%2C0-1.1%2C0.1-1.6%2C0.4c-0.5%2C0.3-0.8%2C0.7-1%2C1.3v4.7c0.3%2C0.2%2C0.6%2C0.3%2C0.9%2C0.4c0.4%2C0.1%2C0.8%2C0.1%2C1.2%2C0.1c0.4%2C0%2C0.8-0.1%2C1.2-0.2%0A%09c0.4-0.1%2C0.7-0.4%2C0.9-0.7c0.3-0.3%2C0.5-0.8%2C0.6-1.2c0.2-0.6%2C0.2-1.1%2C0.2-1.7c0.1-0.8-0.2-1.6-0.7-2.3%0A%09C129.5%2C24.6%2C128.8%2C24.3%2C128.1%2C24.3z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M143.1%2C29h-4.8v4.4h-2.9V22.2h2.9v4.2h4.8v-4.2h2.9v11.2h-2.9V29z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M159%2C32.2c-0.2%2C0.2-0.5%2C0.4-0.8%2C0.5c-0.3%2C0.2-0.7%2C0.3-1.1%2C0.5c-0.4%2C0.2-0.9%2C0.3-1.4%2C0.4c-0.5%2C0.1-1%2C0.1-1.6%2C0.1%0A%09c-0.9%2C0-1.7-0.1-2.6-0.4c-1.4-0.5-2.6-1.6-3.1-3c-0.3-0.8-0.4-1.6-0.4-2.5c0-0.9%2C0.1-1.8%2C0.5-2.6c0.3-0.7%2C0.7-1.3%2C1.3-1.9%0A%09c0.6-0.5%2C1.2-0.9%2C1.9-1.1c1.3-0.4%2C2.8-0.5%2C4.1-0.1c0.6%2C0.1%2C1.2%2C0.4%2C1.7%2C0.8c0.5%2C0.4%2C1%2C0.9%2C1.3%2C1.5c0.3%2C0.7%2C0.5%2C1.5%2C0.5%2C2.3%0A%09c0%2C0.7-0.1%2C1.4-0.2%2C2.1H151c0%2C0.4%2C0.1%2C0.8%2C0.3%2C1.2c0.2%2C0.3%2C0.4%2C0.6%2C0.7%2C0.8c0.3%2C0.2%2C0.7%2C0.4%2C1.1%2C0.5c0.4%2C0.1%2C0.8%2C0.2%2C1.3%2C0.1%0A%09c0.7%2C0%2C1.5-0.1%2C2.2-0.3c0.5-0.2%2C1-0.4%2C1.4-0.8L159%2C32.2z%20M154.1%2C24.2c-0.4%2C0-0.7%2C0.1-1.1%2C0.2c-0.3%2C0.1-0.6%2C0.3-0.9%2C0.5%0A%09c-0.3%2C0.2-0.5%2C0.5-0.7%2C0.8c-0.2%2C0.3-0.3%2C0.6-0.3%2C1h5.5c0.1-1.2-0.8-2.3-2-2.4C154.5%2C24.2%2C154.3%2C24.2%2C154.1%2C24.2L154.1%2C24.2%0A%09L154.1%2C24.2z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M162.3%2C30.9h2.9v-6.2h-1.8v1.9H161v-4.5h11.5v4.5h-2.5v-1.9h-1.8v6.2h2.9v2.5h-8.8L162.3%2C30.9%0A%09C162.4%2C30.9%2C162.3%2C30.9%2C162.3%2C30.9z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M68.7%2C43.7h3.8l0.3%2C1.3h0.1c0.9-1.2%2C2.3-1.8%2C3.8-1.7c0.6%2C0%2C1.3%2C0.1%2C1.9%2C0.3c0.6%2C0.2%2C1.1%2C0.6%2C1.5%2C1%0A%09c0.5%2C0.5%2C0.8%2C1.1%2C1%2C1.8c0.2%2C0.8%2C0.3%2C1.7%2C0.3%2C2.6c0%2C0.9-0.1%2C1.7-0.4%2C2.6c-0.2%2C0.7-0.6%2C1.4-1.1%2C2c-0.5%2C0.5-1.1%2C1-1.8%2C1.2%0A%09c-0.8%2C0.3-1.6%2C0.4-2.4%2C0.4c-0.5%2C0-0.9%2C0-1.4-0.1c-0.4-0.1-0.8-0.2-1.1-0.3v4.6h-2.9V46.1h-1.7L68.7%2C43.7L68.7%2C43.7z%20M75.8%2C45.8%0A%09c-0.6%2C0-1.1%2C0.1-1.6%2C0.4c-0.5%2C0.3-0.8%2C0.7-1%2C1.3v4.7c0.3%2C0.2%2C0.6%2C0.3%2C0.9%2C0.4c0.4%2C0.1%2C0.8%2C0.1%2C1.2%2C0.2c0.4%2C0%2C0.8-0.1%2C1.2-0.2%0A%09c0.4-0.1%2C0.7-0.4%2C0.9-0.7c0.3-0.3%2C0.5-0.8%2C0.6-1.2c0.2-0.6%2C0.2-1.1%2C0.2-1.7c0.1-0.8-0.2-1.6-0.7-2.3C77.2%2C46.1%2C76.5%2C45.8%2C75.8%2C45.8%0A%09C75.8%2C45.8%2C75.8%2C45.8%2C75.8%2C45.8z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M93.7%2C53.7c-0.2%2C0.2-0.5%2C0.4-0.8%2C0.5c-0.3%2C0.2-0.7%2C0.3-1.1%2C0.5c-0.4%2C0.2-0.9%2C0.3-1.4%2C0.4%0A%09c-0.5%2C0.1-1%2C0.1-1.6%2C0.1c-0.9%2C0-1.7-0.1-2.6-0.4c-1.4-0.5-2.6-1.6-3.1-3c-0.3-0.8-0.4-1.6-0.4-2.5c0-0.9%2C0.1-1.8%2C0.5-2.6%0A%09c0.3-0.7%2C0.7-1.3%2C1.3-1.8c0.6-0.5%2C1.2-0.9%2C1.9-1.1c1.3-0.4%2C2.8-0.5%2C4.1-0.2c0.6%2C0.1%2C1.2%2C0.4%2C1.7%2C0.8c0.5%2C0.4%2C1%2C0.9%2C1.3%2C1.5%0A%09c0.3%2C0.7%2C0.5%2C1.5%2C0.4%2C2.3c0%2C0.7-0.1%2C1.4-0.2%2C2.1h-8c0%2C0.4%2C0.1%2C0.8%2C0.3%2C1.2c0.2%2C0.3%2C0.4%2C0.6%2C0.7%2C0.8c0.3%2C0.2%2C0.7%2C0.4%2C1.1%2C0.5%0A%09c0.4%2C0.1%2C0.8%2C0.2%2C1.3%2C0.2c0.7%2C0%2C1.5-0.1%2C2.2-0.3c0.5-0.2%2C1-0.4%2C1.4-0.8L93.7%2C53.7z%20M88.8%2C45.7c-0.4%2C0-0.7%2C0.1-1.1%2C0.2%0A%09c-0.3%2C0.1-0.6%2C0.3-0.9%2C0.5c-0.3%2C0.2-0.5%2C0.5-0.7%2C0.8c-0.2%2C0.3-0.3%2C0.6-0.3%2C1h5.5c0.1-1.2-0.8-2.3-2-2.4C89.2%2C45.7%2C89%2C45.7%2C88.8%2C45.7%0A%09L88.8%2C45.7z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M95.4%2C54.9V43.7h2.7v8.6h2v-8.6h2.7v8.6h2v-8.6h2.7v11.2H95.4z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M119.7%2C53.7c-0.2%2C0.2-0.5%2C0.4-0.8%2C0.5c-0.3%2C0.2-0.7%2C0.3-1.1%2C0.5c-0.4%2C0.2-0.9%2C0.3-1.4%2C0.4%0A%09c-0.5%2C0.1-1%2C0.1-1.6%2C0.1c-0.9%2C0-1.7-0.1-2.6-0.4c-1.4-0.5-2.6-1.6-3.1-3c-0.3-0.8-0.4-1.6-0.4-2.5c0-0.9%2C0.1-1.8%2C0.5-2.6%0A%09c0.3-0.7%2C0.7-1.3%2C1.3-1.8c0.6-0.5%2C1.2-0.9%2C1.9-1.1c1.3-0.4%2C2.8-0.5%2C4.1-0.2c0.6%2C0.1%2C1.2%2C0.4%2C1.7%2C0.8c0.5%2C0.4%2C1%2C0.9%2C1.3%2C1.5%0A%09c0.3%2C0.7%2C0.5%2C1.5%2C0.5%2C2.3c0%2C0.7-0.1%2C1.4-0.2%2C2.1h-8.1c0%2C0.4%2C0.1%2C0.8%2C0.3%2C1.2c0.2%2C0.3%2C0.4%2C0.6%2C0.7%2C0.8c0.3%2C0.2%2C0.7%2C0.4%2C1.1%2C0.5%0A%09c0.4%2C0.1%2C0.8%2C0.2%2C1.3%2C0.2c0.7%2C0%2C1.5-0.1%2C2.2-0.3c0.5-0.2%2C1-0.4%2C1.4-0.8L119.7%2C53.7z%20M114.9%2C45.7c-0.4%2C0-0.7%2C0.1-1.1%2C0.2%0A%09c-0.3%2C0.1-0.6%2C0.3-0.9%2C0.5c-0.3%2C0.2-0.5%2C0.5-0.7%2C0.8c-0.2%2C0.3-0.3%2C0.6-0.3%2C1h5.5c0.1-1.2-0.8-2.3-2-2.4%0A%09C115.2%2C45.7%2C115%2C45.7%2C114.9%2C45.7L114.9%2C45.7z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M129.9%2C50.5h-4.8v4.4h-2.9V43.7h2.9v4.2h4.8v-4.2h2.9v11.2h-2.9L129.9%2C50.5L129.9%2C50.5z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M142.8%2C49.8l0.2-1.6h-0.1l-5.4%2C6.7h-2.3V43.7h2.9V49l-0.1%2C1.5h0.1l5.4-6.9h2.3v11.2h-2.9L142.8%2C49.8%0A%09C142.9%2C49.8%2C142.8%2C49.8%2C142.8%2C49.8z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M147.8%2C52.4h1.7l1.1-1.7c-0.7-0.2-1.3-0.7-1.7-1.3c-0.4-0.7-0.6-1.4-0.5-2.2c-0.1-1.2%2C0.5-2.4%2C1.6-3%0A%09c1.3-0.7%2C2.9-1.1%2C4.4-1c0.4%2C0%2C0.7%2C0%2C1.1%2C0l1.2%2C0.1c0.4%2C0%2C0.8%2C0%2C1.1%2C0.1l0.9%2C0.1v11.3h-2.9v-3.8h-2.2l-2.4%2C3.8h-3.3L147.8%2C52.4%0A%09C147.8%2C52.4%2C147.8%2C52.4%2C147.8%2C52.4z%20M155.7%2C49v-3l-0.4-0.1h-0.5h-0.5h-0.4c-0.3%2C0-0.7%2C0-1%2C0.1c-0.3%2C0.1-0.6%2C0.2-0.8%2C0.3%0A%09c-0.2%2C0.1-0.4%2C0.3-0.6%2C0.5c-0.1%2C0.2-0.2%2C0.5-0.2%2C0.8c0%2C0.2%2C0.1%2C0.5%2C0.2%2C0.7c0.1%2C0.2%2C0.3%2C0.3%2C0.5%2C0.4c0.3%2C0.1%2C0.5%2C0.2%2C0.8%2C0.2%0A%09c0.4%2C0%2C0.8%2C0%2C1.1%2C0L155.7%2C49L155.7%2C49z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M174.5%2C41.6l1.8%2C0.8l-6.7%2C15.1l-1.8-0.9L174.5%2C41.6z%22%2F%3E%0A%3Cpath%20class%3D%22st0%22%20d%3D%22M187.3%2C54.5l-1.1-1.7l6.8-4l-6.8-4.1l1.1-1.7l8.7%2C5.4v0.9L187.3%2C54.5z%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+}
+.breadcrumbs {
+  margin-top: 6px;
+  margin-bottom: .5rem;
+}
+.breadcrumbs__item {
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 15px;
+  margin-right: 12px;
+  font-size: 13px;
+  position: relative;
+  color: #808080;
+}
+.breadcrumbs__item:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 15px;
+  height: 100%;
+  background: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0A%3C!--%20Generator%3A%20Adobe%20Illustrator%2019.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200)%20%20--%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.1%22%20id%3D%22Capa_1%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2041.999%2041.999%22%20style%3D%22enable-background%3Anew%200%200%2041.999%2041.999%3B%22%20xml%3Aspace%3D%22preserve%22%20width%3D%22512px%22%20height%3D%22512px%22%3E%0A%3Cpath%20d%3D%22M36.068%2C20.176l-29-20C6.761-0.035%2C6.363-0.057%2C6.035%2C0.114C5.706%2C0.287%2C5.5%2C0.627%2C5.5%2C0.999v40%20%20c0%2C0.372%2C0.206%2C0.713%2C0.535%2C0.886c0.146%2C0.076%2C0.306%2C0.114%2C0.465%2C0.114c0.199%2C0%2C0.397-0.06%2C0.568-0.177l29-20%20%20c0.271-0.187%2C0.432-0.494%2C0.432-0.823S36.338%2C20.363%2C36.068%2C20.176z%22%20fill%3D%22%23b3b3b3%22%2F%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A") no-repeat right center;
+  background-size: 6px;
+}
+.breadcrumbs__item:last-child {
+  margin-right: 0;
+}
+.breadcrumbs__item:last-child:after {
+  display: none;
+}
+a.breadcrumbs__item {
+  font-weight: bold;
+}
+a.breadcrumbs__item:hover {
+  text-decoration: underline;
+}
+.detail {
+  margin-bottom: 4rem;
+}
+.detail__img {
+  max-width: 30rem;
+  float: left;
+  margin: 0 2.5rem 2.5rem 0;
+}
+.detail p {
+  font-size: .875rem;
+  margin: 0 0 1.5rem;
+  line-height: 1.375rem;
+}
+.detail p > a {
+  color: #1f613b;
+  font-weight: bold;
+  transition: .3s;
+}
+.detail p > a:hover {
+  color: #35a664;
+}
+.detail-block {
+  padding-top: 2.375rem;
+  border-top: 2px solid #e6e6e6;
+}
+.detail ol,
+.detail-block ol,
+.detail ul,
+.detail-block ul {
+  font-size: .875rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+.detail ol > li,
+.detail-block ol > li,
+.detail ul > li,
+.detail-block ul > li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 2.5rem;
+}
+.detail ol > li:before,
+.detail-block ol > li:before,
+.detail ul > li:before,
+.detail-block ul > li:before {
+  content: '';
+  width: 2.5rem;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.detail ol,
+.detail-block ol {
+  counter-reset: item;
+}
+.detail ol > li:before,
+.detail-block ol > li:before {
+  content: counter(item) '.';
+  counter-increment: item;
+  font-weight: bold;
+  color: #1f613b;
+}
+.detail ul > li:before,
+.detail-block ul > li:before {
+  background: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0A%3C!--%20Generator%3A%20Adobe%20Illustrator%2019.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200)%20%20--%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.1%22%20id%3D%22Capa_1%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%2041.999%2041.999%22%20style%3D%22enable-background%3Anew%200%200%2041.999%2041.999%3B%22%20xml%3Aspace%3D%22preserve%22%20width%3D%22512px%22%20height%3D%22512px%22%3E%0A%3Cpath%20d%3D%22M36.068%2C20.176l-29-20C6.761-0.035%2C6.363-0.057%2C6.035%2C0.114C5.706%2C0.287%2C5.5%2C0.627%2C5.5%2C0.999v40%20%20c0%2C0.372%2C0.206%2C0.713%2C0.535%2C0.886c0.146%2C0.076%2C0.306%2C0.114%2C0.465%2C0.114c0.199%2C0%2C0.397-0.06%2C0.568-0.177l29-20%20%20c0.271-0.187%2C0.432-0.494%2C0.432-0.823S36.338%2C20.363%2C36.068%2C20.176z%22%20fill%3D%22%231f613b%22%2F%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A") no-repeat left center;
+  background-size: 10px;
+}
+.detail-info:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.file {
+  display: inline-block;
+  vertical-align: top;
+  width: 33%;
+  padding-right: 2rem;
+  padding-left: 60px;
+  position: relative;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+  transition: .3s;
+}
+.file:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 50px;
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%2050%22%3E%3Ctitle%3EAsset%206%3C%2Ftitle%3E%3Cpath%20d%3D%22M0%2C0H26L40%2C14V50H0Z%22%20fill%3D%22%23616466%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M26%2C0%2C40%2C14H26Z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%20opacity%3D%220.3%22%2F%3E%3C%2Fsvg%3E") no-repeat center;
+  background-size: 100%;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  padding-top: 22px;
+  box-sizing: border-box;
+  transition: .3s;
+}
+.file:hover {
+  color: #ffbb00;
+}
+.file:hover:before {
+  color: #ffbb00;
+}
+.file[href$='.doc']:before {
+  content: 'doc';
+}
+.file[href$='.docx']:before {
+  content: 'docx';
+}
+.file[href$='.doc']:before,
+.file[href$='.docx']:before {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%2050%22%3E%3Ctitle%3EAsset%202%3C%2Ftitle%3E%3Cpath%20d%3D%22M0%2C0H26L40%2C14V50H0Z%22%20fill%3D%22%232281d2%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M26%2C0%2C40%2C14H26Z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%20opacity%3D%220.3%22%2F%3E%3C%2Fsvg%3E");
+}
+.file[href$='.ppt']:before {
+  content: 'ppt';
+}
+.file[href$='.pptx']:before {
+  content: 'pptx';
+}
+.file[href$='.ppt']:before,
+.file[href$='.pptx']:before {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%2050%22%3E%3Ctitle%3EAsset%204%3C%2Ftitle%3E%3Cpath%20d%3D%22M0%2C0H26L40%2C14V50H0Z%22%20fill%3D%22%23ff7510%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M26%2C0%2C40%2C14H26Z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%20opacity%3D%220.3%22%2F%3E%3C%2Fsvg%3E");
+}
+.file[href$='.xls']:before {
+  content: 'xls';
+}
+.file[href$='.xlsx']:before {
+  content: 'xlsx';
+}
+.file[href$='.xls']:before,
+.file[href$='.xlsx']:before {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%2050%22%3E%3Ctitle%3EAsset%205%3C%2Ftitle%3E%3Cpath%20d%3D%22M0%2C0H26L40%2C14V50H0Z%22%20fill%3D%22%2328982b%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M26%2C0%2C40%2C14H26Z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%20opacity%3D%220.3%22%2F%3E%3C%2Fsvg%3E");
+}
+.file[href$='.rar']:before {
+  content: 'rar';
+}
+.file[href$='.zip']:before {
+  content: 'zip';
+}
+.file[href$='.rar']:before,
+.file[href$='.zip']:before {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%2050%22%3E%3Ctitle%3EAsset%203%3C%2Ftitle%3E%3Cpath%20d%3D%22M0%2C0H26L40%2C14V50H0Z%22%20fill%3D%22%237438a7%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M26%2C0%2C40%2C14H26Z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%20opacity%3D%220.3%22%2F%3E%3C%2Fsvg%3E");
+}
+.file[href$='.pdf']:before {
+  content: 'pdf';
+}
+.file[href$='.pdf']:before {
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2040%2050%22%3E%3Ctitle%3EAsset%201%3C%2Ftitle%3E%3Cpath%20d%3D%22M0%2C0H26L40%2C14V50H0Z%22%20fill%3D%22%23e3301d%22%20fill-rule%3D%22evenodd%22%2F%3E%3Cpath%20d%3D%22M26%2C0%2C40%2C14H26Z%22%20fill%3D%22%23fff%22%20fill-rule%3D%22evenodd%22%20opacity%3D%220.3%22%2F%3E%3C%2Fsvg%3E");
+}
+.tabs {
+  position: relative;
+}
+.tabs__input {
+  display: none;
+}
+.tabs__input:checked + .tabs__label {
+  color: #333;
+  border-left: 2px solid #e6e6e6;
+  border-right: 2px solid #e6e6e6;
+  border-bottom: none;
+  z-index: 2;
+}
+.tabs__input:checked + .tabs__label:before {
+  opacity: 1;
+}
+.tabs__input[data-one]:checked ~ .tabs__section[data-one],
+.tabs__input[data-two]:checked ~ .tabs__section[data-two] {
+  display: block;
+}
+.tabs__label {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #999;
+  position: relative;
+  text-align: center;
+  padding: 1.125rem 1rem 1rem;
+  height: 3.25rem;
+  white-space: nowrap;
+  z-index: 1;
+  background-color: #fff;
+}
+.tabs__label:before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: 0;
+  width: calc(100% + 4px);
+  height: 4px;
+  background-color: #1f613b;
+  transition: .3s;
+  opacity: 0;
+  z-index: 2;
+}
+.tabs__label:hover {
+  cursor: pointer;
+}
+.tabs__section {
+  display: none;
+  -webkit-animation: fadein 1s;
+          animation: fadein 1s;
+  margin-top: 2rem;
+}
+.tabs:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: calc(3.25rem - 2px);
+  width: 100%;
+  height: 2px;
+  background-color: #e6e6e6;
+  z-index: 1;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.table {
+  width: 100%;
+  display: block;
+  font-size: .875rem;
+  line-height: .875rem;
+  margin-bottom: 2rem;
+}
+.table tbody,
+.table tr {
+  width: 100%;
+}
+.table td,
+.table th {
+  background-color: #fff;
+  padding: 10px 0 9px 20px;
+  width: 15%;
+  text-align: left;
+}
+.table tr:nth-child(2n) td {
+  background-color: #f2f2f2;
+}
+.form {
+  margin-bottom: 2rem;
+}
+.form-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form-flex .form-control {
+  margin-left: 1.875rem;
+}
+.form-flex .form-control:first-child {
+  margin-left: 0;
+}
+.form-control {
+  position: relative;
+  padding-top: 1rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.form-control > span {
+  display: none;
+  vertical-align: top;
+  color: #e3301d;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: .875rem;
+}
+.form-control.err .form__input {
+  border-bottom-color: #e3301d;
+}
+.form-control.err > span {
+  display: inline-block;
+  top: 1rem;
+  transition: .3s;
+}
+.form__input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  height: 2.25rem;
+  outline: none;
+  border-bottom: 4px solid #1f613b;
+  transition: .3s;
+}
+.form__input.text + .form__label,
+.form__input.text ~ span {
+  top: 0;
+}
+.form__input:focus {
+  border-bottom-color: #35a664;
+}
+.form__input:focus + .form__label,
+.form__input:focus ~ span {
+  top: 0;
+}
+.form__input[type="checkbox"] {
+  display: none;
+}
+.form__input[type="checkbox"] + .form__label {
+  position: relative;
+  left: auto;
+  top: auto;
+  padding-left: 46px;
+  color: #333;
+  font-size: 1rem;
+  min-height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+}
+.form__input[type="checkbox"] + .form__label:before,
+.form__input[type="checkbox"] + .form__label:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: calc(50% - 15px);
+}
+.form__input[type="checkbox"] + .form__label:before {
+  width: 26px;
+  height: 26px;
+  border: 2px solid #1f613b;
+}
+.form__input[type="checkbox"] + .form__label:after {
+  width: 30px;
+  height: 30px;
+  background: #1f613b url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.1%22%20viewBox%3D%220%200%2026%2026%22%20enable-background%3D%22new%200%200%2026%2026%22%20width%3D%22512px%22%20height%3D%22512px%22%3E%0A%20%20%3Cpath%20d%3D%22m.3%2C14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5%200.3-0.7l1.4-1.4c0.4-0.4%201-0.4%201.4%2C0l.1%2C.1%205.5%2C5.9c0.2%2C0.2%200.5%2C0.2%200.7%2C0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4%201-0.4%201.4%2C0l1.4%2C1.4c0.4%2C0.4%200.4%2C1%200%2C1.4l0%2C0-16%2C16.6c-0.2%2C0.2-0.4%2C0.3-0.7%2C0.3-0.3%2C0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z%22%20fill%3D%22%23FFFFFF%22%2F%3E%0A%3C%2Fsvg%3E%0A") no-repeat center;
+  background-size: 20px;
+  opacity: 0;
+  transition: .3s;
+}
+.form__input[type="checkbox"] + .form__label:hover {
+  cursor: pointer;
+}
+.form__input[type="checkbox"]:checked + .form__label:after {
+  opacity: 1;
+}
+.form__label {
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  color: #808080;
+  font-size: .875rem;
+  transition: .3s;
+}
+.form-captcha {
+  margin-right: 7rem;
+}
+.timeline__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 40px;
+}
+.timeline__item-left {
+  width: 96px;
+  padding-bottom: 40px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+}
+.timeline__item-right {
+  width: calc(100% - 120px);
+  padding-left: 24px;
+}
+.timeline__item-right > p {
+  margin: 0 0 .75rem;
+}
+.units {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.units__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 50%;
+  height: 15rem;
+}
+.units__item-block {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 6px solid #fff;
+  border-radius: 16px;
+  background-color: #36945f;
+  overflow: hidden;
+  transition: .3s;
+}
+.units__item-wrap,
+.units__item-name {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.units__item-wrap {
+  background: no-repeat center;
+  background-size: cover;
+  opacity: .4;
+}
+.units__item-name {
+  color: #fff;
+  font-family: 'Museo Cyrl 700', sans-serif;
+  font-size: 2rem;
+  line-height: 2rem;
+  padding: 3.375rem 1rem 1rem 2.375rem;
+}
+.units__item:hover .units__item-block {
+  border-color: #ffbb00;
+}
+.gallery {
+  margin: 2rem 0;
+}
+.gallery-item {
+  width: 18.5rem;
+  height: 12.25rem;
+  margin-right: 4px;
+}
+.reg {
+  position: relative;
+  width: 760px;
+  height: 512px;
+  margin: 0 auto;
+}
+.reg-item {
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 344px;
+  height: 144px;
+  border: 8px solid #1f613b;
+  padding: 24px 30px 5px;
+  text-align: center;
+}
+.reg-item:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -48px;
+  width: 8px;
+  height: 40px;
+  background-color: #e6e6e6;
+}
+.reg-item__name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #1f613b;
+  margin-bottom: 32px;
+}
+.reg-item__desc {
+  font-size: 13px;
+  color: #808080;
+}
+.reg-item.first {
+  left: calc(50% - 172px);
+  top: 0;
+}
+.reg-item.first:after {
+  display: none;
+}
+.reg-item.second {
+  top: 184px;
+}
+.reg-item.second:after {
+  left: auto;
+  right: 68px;
+}
+.reg-item.third {
+  top: 184px;
+  left: auto;
+  right: 0;
+}
+.reg-item.third:after {
+  left: 68px;
+}
+.reg-item.fouth {
+  top: auto;
+  bottom: 0;
+}
+.reg-item.fouth:after {
+  left: auto;
+  right: 68px;
+}
+.popup {
+  text-align: left;
+  min-height: 32rem;
+}
+.popup-block {
+  display: none;
+}
+.popup.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.popup-left {
+  width: 30rem;
+  background-color: #005532;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.popup-right {
+  width: calc(100% - 30rem);
+  padding: 1.875rem 5rem 6.25rem;
+  position: relative;
+}
+.popup-right.detail {
+  margin-bottom: 0;
+}
+.popup__button {
+  background: #fff;
+  border: 4px solid #e6e6e6;
+  color: #808080;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 21px 37px;
+  position: absolute;
+  left: 5rem;
+  bottom: 2rem;
+  outline: none;
+  transition: .3s;
+}
+.popup__button:hover {
+  cursor: pointer;
+  background-color: #e6e6e6;
+}
+.popup .detail {
+  margin-bottom: 0;
+  padding: 1.875rem 5rem 6.25rem;
+}
+.jBox-Modal .jBox-container {
+  box-shadow: none;
+  border-radius: 0;
+}
+.jBox-Modal .jBox-content {
+  padding: 0;
+}
+.jBox-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.jBox-overlay .jBox-closeButton {
+  display: none;
+}
