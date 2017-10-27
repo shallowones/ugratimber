@@ -1,0 +1,213 @@
+extends layout
+
+block content
+
+  .page
+    header.header
+      .header-top.wrapper
+        .header-logo Югорский<br>лесопромышленный холдинг
+        .header-contacts
+          .header-contacts__item E-mail:&nbsp;
+            a(href="#") office@ugratimber.ru
+          .header-contacts__item Телефон:
+            span  +7 3467
+              b  35-62-73
+          .header-contacts__item Факс:
+            span  +7 3467
+              b  36-30-33
+        select#lang
+          option(value="ru", selected) RU
+          option(value="en") EN
+      .menu
+        .wrapper
+          a(href="#").menu__item.active О компании
+          a(href="#").menu__item Продукция
+          a(href="#").menu__item Раскрытие информации
+          a(href="#").menu__item Закупки
+          a(href="#").menu__item Реализация активов
+          a(href="#").menu__item Пресс центр
+          a(href="#").menu__item Вакансии
+          a(href="#").menu__item Контакты
+          button(type="button").menu__item.search
+
+    main.main
+      .wrapper
+        .breadcrumbs
+          a(href="#").breadcrumbs__item Главная
+          a(href="#").breadcrumbs__item Продукция
+          span.breadcrumbs__item Древесно-стружечные плиты
+
+        h1.h1 Продукция
+        .detail
+          .detail-block.flex.space-b.no-line
+            .detail-gal-block
+              .swiper-container.detail-gal
+                .swiper-wrapper
+                  a(href="images/dsp-1.png", data-fancybox="detail-gallery").swiper-slide.detail-gal__item
+                    .detail-gal__item-img(style="background-image: url('images/dsp-1.png')")
+                  a(href="images/dsp-2.png", data-fancybox="detail-gallery").swiper-slide.detail-gal__item
+                    .detail-gal__item-img(style="background-image: url('images/dsp-2.png')")
+                  a(href="images/dsp-3.png", data-fancybox="detail-gallery").swiper-slide.detail-gal__item
+                    .detail-gal__item-img(style="background-image: url('images/dsp-3.png')")
+                  a(href="images/dsp-4.png", data-fancybox="detail-gallery").swiper-slide.detail-gal__item
+                    .detail-gal__item-img(style="background-image: url('images/dsp-4.png')")
+              .swiper-container.detail-gal-thumbs
+                .swiper-wrapper
+                  a(href="images/dsp-1.png", data-fancybox="detail-gallery").swiper-slide.detail-gal-thumbs__item
+                    .detail-gal__item-img(style="background-image: url('images/dsp-1.png')")
+                  a(href="images/dsp-2.png", data-fancybox="detail-gallery").swiper-slide.detail-gal-thumbs__item
+                    .detail-gal__item-img(style="background-image: url('images/dsp-2.png')")
+                  a(href="images/dsp-3.png", data-fancybox="detail-gallery").swiper-slide.detail-gal-thumbs__item
+                    .detail-gal__item-img(style="background-image: url('images/dsp-3.png')")
+                  a(href="images/dsp-4.png", data-fancybox="detail-gallery").swiper-slide.detail-gal-thumbs__item
+                    .detail-gal__item-img(style="background-image: url('images/dsp-4.png')")
+            div
+              h3.h3 Описание
+              p.
+                В настоящее время югорская плита оценивается производителями мебели как
+                одна из наиболее качественных на рынке.
+              p.
+                Ключевыми факторами успеха предприятия являются современные технологические
+                решения, индивидуальный подход к клиенту и бережное отношение к природным ресурсам.
+              p Завод «Югра-плит» укомплектован современным оборудованием Siempelkamp, Pallmann.
+
+          .detail-block
+            h3.h3 Характеристика продукции
+            .flex.space-b
+              .characteristic-block
+                .characteristic
+                  .characteristic-left Тип ДСП:
+                  .characteristic-right Влагостойкая и стандартная ДСП, ламинированная меламиновыми пленками
+                .characteristic
+                  .characteristic-left Применение:
+                  .characteristic-right Строительство, Производство мебели, Внутренняя отделка помещений
+                .characteristic
+                  .characteristic-left Конкурентное преимущество:
+                  .characteristic-right.
+                    Высокое качество, Оптимальная плотность, однородность внутренних слоев,
+                    Способность выдерживать многократную сборку-разборку мебели, Отсутствие
+                    разнотолщинности, Отсутствие посторонних включений, минеральных примесей,
+                    как следствие минимальный износ пил при обработке, Отсутствие сколов
+                    ламинированной поверхности, SF (ABC), 3, 4 сорта, С16-С30
+              .characteristic-block
+                .characteristic
+                  .characteristic-left Тип ДСП согласно стандарту EN-312:
+                  .characteristic-right Р2
+                .characteristic
+                  .characteristic-left Формат, мм:
+                  .characteristic-right 1830х2440
+                .characteristic
+                  .characteristic-left Толщины, мм:
+                  .characteristic-right 8, 10, 12, 16, 18, 22, 25, 38
+                .characteristic
+                  .characteristic-left Тип покрытия:
+                  .characteristic-right Меламиновая пленка / Без покрытия
+                .characteristic
+                  .characteristic-left Тиснение:
+                  .characteristic-right Опционально
+                .characteristic
+                  .characteristic-left Декор:
+                  .characteristic-right Опционально
+                .characteristic
+                  .characteristic-left Кромка:
+                  .characteristic-right ПВХ / Меламиновая кромка / Без кромки
+
+          .detail-block.with-mar
+            .tabs
+              input(type="radio", id="tab-1", name="tab", data-one, checked).tabs__input
+              label(for="tab-1").tabs__label Виды декора
+              input(type="radio", id="tab-2", name="tab", data-two).tabs__input
+              label(for="tab-2").tabs__label Виды тиснений
+              section(data-one).tabs__section
+                .types
+                  - for (var i = 0; i < 4; i++)
+                    a(href="images/decor-1.png", data-fancybox="types-gallery").types__item
+                      img(src="images/decor-1.png")
+                    a(href="images/decor-2.png", data-fancybox="types-gallery").types__item
+                      img(src="images/decor-2.png")
+                    a(href="images/decor-3.png", data-fancybox="types-gallery").types__item
+                      img(src="images/decor-3.png")
+                    a(href="images/decor-4.png", data-fancybox="types-gallery").types__item
+                      img(src="images/decor-4.png")
+                  .types-more
+                    // добавить класс .wait во время ajax-запроса
+                    button(type="button").button.more Загрузить еще
+              section(data-two).tabs__section
+                .types
+                  - for (var i = 0; i < 4; i++)
+                    a(href="images/decor-4.png", data-fancybox="types-gallery").types__item
+                      img(src="images/decor-4.png")
+                    a(href="images/decor-3.png", data-fancybox="types-gallery").types__item
+                      img(src="images/decor-3.png")
+                    a(href="images/decor-2.png", data-fancybox="types-gallery").types__item
+                      img(src="images/decor-2.png")
+                    a(href="images/decor-1.png", data-fancybox="types-gallery").types__item
+                      img(src="images/decor-1.png")
+                  .types-more
+                    // убрать класс .wait во время ajax-запроса
+                    button(type="button").button.more.wait Загрузить еще
+
+          .detail-block
+            h3.h3 Документация
+            a(href="file.pdf").file Технические характеристики ГОСТ 26002-83
+            a(href="file.pdf").file Спецификация продукции
+
+          .detail-block
+            h3.h3 Логистика
+            .flex.space-b.align-center.logic
+              table.table
+                tbody
+                  tr
+                    th Вид транспорта
+                    th Минимальная партия, м3
+                  tr
+                    td Паллет
+                    td 75
+                  tr
+                    td Вагон
+                    td 100
+                  tr
+                    td Паллет
+                    td 75
+                  tr
+                    td Вагон
+                    td 100
+              .train
+
+          .detail-block
+            h2.h2 Остались вопросы?
+            form(action="#").form
+              .form-flex
+                .form-control
+                  input(type="text", id="input-1", value="Активное поле").form__input.text
+                  label(for="input-1").form__label ФИО
+                .form-control.err
+                  input(type="text", id="input-2", value="joran99").form__input.text
+                  label(for="input-2").form__label E-mail
+                  span Неверно указан e-mail
+                .form-control
+                  input(type="text", id="input-3").form__input
+                  label(for="input-3").form__label Телефон
+              .form-control.full
+                input(id="input-4").form__input
+                label(for="input-4").form__label Сообщение
+              .form-flex
+                .form-control
+                  input(type="checkbox", id="check-1").form__input
+                  label(for="check-1").form__label Даю согласие на обработку персональных данных
+                .form-captcha
+                  // подразумевается вставка блока кода гугла вместо img
+                  img(src="images/captcha.jpg")
+                .button Отправить
+
+    footer.footer
+      .wrapper
+        .footer-block
+          .footer-left
+            p.
+              628011, Россия, Тюменская область, Ханты-Мансийский автономный округ — Югра,
+              г. Ханты-Мансийск, ул. Рознина, д. 71
+            p Телефон: +7 (3467) <b>35-62-73</b>, Факс: + 7 (3467) <b>36-30-33</b>
+          .footer-right
+            a(href="#").uw
+        .footer-bottom © Copyright АО «Югорский Лесопромышленный Холдинг», 2005-2017

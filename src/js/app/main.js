@@ -1,4 +1,4 @@
-(function ($, jBox) {
+(function ($, jBox, Swiper) {
   $(function () {
 
     // инициализация слайдера на главной
@@ -32,6 +32,35 @@
 
       mainSlider.params.control = mainSliderThumbs;
       mainSliderThumbs.params.control = mainSlider;
+    }
+
+    // инициализация слайдера на главной
+    {
+      const countSliders = 4
+
+      const detailSlider = new Swiper('.detail-gal', {
+        loop: true,
+        loopedSlides: countSliders,
+        slidesPerView: 1
+        //autoplay: 2000
+      });
+
+      const detailSliderThumbs = new Swiper('.detail-gal-thumbs', {
+        slidesPerView: 'auto',
+        touchRatio: 0.2,
+        loop: true,
+        slideToClickedSlide: true,
+        loopedSlides: countSliders,
+        onSlideChangeEnd: function (swiper) {
+          if (swiper.activeIndex === (countSliders * 2)) {
+            swiper.update(true);
+            swiper.slideTo(0, 0)
+          }
+        }
+      });
+
+      detailSlider.params.control = detailSliderThumbs;
+      detailSliderThumbs.params.control = detailSlider;
     }
 
     // кастомим селект выбора языка сайта
@@ -86,4 +115,4 @@
     }
 
   })
-})(jQuery, jBox)
+})(jQuery, jBox, Swiper)
