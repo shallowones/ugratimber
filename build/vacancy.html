@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Югорский лесопромышленный холдинг</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="fonts/bundle.css">
+    <link rel="stylesheet" href="js/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/vendor/swiper/swiper.min.css">
+    <link rel="stylesheet" href="js/vendor/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="js/vendor/jbox/jBox.css">
+    <link rel="stylesheet" href="js/vendor/jquery-filestyle/jquery-filestyle.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="header-top wrapper">
+          <div class="header-logo">Югорский<br>лесопромышленный холдинг</div>
+          <div class="header-contacts">
+            <div class="header-contacts__item">E-mail:&nbsp;<a href="#">office@ugratimber.ru</a></div>
+            <div class="header-contacts__item">Телефон:<span> +7 3467<b> 35-62-73</b></span></div>
+            <div class="header-contacts__item">Факс:<span> +7 3467<b> 36-30-33</b></span></div>
+          </div>
+          <select id="lang">
+            <option value="ru" selected>RU</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+        <div class="menu">
+          <div class="wrapper"><a class="menu__item" href="#">О компании</a><a class="menu__item" href="#">Продукция</a><a class="menu__item" href="#">Раскрытие информации</a><a class="menu__item" href="#">Закупки</a><a class="menu__item" href="#">Реализация активов</a><a class="menu__item" href="#">Пресс центр</a><a class="menu__item" href="#">Вакансии</a><a class="menu__item" href="#">Контакты</a>
+            <button class="menu__item search js-search" type="button" data-target="#search"></button>
+            <form class="search-form" action="#" id="search">
+              <input class="search-form__input" type="text">
+              <button class="search-form__button">Найти</button>
+            </form>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <div class="wrapper">
+          <div class="breadcrumbs"><a class="breadcrumbs__item" href="#">Главная</a><a class="breadcrumbs__item" href="#">Персонал</a><span class="breadcrumbs__item">Вакансии</span></div>
+          <h1 class="h1">Вакансии</h1>
+          <div class="detail">
+            <div class="subunit">
+              <div class="subunit__name">Машинист манипулятора</div>
+              <p><b>Требования к образованию и квалификации:</b></p>
+              <ul>
+                <li>опыт работы на кране-манипуляторе;</li>
+                <li>наличие карты водителя, медсправки;</li>
+                <li>ответственность, исполнительность, аккуратность.</li>
+              </ul>
+              <p><b>Обязанности:</b></p>
+              <ul>
+                <li>знать основные виды неисправностей крана;</li>
+                <li>знать карты смазки и способы смазывания узлов и механизмов крана;</li>
+                <li>знать схемы строповки;</li>
+                <li>знать условные сигналы;</li>
+                <li>знать методы визуального определения массы и центра тяжести перемещаемых грузов;</li>
+                <li>знать особенности транспортировки сложных конструкций высотных сооружений.</li>
+              </ul>
+            </div>
+            <div class="subunit">
+              <div class="subunit__name">Машинист манипулятора</div>
+              <p><b>Требования к образованию и квалификации:</b></p>
+              <ul>
+                <li>опыт работы на кране-манипуляторе;</li>
+                <li>наличие карты водителя, медсправки.</li>
+              </ul>
+              <p><b>Обязанности:</b></p>
+              <ul>
+                <li>управление мостовым краном;</li>
+                <li>управление башенным краном;</li>
+                <li>погрузочно-разгрузочные работы на территории завода.</li>
+              </ul>
+            </div>
+            <div class="detail-block">
+              <div class="work"><img class="work__img" src="images/work.svg"></div>
+              <h3 class="h3">Вниманию соискателей!</h3>
+              <p>
+                Прием заявок на занятие вакантных должностей осуществляется посредством получения
+                от соискателей резюме. Анкета соискателя заполняется на сайте компании в разделе
+                «Карьера» и автоматически направляется на обработку специалистам отдела кадров.
+                При условии принятия положительного решения по кандидатуре соискателя, специалисты
+                отдела кадров приглашают кандидата на собеседование.
+              </p>
+              <p>
+                Для участия в конкурсе на замещение вакантной должности необходимо заполнить
+                резюме установленной формы, в формате Word (см. ниже).
+              </p><a class="file full" href="file.docx">Образец резюме установленной формы.docx</a><br><a class="button js-popup" href="#">Заполнить анкету
+                <div class="popup-block">
+                  <div class="popup flex wrapper plus-form">
+                    <div class="popup-left"><img src="images/work-popup.png"></div>
+                    <form class="form popup-right detail" action="#">
+                      <h3 class="h3">Анкета соискателя «АО Югорский Лесопромышленный Холдинг»</h3>
+                      <div class="form-control">
+                        <input class="form__input text" type="text" id="input-1" value="Активное поле">
+                        <label class="form__label" for="input-1">ФИО</label>
+                      </div>
+                      <div class="form-flex">
+                        <div class="form-control">
+                          <input class="form__input" type="text" id="input-2">
+                          <label class="form__label" for="input-2">Мобильный телефон</label>
+                        </div>
+                        <div class="form-control">
+                          <input class="form__input" type="text" id="input-3">
+                          <label class="form__label" for="input-3">E-mail</label>
+                        </div>
+                      </div>
+                      <div class="form-control with-file js-file">
+                        <input type="file" id="input-4">
+                        <label class="form__label" for="input-4">Прикрепите заполненный файл с резюме</label>
+                      </div>
+                      <div class="form-control">
+                        <input class="form__input" type="text" id="input-5">
+                        <label class="form__label" for="input-5">Краткая информация о Вас</label>
+                      </div>
+                      <div class="form-control">
+                        <input class="form__input" type="checkbox" id="check-1">
+                        <label class="form__label" for="check-1">Даю согласие на обработку персональных данных</label>
+                      </div>
+                      <div class="form-captcha">
+                        <!-- подразумевается вставка блока кода гугла вместо img--><img src="images/captcha.jpg">
+                      </div>
+                      <div class="form-flex">
+                        <button class="popup__button" type="button">Назад</button>
+                        <button class="button" type="submit">Отправить</button>
+                      </div>
+                    </form>
+                  </div>
+                </div></a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="wrapper">
+          <div class="footer-block">
+            <div class="footer-left">
+              <p>
+                628011, Россия, Тюменская область, Ханты-Мансийский автономный округ — Югра,
+                г. Ханты-Мансийск, ул. Рознина, д. 71
+              </p>
+              <p>Телефон: +7 (3467) <b>35-62-73</b>, Факс: + 7 (3467) <b>36-30-33</b></p>
+            </div>
+            <div class="footer-right"><a class="uw" href="#"></a></div>
+          </div>
+          <div class="footer-bottom">© Copyright АО «Югорский Лесопромышленный Холдинг», 2005-2017</div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="js/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/vendor/swiper/swiper.min.js"></script>
+    <script src="js/vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/vendor/jbox/jBox.min.js"></script>
+    <script src="js/vendor/jquery-filestyle/jquery-filestyle.min.js"></script>
+    <script src="js/app/main.js"></script>
+  </body>
+</html>

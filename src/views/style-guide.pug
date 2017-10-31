@@ -28,7 +28,10 @@ block content
           a(href="#").menu__item Пресс центр
           a(href="#").menu__item Вакансии
           a(href="#").menu__item Контакты
-          button(type="button").menu__item.search
+          button(type="button", data-target="#search").menu__item.search.js-search
+          form(action="#")#search.search-form
+            input(type="text").search-form__input
+            button.search-form__button Найти
 
     main.main
       .wrapper

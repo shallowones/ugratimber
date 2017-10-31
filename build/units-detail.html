@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="js/vendor/swiper/swiper.min.css">
     <link rel="stylesheet" href="js/vendor/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="js/vendor/jbox/jBox.css">
+    <link rel="stylesheet" href="js/vendor/jquery-filestyle/jquery-filestyle.min.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
@@ -30,7 +31,11 @@
         </div>
         <div class="menu">
           <div class="wrapper"><a class="menu__item active" href="#">О компании</a><a class="menu__item" href="#">Продукция</a><a class="menu__item" href="#">Раскрытие информации</a><a class="menu__item" href="#">Закупки</a><a class="menu__item" href="#">Реализация активов</a><a class="menu__item" href="#">Пресс центр</a><a class="menu__item" href="#">Вакансии</a><a class="menu__item" href="#">Контакты</a>
-            <button class="menu__item search" type="button"></button>
+            <button class="menu__item search js-search" type="button" data-target="#search"></button>
+            <form class="search-form" action="#" id="search">
+              <input class="search-form__input" type="text">
+              <button class="search-form__button">Найти</button>
+            </form>
           </div>
         </div>
       </header>
@@ -86,6 +91,7 @@
     <script src="js/vendor/swiper/swiper.min.js"></script>
     <script src="js/vendor/fancybox/jquery.fancybox.min.js"></script>
     <script src="js/vendor/jbox/jBox.min.js"></script>
+    <script src="js/vendor/jquery-filestyle/jquery-filestyle.min.js"></script>
     <script src="js/app/main.js"></script>
   </body>
 </html>
