@@ -2,115 +2,62 @@ extends layout
 
 block content
 
-  .page
-    header.header
-      .header-top.wrapper
-        .header-logo Югорский<br>лесопромышленный холдинг
-        .header-contacts
-          .header-contacts__item E-mail:&nbsp;
-            a(href="#") office@ugratimber.ru
-          .header-contacts__item Телефон:
-            span  +7 3467
-              b  35-62-73
-          .header-contacts__item Факс:
-            span  +7 3467
-              b  36-30-33
-        select#lang
-          option(value="ru", selected) RU
-          option(value="en") EN
-      .menu
-        .wrapper
-          a(href="#").menu__item О компании
-          a(href="#").menu__item Продукция
-          a(href="#").menu__item Раскрытие информации
-          a(href="#").menu__item Закупки
-          a(href="#").menu__item Реализация активов
-          a(href="#").menu__item Пресс центр
-          a(href="#").menu__item Вакансии
-          a(href="#").menu__item Контакты
-          button(type="button", data-target="#search").menu__item.search.js-search
-          form(action="#")#search.search-form
-            input(type="text").search-form__input
-            button.search-form__button Найти
+  main.main
+    .wrapper
+      +breadcrumbs('Главная', 'Пресс-центр', 'Новости')
 
-    main.main
-      .wrapper
-        .breadcrumbs
-          a(href="#").breadcrumbs__item Главная
-          a(href="#").breadcrumbs__item Пресс-центр
-          span.breadcrumbs__item Новости
+      h1.h1 Новости
+      .detail
 
-        h1.h1 Новости
-        .detail
+        .news
+          a(href="#").news-item
+            .news-item-left
+              img(src="images/news-1.png").news-item__img
+            .news-item-right
+              .news-item__date 29 июня 2017
+              h4.h4 Фонд развития представил отчет о своей работе на правительственном часе
+              p.
+                Генеральный директор Фонда развития выступил перед депутатами окружной Думы с
+                докладом о трехлетней работе организации.
+          a(href="#").news-item
+            .news-item-left
+              img(src="images/news-2.png").news-item__img
+            .news-item-right
+              .news-item__date 28 июня 2017
+              h4.h4 Реализация программы «Школы Югры» планируется с применением механизмов ГЧП
+              p.
+                Первый заместитель Бухтин провел совещание в режиме видеоконференцсвязи, где
+                рассматривались вопросы создания объектов общего образования с применением новых механизмов.
+          a(href="#").news-item
+            .news-item-left
+              img(src="images/no-photo.png").news-item__img
+            .news-item-right
+              .news-item__date 27 июня 2017
+              h4.h4 Фонд представил крупные ГЧП-проекты автономного округа
+              p.
+                Презентация и обсуждение актуальных проектов в социальной, транспортной и
+                коммунальной сфере состоялась на заседании комитета по ГЧП Франко-Российской
+                Торгово-промышленной палаты.
+          a(href="#").news-item
+            .news-item-left
+              img(src="images/news-1.png").news-item__img
+            .news-item-right
+              .news-item__date 26 июня 2017
+              h4.h4.
+                Фонд работает над созданием индустриального парка в сфере газопереработки и
+                нефтесервиса и названием в две строки
+              p.
+                9 июня в московском представительстве автономного округа состоялся круглый стол,
+                где обсуждались предпосылки и перспективы создания в Югре индустриального парка в
+                сфере газопереработки, нефтесервиса и других смежных отраслей нефтяной и газовой промышленности.
+          a(href="#").news-item
+            .news-item-left
+              img(src="images/news-2.png").news-item__img
+            .news-item-right
+              .news-item__date 25 июня 2017
+              h4.h4 Фонд развития представил отчет о своей работе на правительственном часе
+              p.
+                Генеральный директор Фонда развития выступил перед депутатами окружной Думы с
+                докладом о трехлетней работе организации.
 
-          .news
-            a(href="#").news-item
-              .news-item-left
-                img(src="images/news-1.png").news-item__img
-              .news-item-right
-                .news-item__date 29 июня 2017
-                h4.h4 Фонд развития представил отчет о своей работе на правительственном часе
-                p.
-                  Генеральный директор Фонда развития выступил перед депутатами окружной Думы с
-                  докладом о трехлетней работе организации.
-            a(href="#").news-item
-              .news-item-left
-                img(src="images/news-2.png").news-item__img
-              .news-item-right
-                .news-item__date 28 июня 2017
-                h4.h4 Реализация программы «Школы Югры» планируется с применением механизмов ГЧП
-                p.
-                  Первый заместитель Бухтин провел совещание в режиме видеоконференцсвязи, где
-                  рассматривались вопросы создания объектов общего образования с применением новых механизмов.
-            a(href="#").news-item
-              .news-item-left
-                img(src="images/no-photo.png").news-item__img
-              .news-item-right
-                .news-item__date 27 июня 2017
-                h4.h4 Фонд представил крупные ГЧП-проекты автономного округа
-                p.
-                  Презентация и обсуждение актуальных проектов в социальной, транспортной и
-                  коммунальной сфере состоялась на заседании комитета по ГЧП Франко-Российской
-                  Торгово-промышленной палаты.
-            a(href="#").news-item
-              .news-item-left
-                img(src="images/news-1.png").news-item__img
-              .news-item-right
-                .news-item__date 26 июня 2017
-                h4.h4.
-                  Фонд работает над созданием индустриального парка в сфере газопереработки и
-                  нефтесервиса и названием в две строки
-                p.
-                  9 июня в московском представительстве автономного округа состоялся круглый стол,
-                  где обсуждались предпосылки и перспективы создания в Югре индустриального парка в
-                  сфере газопереработки, нефтесервиса и других смежных отраслей нефтяной и газовой промышленности.
-            a(href="#").news-item
-              .news-item-left
-                img(src="images/news-2.png").news-item__img
-              .news-item-right
-                .news-item__date 25 июня 2017
-                h4.h4 Фонд развития представил отчет о своей работе на правительственном часе
-                p.
-                  Генеральный директор Фонда развития выступил перед депутатами окружной Думы с
-                  докладом о трехлетней работе организации.
-
-          .pag
-            a(href="#").pag__item.left
-            a(href="#").pag__item.active 1
-            a(href="#").pag__item 2
-            a(href="#").pag__item 3
-            a(href="#").pag__item ...
-            a(href="#").pag__item 11
-            a(href="#").pag__item.right
-
-    footer.footer
-      .wrapper
-        .footer-block
-          .footer-left
-            p.
-              628011, Россия, Тюменская область, Ханты-Мансийский автономный округ — Югра,
-              г. Ханты-Мансийск, ул. Рознина, д. 71
-            p Телефон: +7 (3467) <b>35-62-73</b>, Факс: + 7 (3467) <b>36-30-33</b>
-          .footer-right
-            a(href="#").uw
-        .footer-bottom © Copyright АО «Югорский Лесопромышленный Холдинг», 2005-2017
+        +pagination

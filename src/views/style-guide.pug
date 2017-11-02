@@ -2,276 +2,206 @@ extends layout
 
 block content
 
-  .page
-    header.header
-      .header-top.wrapper
-        .header-logo Югорский<br>лесопромышленный холдинг
-        .header-contacts
-          .header-contacts__item E-mail:&nbsp;
-            a(href="#") office@ugratimber.ru
-          .header-contacts__item Телефон:
-            span  +7 3467
-              b  35-62-73
-          .header-contacts__item Факс:
-            span  +7 3467
-              b  36-30-33
-        select#lang
-          option(value="ru", selected) RU
-          option(value="en") EN
-      .menu
-        .wrapper
-          a(href="#").menu__item О компании
-          a(href="#").menu__item Продукция
-          a(href="#").menu__item Раскрытие информации
-          a(href="#").menu__item Закупки
-          a(href="#").menu__item Реализация активов
-          a(href="#").menu__item Пресс центр
-          a(href="#").menu__item Вакансии
-          a(href="#").menu__item Контакты
-          button(type="button", data-target="#search").menu__item.search.js-search
-          form(action="#")#search.search-form
-            input(type="text").search-form__input
-            button.search-form__button Найти
+  main.main
+    .wrapper
+      +breadcrumbs('Главная', 'Пресс-центр', 'Новости', 'Фонд развития представил отчет о своей работе на правительственном часе')
 
-    main.main
-      .wrapper
-        .breadcrumbs
-          a(href="#").breadcrumbs__item Главная
-          a(href="#").breadcrumbs__item Пресс-центр
-          a(href="#").breadcrumbs__item Новости
-          span.breadcrumbs__item Фонд развития представил отчет о своей работе на прваительственном часе
+      h1.h1 Фонд развития представил отчет о своей работе на правительственном часе h1
+      .detail
+        .detail-info
+          img(src="images/detail.jpg").detail__img
+          h2.h2 Фонд развития представил отчет о своей работе на правительственном часе h2
+          h3.h3 Фонд развития представил отчет о своей работе на правительственном часе h3
+          p.
+            <a href="#">Учредитель фестиваля</a> – <a href="#">Министерство культуры</a> Челябинской области
+            при поддержке Министерства культуры РФ и Государственного Российского Дома народного творчества
+            имени В. Д. Поленова. Организатором фестиваля является Областное государственное бюджетное
+            учреждение культуры «Челябинский государственный центр народного творчества».
+          p.
+            У подножия гор расположатся сцены, творческие площадки, национальные жилища и палатки мастеров,
+            пройдут конкурсы и мастер-классы с участием творческих коллективов и народных умельцев со всей России.
 
-        h1.h1 Фонд развития представил отчет о своей работе на прваительственном часе h1
-        .detail
-          .detail-info
-            img(src="images/detail.jpg").detail__img
-            h2.h2 Фонд развития представил отчет о своей работе на правительственном часе h2
-            h3.h3 Фонд развития представил отчет о своей работе на правительственном часе h3
-            p.
-              <a href="#">Учредитель фестиваля</a> – <a href="#">Министерство культуры</a> Челябинской области
-              при поддержке Министерства культуры РФ и Государственного Российского Дома народного творчества
-              имени В. Д. Поленова. Организатором фестиваля является Областное государственное бюджетное
-              учреждение культуры «Челябинский государственный центр народного творчества».
-            p.
-              У подножия гор расположатся сцены, творческие площадки, национальные жилища и палатки мастеров,
-              пройдут конкурсы и мастер-классы с участием творческих коллективов и народных умельцев со всей России.
+        .detail-block
+          a(href="file.pdf").file План лесоуправления
+          a(href="file.docx").file.
+            Политика ОАО «Югорский лесопромышленный холдинг» в области сертификации цепочки
+            поставок по системе PEFC
+          a(href="file.rar").file Результаты мониторинга хозяйственной деятельности предприятия
+          a(href="file.pptx").file План лесоуправления
+          a(href="file.xls").file.
+            Политика ОАО «Югорский лесопромышленный холдинг» в области сертификации цепочки
+            поставок по системе PEFC
 
-          .detail-block
-            a(href="file.pdf").file План лесоуправления
-            a(href="file.docx").file.
-              Политика ОАО «Югорский лесопромышленный холдинг» в области сертификации цепочки
-              поставок по системе PEFC
-            a(href="file.rar").file Результаты мониторинга хозяйственной деятельности предприятия
-            a(href="file.pptx").file План лесоуправления
-            a(href="file.xls").file.
-              Политика ОАО «Югорский лесопромышленный холдинг» в области сертификации цепочки
-              поставок по системе PEFC
+        .detail-block
+          ol
+            li У подножия гор расположатся сцены, творческие площадки, национальные жилища;
+            li Палатки мастеров, пройдут конкурсы и мастер-классы с участием творческих коллективов;
+            li Народных умельцев со всей России.
+          ul
+            li У подножия гор расположатся сцены, творческие площадки, национальные жилища;
+            li Палатки мастеров, пройдут конкурсы и мастер-классы с участием творческих коллективов;
+            li Народных умельцев со всей России.
 
-          .detail-block
-            ol
-              li У подножия гор расположатся сцены, творческие площадки, национальные жилища;
-              li Палатки мастеров, пройдут конкурсы и мастер-классы с участием творческих коллективов;
-              li Народных умельцев со всей России.
-            ul
-              li У подножия гор расположатся сцены, творческие площадки, национальные жилища;
-              li Палатки мастеров, пройдут конкурсы и мастер-классы с участием творческих коллективов;
-              li Народных умельцев со всей России.
+        .detail-block
+          .tabs
+            input(type="radio", id="tab-1", name="tab", data-one, checked).tabs__input
+            label(for="tab-1").tabs__label Ассортимент продукции
+            input(type="radio", id="tab-2", name="tab", data-two).tabs__input
+            label(for="tab-2").tabs__label Нормативные документы
+            section(data-one).tabs__section
+              table.table
+                tbody
+                  tr
+                    th Сорт (section-1)
+                    th Влажность
+                    th Нормативные документы
+                    th Толщина
+                    th Наименьшая ширина
+                    th Наибольшая ширина
+                  tr
+                    td 15
+                    td 15
+                    td 15
+                    td 15
+                    td 75
+                    td 100
+                  tr
+                    td 19
+                    td 19
+                    td 19
+                    td 19
+                    td 100
+                    td 100
+                  tr
+                    td 25
+                    td 25
+                    td 25
+                    td 75
+                    td 100
+                    td 100
+                  tr
+                    td 32
+                    td 32
+                    td 32
+                    td 32
+                    td 100
+                    td 150
+                  tr
+                    td 38
+                    td 38
+                    td 38
+                    td 38
+                    td 100
+                    td 150
+                  tr
+                    td 44
+                    td 44
+                    td 44
+                    td 44
+                    td 100
+                    td 150
+                  tr
+                    td 47
+                    td 47
+                    td 47
+                    td 47
+                    td 100
+                    td 207
+                  tr
+                    td 50
+                    td 50
+                    td 50
+                    td 50
+                    td 100
+                    td 200
+                  tr
+                    td 63
+                    td 63
+                    td 63
+                    td 63
+                    td 150
+                    td 150
 
-          .detail-block
-            .tabs
-              input(type="radio", id="tab-1", name="tab", data-one, checked).tabs__input
-              label(for="tab-1").tabs__label Ассортимент продукции
-              input(type="radio", id="tab-2", name="tab", data-two).tabs__input
-              label(for="tab-2").tabs__label Нормативные документы
-              section(data-one).tabs__section
-                table.table
-                  tbody
-                    tr
-                      th Сорт (section-1)
-                      th Влажность
-                      th Нормативные документы
-                      th Толщина
-                      th Наименьшая ширина
-                      th Наибольшая ширина
-                    tr
-                      td 15
-                      td 15
-                      td 15
-                      td 15
-                      td 75
-                      td 100
-                    tr
-                      td 19
-                      td 19
-                      td 19
-                      td 19
-                      td 100
-                      td 100
-                    tr
-                      td 25
-                      td 25
-                      td 25
-                      td 75
-                      td 100
-                      td 100
-                    tr
-                      td 32
-                      td 32
-                      td 32
-                      td 32
-                      td 100
-                      td 150
-                    tr
-                      td 38
-                      td 38
-                      td 38
-                      td 38
-                      td 100
-                      td 150
-                    tr
-                      td 44
-                      td 44
-                      td 44
-                      td 44
-                      td 100
-                      td 150
-                    tr
-                      td 47
-                      td 47
-                      td 47
-                      td 47
-                      td 100
-                      td 207
-                    tr
-                      td 50
-                      td 50
-                      td 50
-                      td 50
-                      td 100
-                      td 200
-                    tr
-                      td 63
-                      td 63
-                      td 63
-                      td 63
-                      td 150
-                      td 150
-
-              section(data-two).tabs__section
-                table.table
-                  tbody
-                    tr
-                      th Сорт (section-2)
-                      th Влажность
-                      th Нормативные документы
-                      th Толщина
-                      th Наименьшая ширина
-                      th Наибольшая ширина
-                    tr
-                      td 15
-                      td 15
-                      td 15
-                      td 15
-                      td 75
-                      td 100
-                    tr
-                      td 19
-                      td 19
-                      td 19
-                      td 19
-                      td 100
-                      td 100
-                    tr
-                      td 25
-                      td 25
-                      td 25
-                      td 75
-                      td 100
-                      td 100
-                    tr
-                      td 32
-                      td 32
-                      td 32
-                      td 32
-                      td 100
-                      td 150
-                    tr
-                      td 38
-                      td 38
-                      td 38
-                      td 38
-                      td 100
-                      td 150
-                    tr
-                      td 44
-                      td 44
-                      td 44
-                      td 44
-                      td 100
-                      td 150
-                    tr
-                      td 47
-                      td 47
-                      td 47
-                      td 47
-                      td 100
-                      td 207
-                    tr
-                      td 50
-                      td 50
-                      td 50
-                      td 50
-                      td 100
-                      td 200
-                    tr
-                      td 63
-                      td 63
-                      td 63
-                      td 63
-                      td 150
-                      td 150
+            section(data-two).tabs__section
+              table.table
+                tbody
+                  tr
+                    th Сорт (section-2)
+                    th Влажность
+                    th Нормативные документы
+                    th Толщина
+                    th Наименьшая ширина
+                    th Наибольшая ширина
+                  tr
+                    td 15
+                    td 15
+                    td 15
+                    td 15
+                    td 75
+                    td 100
+                  tr
+                    td 19
+                    td 19
+                    td 19
+                    td 19
+                    td 100
+                    td 100
+                  tr
+                    td 25
+                    td 25
+                    td 25
+                    td 75
+                    td 100
+                    td 100
+                  tr
+                    td 32
+                    td 32
+                    td 32
+                    td 32
+                    td 100
+                    td 150
+                  tr
+                    td 38
+                    td 38
+                    td 38
+                    td 38
+                    td 100
+                    td 150
+                  tr
+                    td 44
+                    td 44
+                    td 44
+                    td 44
+                    td 100
+                    td 150
+                  tr
+                    td 47
+                    td 47
+                    td 47
+                    td 47
+                    td 100
+                    td 207
+                  tr
+                    td 50
+                    td 50
+                    td 50
+                    td 50
+                    td 100
+                    td 200
+                  tr
+                    td 63
+                    td 63
+                    td 63
+                    td 63
+                    td 150
+                    td 150
 
 
-          .detail-block
-            button(type="button").button Отправить
-            br
-            br
-            br
+        .detail-block
+          button(type="button").button Отправить
+          br
+          br
+          br
 
-          .detail-block
-            h2.h2 Остались вопросы?
-            form(action="#").form
-              .form-flex
-                .form-control
-                  input(type="text", id="input-1", value="Активное поле").form__input.text
-                  label(for="input-1").form__label ФИО
-                .form-control.err
-                  input(type="text", id="input-2", value="joran99").form__input.text
-                  label(for="input-2").form__label E-mail
-                  span Неверно указан e-mail
-                .form-control
-                  input(type="text", id="input-3").form__input
-                  label(for="input-3").form__label Телефон
-              .form-control.full
-                input(id="input-4").form__input
-                label(for="input-4").form__label Сообщение
-              .form-flex
-                .form-control
-                  input(type="checkbox", id="check-1").form__input
-                  label(for="check-1").form__label Даю согласие на обработку персональных данных
-                .form-captcha
-                  // подразумевается вставка блока кода гугла вместо img
-                  img(src="images/captcha.jpg")
-                .button.success Сообщение отправлено
-
-    footer.footer
-      .wrapper
-        .footer-block
-          .footer-left
-            p.
-              628011, Россия, Тюменская область, Ханты-Мансийский автономный округ — Югра,
-              г. Ханты-Мансийск, ул. Рознина, д. 71
-            p Телефон: +7 (3467) <b>35-62-73</b>, Факс: + 7 (3467) <b>36-30-33</b>
-          .footer-right
-            a(href="#").uw
-        .footer-bottom © Copyright АО «Югорский Лесопромышленный Холдинг», 2005-2017
+        .detail-block
+          +form('Остались вопросы?')

@@ -15,14 +15,28 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <div id="mobile-menu">
+      <div class="wrapper">
+        <div class="mobile-block"><a class="menu__item" href="#">О компании</a><a class="menu__item" href="#">Продукция</a><a class="menu__item" href="#">Раскрытие информации</a><a class="menu__item" href="#">Закупки</a><a class="menu__item" href="#">Реализация активов</a><a class="menu__item" href="#">Пресс центр</a><a class="menu__item" href="#">Вакансии</a><a class="menu__item" href="#">Контакты</a></div>
+        <form class="form" action="#">
+          <div class="form-control search">
+            <input class="form__input" type="text" name="search">
+            <button class="icon" type="submit"></button>
+          </div>
+        </form>
+      </div>
+      <div class="mobile-wrap"></div>
+    </div>
     <div class="page">
       <header class="header">
         <div class="header-top wrapper">
-          <div class="header-logo">Югорский<br>лесопромышленный холдинг</div>
+          <div class="mobile">
+            <button class="mobile__button js-mobile" type="button"><span></span><span></span><span></span><span></span></button>
+          </div><a class="header-logo" href="#"><span>Югорский<br>лесопромышленный холдинг</span></a>
           <div class="header-contacts">
-            <div class="header-contacts__item">E-mail:&nbsp;<a href="#">office@ugratimber.ru</a></div>
-            <div class="header-contacts__item">Телефон:<span> +7 3467<b> 35-62-73</b></span></div>
-            <div class="header-contacts__item">Факс:<span> +7 3467<b> 36-30-33</b></span></div>
+            <div class="header-contacts__item"><i>E-mail:</i><a href="#"> office@ugratimber.ru</a></div>
+            <div class="header-contacts__item"><i>Телефон:</i><span> +7 3467<b> 35-62-73</b></span></div>
+            <div class="header-contacts__item"><i>Факс:</i><span> +7 3467<b> 36-30-33</b></span></div>
           </div>
           <select id="lang">
             <option value="ru" selected>RU</option>
@@ -30,7 +44,7 @@
           </select>
         </div>
         <div class="menu">
-          <div class="wrapper"><a class="menu__item active" href="#">О компании</a><a class="menu__item" href="#">Продукция</a><a class="menu__item" href="#">Раскрытие информации</a><a class="menu__item" href="#">Закупки</a><a class="menu__item" href="#">Реализация активов</a><a class="menu__item" href="#">Пресс центр</a><a class="menu__item" href="#">Вакансии</a><a class="menu__item" href="#">Контакты</a>
+          <div class="wrapper"><a class="menu__item" href="#">О компании</a><a class="menu__item" href="#">Продукция</a><a class="menu__item" href="#">Раскрытие информации</a><a class="menu__item" href="#">Закупки</a><a class="menu__item" href="#">Реализация активов</a><a class="menu__item" href="#">Пресс центр</a><a class="menu__item" href="#">Вакансии</a><a class="menu__item" href="#">Контакты</a>
             <button class="menu__item search js-search" type="button" data-target="#search"></button>
             <form class="search-form" action="#" id="search">
               <input class="search-form__input" type="text">
@@ -41,7 +55,8 @@
       </header>
       <main class="main">
         <div class="wrapper">
-          <div class="breadcrumbs"><a class="breadcrumbs__item" href="#">Главная</a><a class="breadcrumbs__item" href="#">Продукция</a><span class="breadcrumbs__item">Хвойный пиломатериал</span></div>
+              <div class="breadcrumbs"><a class="breadcrumbs__item" href="#">Главная</a><a class="breadcrumbs__item" href="#">Продукция</a><span class="breadcrumbs__item">Хвойный пиломатериал</span>
+              </div>
           <h1 class="h1">Хвойный пиломатериал</h1>
           <div class="detail">
             <div class="detail-block flex space-b no-line">
@@ -70,7 +85,7 @@
                   </div>
                 </div>
               </div>
-              <div class="desc">
+              <div class="detail-gal-desc">
                 <h3 class="h3">Описание</h3>
                 <p>Пиломатериалы широко используются по всему миру в строительстве и отделочных работах.</p>
                 <p>
@@ -95,7 +110,7 @@
               </div>
             </div>
             <div class="detail-block">
-              <div class="flex space-b">
+              <div class="flex space-b char">
                 <div class="characteristic-block min">
                   <h3 class="h3">Характеристика продукции</h3>
                   <div class="characteristic">
@@ -121,7 +136,7 @@
               </div>
             </div>
             <div class="detail-block with-mar">
-              <div class="flex space-b">
+              <div class="flex space-b overflow-y">
                 <div class="range">
                   <div class="flex">
                     <div class="range__item head">Сорт</div>
@@ -221,37 +236,37 @@
               </div>
             </div>
             <div class="detail-block">
-              <h2 class="h2">Остались вопросы?</h2>
-              <form class="form" action="#">
-                <div class="form-flex">
-                  <div class="form-control">
-                    <input class="form__input text" type="text" id="input-1" value="Активное поле">
-                    <label class="form__label" for="input-1">ФИО</label>
-                  </div>
-                  <div class="form-control err">
-                    <input class="form__input text" type="text" id="input-2" value="joran99">
-                    <label class="form__label" for="input-2">E-mail</label><span>Неверно указан e-mail</span>
-                  </div>
-                  <div class="form-control">
-                    <input class="form__input" type="text" id="input-3">
-                    <label class="form__label" for="input-3">Телефон</label>
-                  </div>
-                </div>
-                <div class="form-control full">
-                  <input class="form__input" id="input-4">
-                  <label class="form__label" for="input-4">Сообщение</label>
-                </div>
-                <div class="form-flex">
-                  <div class="form-control">
-                    <input class="form__input" type="checkbox" id="check-1">
-                    <label class="form__label" for="check-1">Даю согласие на обработку персональных данных</label>
-                  </div>
-                  <div class="form-captcha">
-                    <!-- подразумевается вставка блока кода гугла вместо img--><img src="images/captcha.jpg">
-                  </div>
-                  <div class="button">Отправить</div>
-                </div>
-              </form>
+                  <h2 class="h2">Остались вопросы?</h2>
+                  <form class="form" action="#">
+                    <div class="form-flex">
+                      <div class="form-control">
+                        <input class="form__input text" type="text" id="input-1" value="Активное поле">
+                        <label class="form__label" for="input-1">ФИО</label>
+                      </div>
+                      <div class="form-control err">
+                        <input class="form__input text" type="text" id="input-2" value="joran99">
+                        <label class="form__label" for="input-2">E-mail</label><span>Неверно указан e-mail</span>
+                      </div>
+                      <div class="form-control">
+                        <input class="form__input" type="text" id="input-3">
+                        <label class="form__label" for="input-3">Телефон</label>
+                      </div>
+                    </div>
+                    <div class="form-control full">
+                      <input class="form__input" id="input-4">
+                      <label class="form__label" for="input-4">Сообщение</label>
+                    </div>
+                    <div class="form-flex bottom">
+                      <div class="form-control">
+                        <input class="form__input" type="checkbox" id="check-1">
+                        <label class="form__label" for="check-1">Даю согласие на обработку персональных данных</label>
+                      </div>
+                      <div class="form-captcha">
+                        <!-- подразумевается вставка блока кода гугла вместо img--><img src="images/captcha.jpg">
+                      </div>
+                      <div class="button success">Сообщение отправлено</div>
+                    </div>
+                  </form>
             </div>
           </div>
         </div>

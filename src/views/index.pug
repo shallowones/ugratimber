@@ -1,78 +1,84 @@
-extends layout
+-
+  var pages = [
+    {
+      label: 'Главная',
+      name: 'main'
+    },
+    {
+      label: 'Стайлгайд',
+      name: 'style-guide'
+    },
+    {
+      label: 'История холдинга',
+      name: 'timeline'
+    },
+    {
+      label: 'Подразделения',
+      name: 'units'
+    },
+    {
+      label: '«ЮграТрансСервис»',
+      name: 'units-detail'
+    },
+    {
+      label: 'Органы управления и контроля',
+      name: 'regulatory'
+    },
+    {
+      label: 'Продукция',
+      name: 'products'
+    },
+    {
+      label: 'Древесно-стружечные плиты',
+      name: 'dsp'
+    },
+    {
+      label: 'Хвойный пиломатериал',
+      name: 'product'
+    },
+    {
+      label: 'Реализация активов',
+      name: 'activities'
+    },
+    {
+      label: 'Новости',
+      name: 'news'
+    },
+    {
+      label: 'Новости (детальная страница)',
+      name: 'news-detail'
+    },
+    {
+      label: 'Галерея',
+      name: 'gallery'
+    },
+    {
+      label: 'Галерея (детальная страница)',
+      name: 'gallery-detail'
+    },
+    {
+      label: 'Контакты',
+      name: 'contacts'
+    },
+    {
+      label: 'Вакансии',
+      name: 'vacancy'
+    }
+  ]
 
-block content
-
-  -
-    var pages = [
-      {
-        label: 'Главная',
-        name: 'main'
-      },
-      {
-        label: 'Стайлгайд',
-        name: 'style-guide'
-      },
-      {
-        label: 'История холдинга',
-        name: 'timeline'
-      },
-      {
-        label: 'Подразделения',
-        name: 'units'
-      },
-      {
-        label: '«ЮграТрансСервис»',
-        name: 'units-detail'
-      },
-      {
-        label: 'Органы управления и контроля',
-        name: 'regulatory'
-      },
-      {
-        label: 'Продукция',
-        name: 'products'
-      },
-      {
-        label: 'Древесно-стружечные плиты',
-        name: 'dsp'
-      },
-      {
-        label: 'Хвойный пиломатериал',
-        name: 'product'
-      },
-      {
-        label: 'Реализация активов',
-        name: 'activities'
-      },
-      {
-        label: 'Новости',
-        name: 'news'
-      },
-      {
-        label: 'Новости (детальная страница)',
-        name: 'news-detail'
-      },
-      {
-        label: 'Галерея',
-        name: 'gallery'
-      },
-      {
-        label: 'Галерея (детальная страница)',
-        name: 'gallery-detail'
-      },
-      {
-        label: 'Контакты',
-        name: 'contacts'
-      },
-      {
-        label: 'Вакансии',
-        name: 'vacancy'
-      }
-    ]
-
-  main.index-menu
-    h3 Список страниц в проекте
-    ol
-      each page in pages
-        li
-          a(href= page.name + '.html')= page.label
+doctype html
+html(lang="ru")
+  head
+    title Югорский лесопромышленный холдинг
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="black")
+    link(rel='stylesheet', href='css/main.css')
+  body(style="overflow: hidden")
+    main.index-menu
+      h3 Список страниц в проекте
+      ol
+        each page in pages
+          li
+            a(href= page.name + '.html')= page.label

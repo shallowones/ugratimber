@@ -12,8 +12,7 @@
         grabCursor: true
         //autoplay: 2000
       });
-
-      const mainSliderThumbs = new Swiper('.main-slider-thumbs', {
+      let mainSliderThumbs = new Swiper('.main-slider-thumbs', {
         spaceBetween: countSliders,
         centeredSlides: true,
         slidesPerView: 'auto',
@@ -26,6 +25,12 @@
           if (swiper.activeIndex === (countSliders * 2)) {
             swiper.update(true);
             swiper.slideTo(0, 0)
+          }
+        },
+        breakpoints: {
+          1200: {
+            direction: 'horizontal',
+            centeredSlides: false
           }
         }
       });
@@ -106,7 +111,6 @@
       const popupSelector = '.js-popup'
       new jBox('Modal', {
         attach: popupSelector,
-        closeOnClick: false,
         onOpen: function () {
           const $source = this.source
           const $content = this.content
@@ -166,6 +170,54 @@
         const $target = $(e.currentTarget.dataset.target)
         $target.toggleClass('show')
         $(e.currentTarget).toggleClass('active')
+      })
+    }
+
+    // работа с мобильным меню
+    {
+      const $mobileMenu = $('#mobile-menu')
+      const $menuItems = $mobileMenu.find('.menu__item')
+      const step = 30
+      let delay = 500
+      $menuItems.each((index, el) => {
+        $(el).css({
+          'transition-delay': delay.toString() + 'ms'
+        })
+        delay += step
+      })
+      $mobileMenu.find('.form-control.search').css({
+        'transition-delay': delay.toString() + 'ms'
+      })
+      $('.js-mobile').on('click', () => {
+        $('html').toggleClass('menu-open')
+      })
+    }
+
+    // читать далее
+    {
+      const $reduce = $('.js-reduce')
+      const $hideBlock = $reduce.find('.mobile-reduce-second')
+      const $button = $reduce.find('button[type="button"]')
+      const showClass = 'show'
+      $button.on('click', (e) => {
+        e.preventDefault()
+        const $this = $(e.currentTarget)
+        const delay = 500
+        if ($hideBlock.is(':visible')) {
+          $hideBlock.hide(delay)
+          $this.removeClass(showClass)
+        } else {
+          $hideBlock.show(delay)
+          $this.addClass(showClass)
+        }
+      })
+      const $window = $(window)
+      $window.resize(() => {
+        const width = $window.width()
+        if (width > 480) {
+          $hideBlock.removeAttr('style')
+          $button.removeClass(showClass)
+        }
       })
     }
 

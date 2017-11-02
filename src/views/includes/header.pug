@@ -1,0 +1,39 @@
+header.header
+  .header-top.wrapper
+    .mobile
+      button(type="button").mobile__button.js-mobile
+        span
+        span
+        span
+        span
+    a(href="#").header-logo
+      span Югорский<br>лесопромышленный холдинг
+    .header-contacts
+      .header-contacts__item
+        i E-mail:
+        a(href="#")  office@ugratimber.ru
+      .header-contacts__item
+        i Телефон:
+        span  +7 3467
+          b  35-62-73
+      .header-contacts__item
+        i Факс:
+        span  +7 3467
+          b  36-30-33
+    select#lang
+      option(value="ru", selected) RU
+      option(value="en") EN
+  .menu
+    .wrapper
+      a(href="#").menu__item О компании
+      a(href="#").menu__item Продукция
+      a(href="#").menu__item Раскрытие информации
+      a(href="#").menu__item Закупки
+      a(href="#").menu__item Реализация активов
+      a(href="#").menu__item Пресс центр
+      a(href="#").menu__item Вакансии
+      a(href="#").menu__item Контакты
+      button(type="button", data-target="#search").menu__item.search.js-search
+      form(action="#")#search.search-form
+        input(type="text").search-form__input
+        button.search-form__button Найти
