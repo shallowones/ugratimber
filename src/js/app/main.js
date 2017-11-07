@@ -221,5 +221,35 @@
       })
     }
 
+    // история холдинга
+    {
+      const is = ((item) => { return typeof item !== 'undefined' && item.length })
+      const $timeline = $('.timeline__item')
+      const $window = $(window)
+      if (is($timeline)) {
+        const setHeightToTimeline = (() => {
+          $timeline.each((index, el) => {
+            const $this = $(el)
+            const height = $this.find('.timeline__item-right').height()
+            const $line = $this.find('.timeline__item-left > span')
+            const limit = 60
+            if (height > limit) {
+              $line.css({
+                height: height - limit / 2
+              })
+            } else if (is($line.attr('style'))) {
+              $line.removeAttr('style')
+            }
+          })
+        })
+        setHeightToTimeline()
+        $window.resize((e) => {
+          if (e.currentTarget.innerWidth > 480) {
+            setHeightToTimeline()
+          }
+        })
+      }
+    }
+
   })
 })(jQuery, jBox, Swiper)
