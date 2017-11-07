@@ -23,17 +23,42 @@ header.header
     select#lang
       option(value="ru", selected) RU
       option(value="en") EN
-  .menu
-    .wrapper
-      a(href="#").menu__item О компании
-      a(href="#").menu__item Продукция
-      a(href="#").menu__item Раскрытие информации
-      a(href="#").menu__item Закупки
-      a(href="#").menu__item Реализация активов
-      a(href="#").menu__item Пресс центр
-      a(href="#").menu__item Вакансии
-      a(href="#").menu__item Контакты
-      button(type="button", data-target="#search").menu__item.search.js-search
-      form(action="#")#search.search-form
-        input(type="text").search-form__input
-        button.search-form__button Найти
+  nav.menu
+    ul.wrapper
+      li
+        a(href="#").menu__item О компании
+        ul.submenu
+          li
+            a(href="#").submenu__item Основная деятельность
+          li
+            a(href="#").submenu__item История холдинга
+          li
+            a(href="#").submenu__item Подразделения
+          li
+            a(href="#").submenu__item Органы управления и контроля
+          li.parent
+            a(href="#").submenu__item Персонал
+            ul.submenu
+              li
+                a(href="#").submenu__item Вакансии
+              li
+                a(href="#").submenu__item Конкурсы
+      li
+        a(href="#").menu__item Продукция
+      li
+        a(href="#").menu__item Раскрытие информации
+      li
+        a(href="#").menu__item Закупки
+      li
+        a(href="#").menu__item Реализация активов
+      li
+        a(href="#").menu__item Пресс центр
+      li
+        a(href="#").menu__item Вакансии
+      li
+        a(href="#").menu__item Контакты
+      li
+        button(type="button", data-target="#search").menu__item.search.js-search
+        form(action="#")#search.search-form
+          input(type="text").search-form__input
+          button.search-form__button Найти
