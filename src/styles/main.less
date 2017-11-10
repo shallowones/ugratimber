@@ -381,6 +381,7 @@ a {
     position: relative;
 
     & > li {
+      display: inline-block;
 
       &:hover {
 
@@ -393,6 +394,10 @@ a {
           visibility: visible;
           z-index: 100;
         }
+      }
+
+      @media @plan {
+        margin: 0 5px;
       }
     }
 
@@ -577,6 +582,11 @@ a {
       text-transform: uppercase;
       padding: 0 4rem;
       letter-spacing: 1px;
+
+      @media @desktop-mini {
+        font-size: 1.75vw;
+        line-height: 2.5vw;
+      }
     }
 
     &-thumbs {
@@ -737,6 +747,7 @@ a {
       height: 380px;
       background: url('../images/back-grey.svg') no-repeat center;
       transform: rotate(180deg);
+      z-index: -1;
 
       @media @desktop-mini {
         display: none;

@@ -1,30 +1,35 @@
 (function ($, jBox, Swiper) {
   $(function () {
 
+    // определим глобально селектор окна
+    const $window = $(window)
+
+    // проверка на существование элемента на странице
+    const is = ((item) => { return typeof item !== 'undefined' && item.length })
+
     // инициализация слайдера на главной
     {
       const countSliders = 4
-
       const mainSlider = new Swiper('.main-slider', {
         loop: true,
         loopedSlides: countSliders,
         slidesPerView: 1,
-        grabCursor: true
-        //autoplay: 2000
-      });
-      let mainSliderThumbs = new Swiper('.main-slider-thumbs', {
+        grabCursor: true,
+        autoplay: 3000
+      })
+      const mainSliderThumbs = new Swiper('.main-slider-thumbs', {
         spaceBetween: countSliders,
         centeredSlides: true,
-        slidesPerView: 'auto',
+        slidesPerView: countSliders,
         touchRatio: 0.2,
         slideToClickedSlide: true,
         direction: 'vertical',
         loop: true,
         loopedSlides: countSliders,
         onSlideChangeEnd: function (swiper) {
-          if (swiper.activeIndex === (countSliders * 2)) {
-            swiper.update(true);
-            swiper.slideTo(0, 0)
+          const index = swiper.realIndex
+          if (index + countSliders > swiper.slides.length || index - countSliders < 0) {
+            setTimeout(swiper.fixLoop, 100)
           }
         },
         breakpoints: {
@@ -33,10 +38,24 @@
             centeredSlides: false
           }
         }
-      });
+      })
 
-      mainSlider.params.control = mainSliderThumbs;
-      mainSliderThumbs.params.control = mainSlider;
+      if (is(mainSlider.container) && is(mainSliderThumbs.container)) {
+        mainSlider.params.control = mainSliderThumbs
+        mainSliderThumbs.params.control = mainSlider
+
+        const hover = ((swiper) => {
+          $(swiper.container).hover(() => {
+            mainSlider.stopAutoplay()
+            mainSliderThumbs.stopAutoplay()
+          }, () => {
+            mainSlider.startAutoplay()
+            mainSliderThumbs.startAutoplay()
+          })
+        })
+        hover(mainSlider)
+        hover(mainSliderThumbs)
+      }
     }
 
     // инициализация слайдера на детальных
@@ -211,7 +230,6 @@
           $this.addClass(showClass)
         }
       })
-      const $window = $(window)
       $window.resize(() => {
         const width = $window.width()
         if (width > 480) {
@@ -223,9 +241,7 @@
 
     // история холдинга
     {
-      const is = ((item) => { return typeof item !== 'undefined' && item.length })
       const $timeline = $('.timeline__item')
-      const $window = $(window)
       if (is($timeline)) {
         const setHeightToTimeline = (() => {
           $timeline.each((index, el) => {
