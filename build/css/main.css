@@ -821,6 +821,7 @@ a {
 }
 .menu > .wrapper > li {
   display: inline-block;
+  position: relative;
 }
 .menu > .wrapper > li:hover > .menu__item {
   color: #ffbb00;
