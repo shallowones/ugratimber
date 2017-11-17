@@ -29,15 +29,51 @@
             <option value="en">EN</option>
           </select>
         </div>
-        <div class="menu">
-          <div class="wrapper"><a class="menu__item" href="#">О компании</a><a class="menu__item" href="#">Продукция</a><a class="menu__item" href="#">Раскрытие информации</a><a class="menu__item" href="#">Закупки</a><a class="menu__item" href="#">Реализация активов</a><a class="menu__item" href="#">Пресс центр</a><a class="menu__item" href="#">Вакансии</a><a class="menu__item" href="#">Контакты</a>
-            <button class="menu__item search js-search" type="button" data-target="#search"></button>
-            <form class="search-form" action="#" id="search">
-              <input class="search-form__input" type="text">
-              <button class="search-form__button">Найти</button>
-            </form>
-          </div>
-        </div>
+        <nav class="menu">
+          <ul class="wrapper">
+            <li><a class="menu__item" href="#">О компании</a>
+              <ul class="submenu">
+                <li><a class="submenu__item" href="#">Основная деятельность</a></li>
+                <li><a class="submenu__item" href="#">История холдинга</a></li>
+                <li><a class="submenu__item" href="#">Подразделения</a></li>
+                <li><a class="submenu__item" href="#">Органы управления и контроля</a></li>
+                <li class="parent"><a class="submenu__item" href="#">Персонал</a>
+                  <ul class="submenu">
+                    <li><a class="submenu__item" href="#">Вакансии</a></li>
+                    <li><a class="submenu__item" href="#">Конкурсы</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a class="menu__item" href="#">Продукция</a></li>
+            <li><a class="menu__item" href="#">Раскрытие информации</a></li>
+            <li><a class="menu__item" href="#">Закупки</a></li>
+            <li><a class="menu__item" href="#">Реализация активов</a></li>
+            <li><a class="menu__item" href="#">Пресс центр</a>
+              <ul class="submenu">
+                <li><a class="submenu__item" href="#">Основная деятельность</a></li>
+                <li><a class="submenu__item" href="#">История холдинга</a></li>
+                <li><a class="submenu__item" href="#">Подразделения</a></li>
+                <li><a class="submenu__item" href="#">Органы управления и контроля</a></li>
+                <li class="parent"><a class="submenu__item" href="#">Персонал</a>
+                  <ul class="submenu">
+                    <li><a class="submenu__item" href="#">Вакансии</a></li>
+                    <li><a class="submenu__item" href="#">Конкурсы</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a class="menu__item" href="#">Вакансии</a></li>
+            <li><a class="menu__item" href="#">Контакты</a></li>
+            <li>
+              <button class="menu__item search js-search" type="button" data-target="#search"></button>
+              <form class="search-form" action="#" id="search">
+                <input class="search-form__input" type="text">
+                <button class="search-form__button">Найти</button>
+              </form>
+            </li>
+          </ul>
+        </nav>
       </header>
       <main class="main">
         <div class="main-sliders">
