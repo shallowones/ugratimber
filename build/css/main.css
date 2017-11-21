@@ -453,11 +453,6 @@ html {
   color: #333;
   height: 100%;
 }
-@media (max-width: 480px) {
-  html {
-    font-size: 14px;
-  }
-}
 body {
   background-color: #fff;
   line-height: 1.25rem;
@@ -532,8 +527,16 @@ a {
   line-height: 1.25rem;
   color: #1f613b;
   text-transform: uppercase;
+}
+.header-logo:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 100%;
   background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2074%2074%22%3E%3Ctitle%3EAsset%201%3C%2Ftitle%3E%3Cpolygon%20points%3D%2237%2058.99%2018%2048%2037%2037%2055%2048%2037%2058.99%22%20fill%3D%22%23ffbc00%22%2F%3E%3Cpolygon%20points%3D%2218%2026%2037%2014.99%2055%2026%2018%2026%22%20fill%3D%22%231f623c%22%2F%3E%3Cpolygon%20points%3D%2218%2037%2037%2037%2037%2026%2018%2037%22%20fill%3D%22%23ffbc00%22%2F%3E%3Cpolygon%20points%3D%2237%2037%2055%2037%2037%2026%2037%2037%22%20fill%3D%22%231f623c%22%2F%3E%3Cpath%20d%3D%22M61%2C37A24%2C24%2C0%2C0%2C1%2C37%2C61V74A37%2C37%2C0%2C0%2C0%2C74%2C37Z%22%20fill%3D%22%23ffbc00%22%2F%3E%3Cpath%20d%3D%22M37%2C0A37%2C37%2C0%2C0%2C0%2C0%2C37H13A24%2C24%2C0%2C0%2C1%2C37%2C13Z%22%20fill%3D%22%231f623c%22%2F%3E%3C%2Fsvg%3E") no-repeat left bottom;
-  background-size: 80px;
+  background-size: 100%;
 }
 .header-contacts {
   margin-left: auto;
@@ -654,19 +657,22 @@ a {
   visibility: visible;
   z-index: 100;
 }
-@media (max-width: 768px) {
-  .menu > .wrapper > li {
-    margin: 0 5px;
-  }
+.menu > .wrapper > li.parent > .menu__item {
+  padding-right: 30px;
 }
-@media (max-width: 768px) {
-  .menu > .wrapper {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+.menu > .wrapper > li.parent > .menu__item:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  background: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0A%3C!--%20Generator%3A%20Adobe%20Illustrator%2016.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200)%20%20--%3E%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.1%22%20id%3D%22Capa_1%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22512px%22%20height%3D%22512px%22%20viewBox%3D%220%200%20292.362%20292.362%22%20style%3D%22enable-background%3Anew%200%200%20292.362%20292.362%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cg%3E%0A%09%3Cpath%20d%3D%22M286.935%2C69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952%2C0-9.233%2C1.807-12.85%2C5.424%20%20%20C1.807%2C72.998%2C0%2C77.279%2C0%2C82.228c0%2C4.948%2C1.807%2C9.229%2C5.424%2C12.847l127.907%2C127.907c3.621%2C3.617%2C7.902%2C5.428%2C12.85%2C5.428%20%20%20s9.233-1.811%2C12.847-5.428L286.935%2C95.074c3.613-3.617%2C5.427-7.898%2C5.427-12.847C292.362%2C77.279%2C290.548%2C72.998%2C286.935%2C69.377z%22%20fill%3D%22%23FFFFFF%22%2F%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A") no-repeat center;
+  background-size: 10px;
+  transition: background-image 0.3s;
+}
+.menu > .wrapper > li.parent:hover > .menu__item:after {
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0A%3C!--%20Generator%3A%20Adobe%20Illustrator%2016.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200)%20%20--%3E%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.1%22%20id%3D%22Capa_1%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22512px%22%20height%3D%22512px%22%20viewBox%3D%220%200%20292.362%20292.362%22%20style%3D%22enable-background%3Anew%200%200%20292.362%20292.362%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cg%3E%0A%09%3Cpath%20d%3D%22M286.935%2C69.377c-3.614-3.617-7.898-5.424-12.848-5.424H18.274c-4.952%2C0-9.233%2C1.807-12.85%2C5.424%20%20%20C1.807%2C72.998%2C0%2C77.279%2C0%2C82.228c0%2C4.948%2C1.807%2C9.229%2C5.424%2C12.847l127.907%2C127.907c3.621%2C3.617%2C7.902%2C5.428%2C12.85%2C5.428%20%20%20s9.233-1.811%2C12.847-5.428L286.935%2C95.074c3.613-3.617%2C5.427-7.898%2C5.427-12.847C292.362%2C77.279%2C290.548%2C72.998%2C286.935%2C69.377z%22%20fill%3D%22%23ffbb00%22%2F%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A");
 }
 .menu ul {
   list-style-type: none;
@@ -685,12 +691,6 @@ a {
   transition: .3s;
   white-space: nowrap;
 }
-.menu__item:first-child {
-  padding-left: 0;
-}
-.menu__item:last-child {
-  padding-right: 0;
-}
 .menu__item.active,
 .menu__item:hover {
   color: #ffbb00;
@@ -706,17 +706,6 @@ a {
 .menu__item.search:hover,
 .menu__item.search.active {
   background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2020.74%2020.74%22%3E%3Ctitle%3Emagnify%3C%2Ftitle%3E%3Cpath%20d%3D%22M20.74%2C19.33l-5.57-5.57a8.53%2C8.53%2C0%2C1%2C0-1.41%2C1.41l5.57%2C5.57ZM2%2C8.5A6.5%2C6.5%2C0%2C1%2C1%2C8.5%2C15%2C6.51%2C6.51%2C0%2C0%2C1%2C2%2C8.5Z%22%20fill%3D%22%23ffbb00%22%20fill-rule%3D%22evenodd%22%2F%3E%3C%2Fsvg%3E%0A");
-}
-@media (max-width: 1200px) {
-  .menu__item {
-    font-size: .75rem;
-    padding: .75rem .5rem .5rem;
-  }
-}
-@media (max-width: 768px) {
-  .menu__item {
-    font-size: .875rem;
-  }
 }
 .search-form {
   position: absolute;

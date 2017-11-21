@@ -10,10 +10,6 @@ html {
   font-weight: 400;
   color: #333;
   height: 100%;
-
-  @media @mobile {
-    font-size: 14px;
-  }
 }
 
 body {
@@ -90,8 +86,17 @@ a {
     line-height: 1.25rem;
     color: #1f613b;
     text-transform: uppercase;
-    background: data-uri('../images/svg/logo.svg') no-repeat left bottom;
-    background-size: 80px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 80px;
+      height: 100%;
+      background: data-uri('../images/svg/logo.svg') no-repeat left bottom;
+      background-size: 100%;
+    }
   }
 
   &-contacts {
@@ -229,14 +234,28 @@ a {
         }
       }
 
-      @media @plan {
-        margin: 0 5px;
-      }
-    }
+      &.parent {
 
-    @media @plan {
-      flex-wrap: wrap;
-      justify-content: center;
+        & > .menu__item {
+          padding-right: 30px;
+
+          &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 30px;
+            height: 100%;
+            background: data-uri('../images/svg/arrow-down.svg') no-repeat center;
+            background-size: 10px;
+            transition: background-image .3s;
+          }
+        }
+
+        &:hover > .menu__item:after {
+          background-image: data-uri('../images/svg/arrow-down-active.svg');
+        }
+      }
     }
   }
 
@@ -258,14 +277,6 @@ a {
     transition: .3s;
     white-space: nowrap;
 
-    &:first-child {
-      padding-left: 0;
-    }
-
-    &:last-child {
-      padding-right: 0;
-    }
-
     &.active, &:hover {
       color: #ffbb00;
     }
@@ -282,15 +293,6 @@ a {
       &:hover, &.active {
         background-image: data-uri('../images/svg/magnify-active.svg');
       }
-    }
-
-    @media @desktop-mini {
-      font-size: .75rem;
-      padding: .75rem .5rem .5rem;
-    }
-
-    @media @plan {
-      font-size: .875rem;
     }
   }
 }
@@ -419,8 +421,6 @@ a {
     text-transform: uppercase;
     font-size: 14px;
     color: #fff;
-    //border-bottom: 1px solid #23835a;
-    //border-bottom: 1px solid #fff;
     border-bottom: 1px solid #216f48;
     transition: color .3s;
 

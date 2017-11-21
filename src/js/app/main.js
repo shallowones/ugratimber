@@ -29,12 +29,12 @@
             setTimeout(swiper.fixLoop, 100)
           }
         },
-        breakpoints: {
+        /*breakpoints: {
           1200: {
             direction: 'horizontal',
             centeredSlides: false
           }
-        }
+        }*/
       })
 
       if (is(mainSlider.container) && is(mainSliderThumbs.container)) {
