@@ -110,7 +110,7 @@
           }
         }
       })()
-      $(inputFormSelector).on('keyup', inputFocus)
+      $(inputFormSelector).on('change', inputFocus)
 
       const inputFileSelector = '.js-file input[type="file"]'
       const fileCustom = (() => {
@@ -127,7 +127,6 @@
       const popupSelector = '.js-popup'
       new jBox('Modal', {
         attach: popupSelector,
-        closeOnClick: false,
         onOpen: function () {
           const $source = this.source
           const $content = this.content
@@ -141,7 +140,7 @@
               e.preventDefault()
               this.close()
             })
-            $content.find(inputFormSelector).on('keyup', inputFocus)
+            $content.find(inputFormSelector).on('change', inputFocus)
             fileCustom( $content.find(inputFileSelector) )
           } else {
             this.close()
