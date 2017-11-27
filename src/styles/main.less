@@ -68,7 +68,7 @@ a {
 }
 
 .header {
-  margin-bottom: 4px;
+  //margin-bottom: 4px;
 
   &-top {
     display: flex;
@@ -438,6 +438,14 @@ a {
 
 .main {
   flex: 1 0 auto;
+  position: relative;
+
+  & > .wrapper {
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
+    padding-top: 6px;
+  }
 
   &-slider {
     width: ~"calc(100% - 22.875rem)";
@@ -2229,4 +2237,25 @@ div.jfilestyle {
 
 .display-none {
   display: none;
+}
+
+.rhombus {
+
+  &-left, &-right {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 321px;
+    height: 380px;
+    background: url('../images/back-grey.svg') no-repeat center;
+  }
+
+  &-right {
+    transform: rotate(180deg);
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 0;
+  }
 }

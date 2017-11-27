@@ -505,9 +505,6 @@ a {
   width: 1200px;
   margin: 0 auto;
 }
-.header {
-  margin-bottom: 4px;
-}
 .header-top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -836,6 +833,13 @@ a {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
+  position: relative;
+}
+.main > .wrapper {
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+  padding-top: 6px;
 }
 .main-slider {
   width: calc(100% - 22.875rem);
@@ -2435,4 +2439,22 @@ div.jfilestyle.jfilestyle-corner span:last-child > label {
 }
 .display-none {
   display: none;
+}
+.rhombus-left,
+.rhombus-right {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 321px;
+  height: 380px;
+  background: url('../images/back-grey.svg') no-repeat center;
+}
+.rhombus-right {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
 }
