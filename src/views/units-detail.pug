@@ -2,88 +2,40 @@ extends layout
 
 block content
 
-  .page
-    header.header
-      .header-top.wrapper
-        .header-logo Югорский<br>лесопромышленный холдинг
-        .header-contacts
-          .header-contacts__item E-mail:&nbsp;
-            a(href="#") office@ugratimber.ru
-          .header-contacts__item Телефон:
-            span  +7 3467
-              b  35-62-73
-          .header-contacts__item Факс:
-            span  +7 3467
-              b  36-30-33
-        select#lang
-          option(value="ru", selected) RU
-          option(value="en") EN
-      .menu
-        .wrapper
-          a(href="#").menu__item.active О компании
-          a(href="#").menu__item Продукция
-          a(href="#").menu__item Раскрытие информации
-          a(href="#").menu__item Закупки
-          a(href="#").menu__item Реализация активов
-          a(href="#").menu__item Пресс центр
-          a(href="#").menu__item Вакансии
-          a(href="#").menu__item Контакты
-          button(type="button", data-target="#search").menu__item.search.js-search
-          form(action="#")#search.search-form
-            input(type="text").search-form__input
-            button.search-form__button Найти
+  main.main
+    .wrapper
+      +breadcrumbs('Главная', 'Клиентам', 'Подразделения', '«ЮграТрансСервис»')
 
-    main.main
-      .wrapper
-        .breadcrumbs
-          a(href="#").breadcrumbs__item Главная
-          a(href="#").breadcrumbs__item Клиентам
-          a(href="#").breadcrumbs__item Подразделения
-          span.breadcrumbs__item «ЮграТрансСервис»
-
-        h1.h1 «ЮграТрансСервис»
-        .detail
-          h3.h3 Специализация подразделения
-          p.
-            Заготовка по сортиментной (скандинавской) технологии и вывозка леса. Лесосырьевые
-            ресурсы благодаря суровому, резко континентальному климату отличаются особой
-            прочностью древесины. По породному составу это преимущественно хвойные леса —
-            сосна, ель, кедр, лиственница, пихта.
-          h3.h3 Производственные мощи
-          p Подразделения «ЮграТрансСервис» ежегодно заготавливает до 600 тыс. м3 лесоматериалов.
-          h3.h3 Доли рынка
-          p.
-            Доля в заготовке лесоматериалов на территории Ханты-Мансийского автономного округа –
-            Югры около 40%. Весь объем пиловочного сырья, заготовленного подразделением
-            «ЮграТрансСервис» поступает в «Лесопильные заводы Югры» для распиловки и глубокой переработки.
-          h3.h3 Техническое оснащение
-          p.
-            В процессе лесозаготовки применяется высокотехнологичное оборудование из Финляндии
-            (John Deere, Ponsse) и Бельгии (Volvo).
-          .swiper-container.gallery
-            .swiper-wrapper
-              a(href="images/gal-1.jpg", data-fancybox="gallery").swiper-slide.gallery-item
-                img(src="images/gal-1-min.jpg").gallery-item__img
-              a(href="images/gal-2.jpg", data-fancybox="gallery").swiper-slide.gallery-item
-                img(src="images/gal-2-min.jpg").gallery-item__img
-              a(href="images/gal-1.jpg", data-fancybox="gallery").swiper-slide.gallery-item
-                img(src="images/gal-1-min.jpg").gallery-item__img
-              a(href="images/gal-2.jpg", data-fancybox="gallery").swiper-slide.gallery-item
-                img(src="images/gal-2-min.jpg").gallery-item__img
-              a(href="images/gal-1.jpg", data-fancybox="gallery").swiper-slide.gallery-item
-                img(src="images/gal-1-min.jpg").gallery-item__img
-              a(href="images/gal-2.jpg", data-fancybox="gallery").swiper-slide.gallery-item
-                img(src="images/gal-2-min.jpg").gallery-item__img
-
-
-    footer.footer
-      .wrapper
-        .footer-block
-          .footer-left
-            p.
-              628011, Россия, Тюменская область, Ханты-Мансийский автономный округ — Югра,
-              г. Ханты-Мансийск, ул. Рознина, д. 71
-            p Телефон: +7 (3467) <b>35-62-73</b>, Факс: + 7 (3467) <b>36-30-33</b>
-          .footer-right
-            a(href="#").uw
-        .footer-bottom © Copyright АО «Югорский Лесопромышленный Холдинг», 2005-2017
+      h1.h1 «ЮграТрансСервис»
+      .detail
+        h3.h3 Специализация подразделения
+        p.
+          Заготовка по сортиментной (скандинавской) технологии и вывозка леса. Лесосырьевые
+          ресурсы благодаря суровому, резко континентальному климату отличаются особой
+          прочностью древесины. По породному составу это преимущественно хвойные леса —
+          сосна, ель, кедр, лиственница, пихта.
+        h3.h3 Производственные мощи
+        p Подразделения «ЮграТрансСервис» ежегодно заготавливает до 600 тыс. м3 лесоматериалов.
+        h3.h3 Доли рынка
+        p.
+          Доля в заготовке лесоматериалов на территории Ханты-Мансийского автономного округа –
+          Югры около 40%. Весь объем пиловочного сырья, заготовленного подразделением
+          «ЮграТрансСервис» поступает в «Лесопильные заводы Югры» для распиловки и глубокой переработки.
+        h3.h3 Техническое оснащение
+        p.
+          В процессе лесозаготовки применяется высокотехнологичное оборудование из Финляндии
+          (John Deere, Ponsse) и Бельгии (Volvo).
+        .swiper-container.gallery
+          .swiper-wrapper
+            a(href="images/gal-1.jpg", data-fancybox="gallery").swiper-slide.gallery-item
+              img(src="images/gal-1-min.jpg").gallery-item__img
+            a(href="images/gal-2.jpg", data-fancybox="gallery").swiper-slide.gallery-item
+              img(src="images/gal-2-min.jpg").gallery-item__img
+            a(href="images/gal-1.jpg", data-fancybox="gallery").swiper-slide.gallery-item
+              img(src="images/gal-1-min.jpg").gallery-item__img
+            a(href="images/gal-2.jpg", data-fancybox="gallery").swiper-slide.gallery-item
+              img(src="images/gal-2-min.jpg").gallery-item__img
+            a(href="images/gal-1.jpg", data-fancybox="gallery").swiper-slide.gallery-item
+              img(src="images/gal-1-min.jpg").gallery-item__img
+            a(href="images/gal-2.jpg", data-fancybox="gallery").swiper-slide.gallery-item
+              img(src="images/gal-2-min.jpg").gallery-item__img

@@ -2,134 +2,88 @@ extends layout
 
 block content
 
-  .page
-    header.header
-      .header-top.wrapper
-        .header-logo Югорский<br>лесопромышленный холдинг
-        .header-contacts
-          .header-contacts__item E-mail:&nbsp;
-            a(href="#") office@ugratimber.ru
-          .header-contacts__item Телефон:
-            span  +7 3467
-              b  35-62-73
-          .header-contacts__item Факс:
-            span  +7 3467
-              b  36-30-33
-        select#lang
-          option(value="ru", selected) RU
-          option(value="en") EN
-      .menu
-        .wrapper
-          a(href="#").menu__item О компании
-          a(href="#").menu__item Продукция
-          a(href="#").menu__item Раскрытие информации
-          a(href="#").menu__item Закупки
-          a(href="#").menu__item Реализация активов
-          a(href="#").menu__item Пресс центр
-          a(href="#").menu__item Вакансии
-          a(href="#").menu__item Контакты
-          button(type="button", data-target="#search").menu__item.search.js-search
-          form(action="#")#search.search-form
-            input(type="text").search-form__input
-            button.search-form__button Найти
+  main.main
+    .wrapper
+      +breadcrumbs('Главная', 'Персонал', 'Вакансии')
 
-    main.main
-      .wrapper
-        .breadcrumbs
-          a(href="#").breadcrumbs__item Главная
-          a(href="#").breadcrumbs__item Персонал
-          span.breadcrumbs__item Вакансии
+      h1.h1 Вакансии
+      .detail
 
-        h1.h1 Вакансии
-        .detail
+        .subunit
+          .subunit__name Машинист манипулятора
+          p
+            b Требования к образованию и квалификации:
+          ul
+            li опыт работы на кране-манипуляторе;
+            li наличие карты водителя, медсправки;
+            li ответственность, исполнительность, аккуратность.
+          p
+            b Обязанности:
+          ul
+            li знать основные виды неисправностей крана;
+            li знать карты смазки и способы смазывания узлов и механизмов крана;
+            li знать схемы строповки;
+            li знать условные сигналы;
+            li знать методы визуального определения массы и центра тяжести перемещаемых грузов;
+            li знать особенности транспортировки сложных конструкций высотных сооружений.
 
-          .subunit
-            .subunit__name Машинист манипулятора
-            p
-              b Требования к образованию и квалификации:
-            ul
-              li опыт работы на кране-манипуляторе;
-              li наличие карты водителя, медсправки;
-              li ответственность, исполнительность, аккуратность.
-            p
-              b Обязанности:
-            ul
-              li знать основные виды неисправностей крана;
-              li знать карты смазки и способы смазывания узлов и механизмов крана;
-              li знать схемы строповки;
-              li знать условные сигналы;
-              li знать методы визуального определения массы и центра тяжести перемещаемых грузов;
-              li знать особенности транспортировки сложных конструкций высотных сооружений.
+        .subunit
+          .subunit__name Машинист манипулятора
+          p
+            b Требования к образованию и квалификации:
+          ul
+            li опыт работы на кране-манипуляторе;
+            li наличие карты водителя, медсправки.
+          p
+            b Обязанности:
+          ul
+            li управление мостовым краном;
+            li управление башенным краном;
+            li погрузочно-разгрузочные работы на территории завода.
 
-          .subunit
-            .subunit__name Машинист манипулятора
-            p
-              b Требования к образованию и квалификации:
-            ul
-              li опыт работы на кране-манипуляторе;
-              li наличие карты водителя, медсправки.
-            p
-              b Обязанности:
-            ul
-              li управление мостовым краном;
-              li управление башенным краном;
-              li погрузочно-разгрузочные работы на территории завода.
-
-          .detail-block
-            .work
-              img(src="images/work.svg").work__img
-            h3.h3 Вниманию соискателей!
-            p.
-              Прием заявок на занятие вакантных должностей осуществляется посредством получения
-              от соискателей резюме. Анкета соискателя заполняется на сайте компании в разделе
-              «Карьера» и автоматически направляется на обработку специалистам отдела кадров.
-              При условии принятия положительного решения по кандидатуре соискателя, специалисты
-              отдела кадров приглашают кандидата на собеседование.
-            p.
-              Для участия в конкурсе на замещение вакантной должности необходимо заполнить
-              резюме установленной формы, в формате Word (см. ниже).
-            a(href="file.docx").file.full Образец резюме установленной формы.docx
-            br
-            a(href="#").button.js-popup Заполнить анкету
-              .popup-block
-                .popup.flex.wrapper.plus-form
-                  .popup-left(style="background-image: url(images/work-popup.png)")
-                  form(action="#").form.popup-right.detail
-                    h3.h3 Анкета соискателя «АО Югорский Лесопромышленный Холдинг»
+        .detail-block
+          .work
+            img(src="images/work.svg").work__img
+          h3.h3 Вниманию соискателей!
+          p.
+            Прием заявок на занятие вакантных должностей осуществляется посредством получения
+            от соискателей резюме. Анкета соискателя заполняется на сайте компании в разделе
+            «Карьера» и автоматически направляется на обработку специалистам отдела кадров.
+            При условии принятия положительного решения по кандидатуре соискателя, специалисты
+            отдела кадров приглашают кандидата на собеседование.
+          p.
+            Для участия в конкурсе на замещение вакантной должности необходимо заполнить
+            резюме установленной формы, в формате Word (см. ниже).
+          a(href="file.docx").file.full Образец резюме установленной формы.docx
+          br
+          a(href="#").button.js-popup Заполнить анкету
+            .popup-block
+              .popup.flex.wrapper.plus-form
+                .popup-left(style="background-image: url('images/work-popup.png');")
+                form(action="#").form.popup-right.detail
+                  h3.h3 Анкета соискателя «АО Югорский Лесопромышленный Холдинг»
+                  .form-control
+                    input(type="text", id="input-1", value="Активное поле").form__input.text
+                    label(for="input-1").form__label ФИО
+                  .form-flex
                     .form-control
-                      input(type="text", id="input-1", value="Активное поле").form__input.text
-                      label(for="input-1").form__label ФИО
-                    .form-flex
-                      .form-control
-                        input(type="text", id="input-2").form__input
-                        label(for="input-2").form__label Мобильный телефон
-                      .form-control
-                        input(type="text", id="input-3").form__input
-                        label(for="input-3").form__label E-mail
-                    .form-control.with-file.js-file
-                      input(type="file", id="input-4")
-                      label(for="input-4").form__label Прикрепите заполненный файл с резюме
+                      input(type="text", id="input-2").form__input
+                      label(for="input-2").form__label Мобильный телефон
                     .form-control
-                      input(type="text", id="input-5").form__input
-                      label(for="input-5").form__label Краткая информация о Вас
-                    .form-control
-                      input(type="checkbox", id="check-1").form__input
-                      label(for="check-1").form__label Даю согласие на обработку персональных данных
-                    .form-captcha
-                      // подразумевается вставка блока кода гугла вместо img
-                      img(src="images/captcha.jpg")
-                    .form-flex
-                      button(type="button").popup__button Назад
-                      button(type="submit").button Отправить
-
-    footer.footer
-      .wrapper
-        .footer-block
-          .footer-left
-            p.
-              628011, Россия, Тюменская область, Ханты-Мансийский автономный округ — Югра,
-              г. Ханты-Мансийск, ул. Рознина, д. 71
-            p Телефон: +7 (3467) <b>35-62-73</b>, Факс: + 7 (3467) <b>36-30-33</b>
-          .footer-right
-            a(href="#").uw
-        .footer-bottom © Copyright АО «Югорский Лесопромышленный Холдинг», 2005-2017
+                      input(type="text", id="input-3").form__input
+                      label(for="input-3").form__label E-mail
+                  .form-control.with-file.js-file
+                    input(type="file", id="input-4")
+                    label(for="input-4").form__label Прикрепите заполненный файл с резюме
+                  .form-control
+                    input(type="text", id="input-5").form__input
+                    label(for="input-5").form__label Краткая информация о Вас
+                  .form-control
+                    input(type="checkbox", id="check-1").form__input
+                    label(for="check-1").form__label Даю согласие на обработку персональных данных
+                  .form-captcha
+                    // подразумевается вставка блока кода гугла вместо img
+                    img(src="images/captcha.jpg")
+                  .form-flex
+                    button(type="button").popup__button Назад
+                    button(type="submit").button Отправить

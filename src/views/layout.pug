@@ -15,7 +15,15 @@ html(lang="ru")
     link(rel='stylesheet', href='css/main.css')
 
   body
-    block content
+    include mixins/pagination
+    include mixins/breadcrumbs
+    include mixins/form
+
+    include includes/mobile-menu
+    .page
+      include includes/header
+      block content
+      include includes/footer
 
     script(src="js/vendor/jquery/jquery-3.2.1.min.js")
     script(src="js/vendor/jquery-ui/jquery-ui.min.js")

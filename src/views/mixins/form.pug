@@ -1,0 +1,25 @@
+mixin form(name)
+  h2.h2= name
+  form(action="#").form
+    .form-flex
+      .form-control
+        input(type="text", id="input-1", value="Активное поле").form__input.text
+        label(for="input-1").form__label ФИО
+      .form-control.err
+        input(type="text", id="input-2", value="joran99").form__input.text
+        label(for="input-2").form__label E-mail
+        span Неверно указан e-mail
+      .form-control
+        input(type="text", id="input-3").form__input
+        label(for="input-3").form__label Телефон
+    .form-control.full
+      input(id="input-4").form__input
+      label(for="input-4").form__label Сообщение
+    .form-flex.bottom
+      .form-control
+        input(type="checkbox", id="check-1").form__input
+        label(for="check-1").form__label Даю согласие на обработку персональных данных
+      .form-captcha
+        // подразумевается вставка блока кода гугла вместо img
+        img(src="images/captcha.jpg")
+      .button.success Сообщение отправлено

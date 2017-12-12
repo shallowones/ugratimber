@@ -1,6 +1,9 @@
 (function ($, jBox, Swiper) {
   $(function () {
 
+    // определим глобально селектор окна
+    const $window = $(window)
+
     // проверка на существование элемента на странице
     const is = ((item) => { return typeof item !== 'undefined' && item.length })
 
@@ -29,12 +32,12 @@
             setTimeout(swiper.fixLoop, 100)
           }
         },
-        /*breakpoints: {
+        breakpoints: {
           1200: {
             direction: 'horizontal',
             centeredSlides: false
           }
-        }*/
+        }
       })
 
       if (is(mainSlider.container) && is(mainSliderThumbs.container)) {
@@ -187,6 +190,81 @@
         $target.toggleClass('show')
         $(e.currentTarget).toggleClass('active')
       })
+    }
+
+    // работа с мобильным меню
+    {
+      const $mobileMenu = $('#mobile-menu')
+      const $menuItems = $mobileMenu.find('.menu__item')
+      const step = 30
+      let delay = 500
+      $menuItems.each((index, el) => {
+        $(el).css({
+          'transition-delay': delay.toString() + 'ms'
+        })
+        delay += step
+      })
+      $mobileMenu.find('.form-control.search').css({
+        'transition-delay': delay.toString() + 'ms'
+      })
+      $('.js-mobile').on('click', () => {
+        $('html').toggleClass('menu-open')
+      })
+    }
+
+    // читать далее
+    {
+      const $reduce = $('.js-reduce')
+      const $hideBlock = $reduce.find('.mobile-reduce-second')
+      const $button = $reduce.find('button[type="button"]')
+      const showClass = 'show'
+      $button.on('click', (e) => {
+        e.preventDefault()
+        const $this = $(e.currentTarget)
+        const delay = 500
+        if ($hideBlock.is(':visible')) {
+          $hideBlock.hide(delay)
+          $this.removeClass(showClass)
+        } else {
+          $hideBlock.show(delay)
+          $this.addClass(showClass)
+        }
+      })
+      $window.resize(() => {
+        const width = $window.width()
+        if (width > 480) {
+          $hideBlock.removeAttr('style')
+          $button.removeClass(showClass)
+        }
+      })
+    }
+
+    // история холдинга
+    {
+      const $timeline = $('.timeline__item')
+      if (is($timeline)) {
+        const setHeightToTimeline = (() => {
+          $timeline.each((index, el) => {
+            const $this = $(el)
+            const height = $this.find('.timeline__item-right').height()
+            const $line = $this.find('.timeline__item-left > span')
+            const limit = 60
+            if (height > limit) {
+              $line.css({
+                height: height - limit / 2
+              })
+            } else if (is($line.attr('style'))) {
+              $line.removeAttr('style')
+            }
+          })
+        })
+        setHeightToTimeline()
+        $window.resize((e) => {
+          if (e.currentTarget.innerWidth > 480) {
+            setHeightToTimeline()
+          }
+        })
+      }
     }
 
   })

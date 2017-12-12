@@ -2,72 +2,26 @@ extends layout
 
 block content
 
-  .page
-    header.header
-      .header-top.wrapper
-        .header-logo Югорский<br>лесопромышленный холдинг
-        .header-contacts
-          .header-contacts__item E-mail:&nbsp;
-            a(href="#") office@ugratimber.ru
-          .header-contacts__item Телефон:
-            span  +7 3467
-              b  35-62-73
-          .header-contacts__item Факс:
-            span  +7 3467
-              b  36-30-33
-        select#lang
-          option(value="ru", selected) RU
-          option(value="en") EN
-      .menu
-        .wrapper
-          a(href="#").menu__item.active О компании
-          a(href="#").menu__item Продукция
-          a(href="#").menu__item Раскрытие информации
-          a(href="#").menu__item Закупки
-          a(href="#").menu__item Реализация активов
-          a(href="#").menu__item Пресс центр
-          a(href="#").menu__item Вакансии
-          a(href="#").menu__item Контакты
-          button(type="button", data-target="#search").menu__item.search.js-search
-          form(action="#")#search.search-form
-            input(type="text").search-form__input
-            button.search-form__button Найти
+  main.main
+    .wrapper
+      +breadcrumbs('Главная', 'О компании', 'Подразделения')
 
-    main.main
-      .wrapper
-        .breadcrumbs
-          a(href="#").breadcrumbs__item Главная
-          a(href="#").breadcrumbs__item О компании
-          span.breadcrumbs__item Подразделения
-
-        h1.h1 Подразделения
-        .detail
-          .units
-            a(href="#").units__item
-              .units__item-block
-                .units__item-wrap(style="background-image: url('images/unit-1.png')")
-                .units__item-name «ЮграТрансСервис»
-            a(href="#").units__item
-              .units__item-block
-                .units__item-wrap(style="background-image: url('images/unit-2.png')")
-                .units__item-name «Лесопильные заводы»
-            a(href="#").units__item
-              .units__item-block
-                .units__item-wrap(style="background-image: url('images/unit-3.png')")
-                .units__item-name «ЛВЛ-Югра»
-            a(href="#").units__item
-              .units__item-block
-                .units__item-wrap(style="background-image: url('images/unit-4.png')")
-                .units__item-name «Югра-плит»
-
-    footer.footer
-      .wrapper
-        .footer-block
-          .footer-left
-            p.
-              628011, Россия, Тюменская область, Ханты-Мансийский автономный округ — Югра,
-              г. Ханты-Мансийск, ул. Рознина, д. 71
-            p Телефон: +7 (3467) <b>35-62-73</b>, Факс: + 7 (3467) <b>36-30-33</b>
-          .footer-right
-            a(href="#").uw
-        .footer-bottom © Copyright АО «Югорский Лесопромышленный Холдинг», 2005-2017
+      h1.h1 Подразделения
+      .detail
+        .units
+          a(href="#").units__item
+            .units__item-block
+              .units__item-wrap(style="background-image: url('images/unit-1.png')")
+              .units__item-name «ЮграТрансСервис»
+          a(href="#").units__item
+            .units__item-block
+              .units__item-wrap(style="background-image: url('images/unit-2.png')")
+              .units__item-name «Лесопильные заводы»
+          a(href="#").units__item
+            .units__item-block
+              .units__item-wrap(style="background-image: url('images/unit-3.png')")
+              .units__item-name «ЛВЛ-Югра»
+          a(href="#").units__item
+            .units__item-block
+              .units__item-wrap(style="background-image: url('images/unit-4.png')")
+              .units__item-name «Югра-плит»

@@ -2,170 +2,90 @@ extends layout
 
 block content
 
-  .page
-    header.header
-      .header-top.wrapper
-        .header-logo Югорский<br>лесопромышленный холдинг
-        .header-contacts
-          .header-contacts__item E-mail:&nbsp;
-            a(href="#") office@ugratimber.ru
-          .header-contacts__item Телефон:
-            span  +7 3467
-              b  35-62-73
-          .header-contacts__item Факс:
-            span  +7 3467
-              b  36-30-33
-        select#lang
-          option(value="ru", selected) RU
-          option(value="en") EN
-      nav.menu
-        ul.wrapper
-          li.parent
-            a(href="#").menu__item О компании
-            ul.submenu
-              li
-                a(href="#").submenu__item Основная деятельность
-              li
-                a(href="#").submenu__item История холдинга
-              li
-                a(href="#").submenu__item Подразделения
-              li
-                a(href="#").submenu__item Органы управления и контроля
-              li.parent
-                a(href="#").submenu__item Персонал
-                ul.submenu
-                  li
-                    a(href="#").submenu__item Вакансии
-                  li
-                    a(href="#").submenu__item Конкурсы
-          li
-            a(href="#").menu__item Продукция
-          li
-            a(href="#").menu__item Раскрытие информации
-          li
-            a(href="#").menu__item Закупки
-          li
-            a(href="#").menu__item Реализация активов
-          li.parent
-            a(href="#").menu__item Пресс центр
-            ul.submenu
-              li
-                a(href="#").submenu__item Основная деятельность
-              li
-                a(href="#").submenu__item История холдинга
-              li
-                a(href="#").submenu__item Подразделения
-              li
-                a(href="#").submenu__item Органы управления и контроля
-              li.parent
-                a(href="#").submenu__item Персонал
-                ul.submenu
-                  li
-                    a(href="#").submenu__item Вакансии
-                  li
-                    a(href="#").submenu__item Конкурсы
-          li
-            a(href="#").menu__item Вакансии
-          li
-            a(href="#").menu__item Контакты
-          li
-            button(type="button", data-target="#search").menu__item.search.js-search
-            form(action="#")#search.search-form
-              input(type="text").search-form__input
-              button.search-form__button Найти
+  main.main
+    .main-sliders
+      .swiper-container.main-slider
+        .swiper-wrapper
+          .swiper-slide(style="background-image: url('images/slider-1.jpg')")
+            .main-slider__wrap
+          .swiper-slide(style="background-image: url('images/slider-2.jpg')")
+            .main-slider__wrap
+          .swiper-slide(style="background-image: url('images/slider-3.jpg')")
+            .main-slider__wrap
+          .swiper-slide(style="background-image: url('images/slider-4.jpg')")
+            .main-slider__wrap
+      .swiper-container.main-slider-thumbs
+        .swiper-wrapper
+          .swiper-slide(style="background-image: url('images/slider-1-small.jpg')")
+            .main-slider__wrap
+            .main-slider__desc Лесозаготовка и вывозка
+          .swiper-slide(style="background-image: url('images/slider-2.jpg')")
+            .main-slider__wrap
+            .main-slider__desc Лесопильное производство
+          .swiper-slide(style="background-image: url('images/slider-3.jpg')")
+            .main-slider__wrap
+            .main-slider__desc Производство ламинированной дсп
+          .swiper-slide(style="background-image: url('images/slider-4.jpg')")
+            .main-slider__wrap
+            .main-slider__desc Производство бруса лвл
 
-    main.main
-      .main-sliders
-        .swiper-container.main-slider
-          .swiper-wrapper
-            .swiper-slide(style="background-image: url('images/slider-1.jpg')")
-              .main-slider__wrap
-            .swiper-slide(style="background-image: url('images/slider-2.jpg')")
-              .main-slider__wrap
-            .swiper-slide(style="background-image: url('images/slider-3.jpg')")
-              .main-slider__wrap
-            .swiper-slide(style="background-image: url('images/slider-4.jpg')")
-              .main-slider__wrap
-        .swiper-container.main-slider-thumbs
-          .swiper-wrapper
-            .swiper-slide(style="background-image: url('images/slider-1-small.jpg')")
-              .main-slider__wrap
-              .main-slider__desc Лесозаготовка и вывозка
-            .swiper-slide(style="background-image: url('images/slider-2.jpg')")
-              .main-slider__wrap
-              .main-slider__desc Лесопильное производство
-            .swiper-slide(style="background-image: url('images/slider-3.jpg')")
-              .main-slider__wrap
-              .main-slider__desc Производство ламинированной дсп
-            .swiper-slide(style="background-image: url('images/slider-4.jpg')")
-              .main-slider__wrap
-              .main-slider__desc Производство бруса лвл
+    .wrapper
 
+      .presentation
+        .presentation__name Югорский<br>лесопромышленный<br>холдинг
+        .presentation__desc
+          span Передовые
+          | технологии<br>Югры
+        .presentation__desc
+          span Ведущее предприятие
+          | лесопромышленного<br>комплекса в Югре
+        .presentation__desc Более
+          span
+            b 1000
+          | рабочих мест
+
+      .greeting
+        .greeting-left
+          img(src="images/director.jpg").greeting__img
+          .greeting__director Краев Юрий Геннадьевич
+          .greeting__position Генеральный Директор<br>АО «Югорский лесопромышленный холдинг»
+          button(type="button").button Задать вопрос
+        .greeting-right
+          h1.h1 Уважаемые посетители!
+          .mobile-reduce.js-reduce
+            .mobile-reduce-first
+              p
+                b Мы  рады приветствовать вас на официальном сайте акционерного общества «Югорский лесопромышленный
+                  | холдинг» и благодарим за интерес, который вы проявляете к нашей работе.
+              p АО «Югорский лесопромышленный холдинг» – ведущее лесозаготовительное и деревообрабатывающее
+                | предприятие Югры, специализирующееся на выполнении полного производственного цикла:
+                | от заготовки и вывозки до <a href="#">распиловки</a> и <a href="#">глубокой переработки древесины</a>.
+              p Использование передовых технологий — это твердые перспективы развития Общества,
+                | снижение нагрузки на окружающую среду, улучшенные условия труда и рост профессионализма работников.
+            .mobile-reduce-second
+              p Учредителем Общества является Ханты-Мансийский автономный округ – Югра в лице Департамента по управлению
+                | государственным имуществом Ханты-Мансийского автономного округа – Югры
+              p АО «Югорский лесопромышленный холдинг» - социально ориентированное предприятие,
+                | а ее коллектив – сплочённой командой. Общество занимается благотворительной деятельностью,
+                | принимает участие в общественно значимых проектах округа.
+              p На нашем сайте вы сможете получить совет или консультацию специалистов предприятия,поднять
+                | интересующие вас темы, связанные с деятельностью АО «Югорский лесопромышленный холдинг»,
+                | и задать актуальные вопросы.
+            button(type="button").mobile-reduce__link
+
+    .main-news
       .wrapper
-
-        .presentation
-          .presentation__name Югорский<br>лесопромышленный<br>холдинг
-          .presentation__desc
-            span Передовые
-            | технологии<br>Югры
-          .presentation__desc
-            span Ведущее предприятие
-            | лесопромышленного<br>комплекса в Югре
-          .presentation__desc Более
-            span
-              b 1000
-            | рабочих мест
-
-        .greeting
-          .greeting-left
-            img(src="images/director.jpg").greeting__img
-            .greeting__director Краев Юрий Геннадьевич
-            .greeting__position Генеральный Директор<br>АО «Югорский лесопромышленный холдинг»
-            button(type="button").button Задать вопрос
-          .greeting-right
-            h1.h1 Уважаемые посетители!
-            p
-              b Мы  рады приветствовать вас на официальном сайте акционерного общества «Югорский лесопромышленный
-                | холдинг» и благодарим за интерес, который вы проявляете к нашей работе.
-            p АО «Югорский лесопромышленный холдинг» – ведущее лесозаготовительное и деревообрабатывающее
-              | предприятие Югры, специализирующееся на выполнении полного производственного цикла:
-              | от заготовки и вывозки до <a href="#">распиловки</a> и <a href="#">глубокой переработки древесины</a>.
-            p Использование передовых технологий — это твердые перспективы развития Общества,
-              | снижение нагрузки на окружающую среду, улучшенные условия труда и рост профессионализма работников.
-            p Учредителем Общества является Ханты-Мансийский автономный округ – Югра в лице Департамента по управлению
-              | государственным имуществом Ханты-Мансийского автономного округа – Югры
-            p АО «Югорский лесопромышленный холдинг» - социально ориентированное предприятие,
-              | а ее коллектив – сплочённой командой. Общество занимается благотворительной деятельностью,
-              | принимает участие в общественно значимых проектах округа.
-            p На нашем сайте вы сможете получить совет или консультацию специалистов предприятия,поднять
-              | интересующие вас темы, связанные с деятельностью АО «Югорский лесопромышленный холдинг»,
-              | и задать актуальные вопросы.
-
-      .main-news
-        .wrapper
-          .main-news-block
-            .main-news__item
-              h1.h1 Новости
-            a(href="#").main-news__item
-              h3.h3 Фонд развития представил отчет о своей работе на правительственном часе
-              p Генеральный директор Фонда развития выступил перед депутатами окружной Думы с
-                | докладом о трехлетней работе организации.
-              .main-news__item-date 29 июня 2017
-            a(href="#").main-news__item
-              h3.h3 Реализация программы «Школы Югры» планируется с применением механизмов ГЧП
-              p Первый заместитель Бухтин провел совещание в режиме видеоконференцсвязи, где рассматривались
-                | вопросы создания объектов общего образования с применением новых механизмов.
-              .main-news__item-date 28 июня 2017
-          a(href="#").button Все новости
-
-    footer.footer
-      .wrapper
-        .footer-block
-          .footer-left
-            p.
-              628011, Россия, Тюменская область, Ханты-Мансийский автономный округ — Югра,
-              г. Ханты-Мансийск, ул. Рознина, д. 71
-            p Телефон: +7 (3467) <b>35-62-73</b>, Факс: + 7 (3467) <b>36-30-33</b>
-          .footer-right
-            a(href="#").uw
-        .footer-bottom © Copyright АО «Югорский Лесопромышленный Холдинг», 2005-2017
+        .main-news-block
+          .main-news__item
+            h1.h1 Новости
+          a(href="#").main-news__item
+            h3.h3 Фонд развития представил отчет о своей работе на правительственном часе
+            p Генеральный директор Фонда развития выступил перед депутатами окружной Думы с
+              | докладом о трехлетней работе организации.
+            .main-news__item-date 29 июня 2017
+          a(href="#").main-news__item
+            h3.h3 Реализация программы «Школы Югры» планируется с применением механизмов ГЧП
+            p Первый заместитель Бухтин провел совещание в режиме видеоконференцсвязи, где рассматривались
+              | вопросы создания объектов общего образования с применением новых механизмов.
+            .main-news__item-date 28 июня 2017
+        a(href="#").button Все новости

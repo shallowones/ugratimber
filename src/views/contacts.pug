@@ -2,187 +2,119 @@ extends layout
 
 block content
 
-  .page
-    header.header
-      .header-top.wrapper
-        .header-logo Югорский<br>лесопромышленный холдинг
-        .header-contacts
-          .header-contacts__item E-mail:&nbsp;
-            a(href="#") office@ugratimber.ru
-          .header-contacts__item Телефон:
-            span  +7 3467
-              b  35-62-73
-          .header-contacts__item Факс:
-            span  +7 3467
-              b  36-30-33
-        select#lang
-          option(value="ru", selected) RU
-          option(value="en") EN
-      .menu
-        .wrapper
-          a(href="#").menu__item О компании
-          a(href="#").menu__item Продукция
-          a(href="#").menu__item Раскрытие информации
-          a(href="#").menu__item Закупки
-          a(href="#").menu__item Реализация активов
-          a(href="#").menu__item Пресс центр
-          a(href="#").menu__item Вакансии
-          a(href="#").menu__item Контакты
-          button(type="button", data-target="#search").menu__item.search.js-search
-          form(action="#")#search.search-form
-            input(type="text").search-form__input
-            button.search-form__button Найти
+  main.main
+    .wrapper
+      +breadcrumbs('Главная', 'Контакты')
 
-    main.main
-      .wrapper
-        .breadcrumbs
-          a(href="#").breadcrumbs__item Главная
-          span.breadcrumbs__item Контакты
+      h1.h1 Контакты
+      .detail
 
-        h1.h1 Контакты
-        .detail
-
-          .subunit.line
-            .subunit__name Дирекция
-            p.
-              АО «Югорский лесопромышленный холдинг»<br>
-              628011, Россия, Тюменская область, Ханты-Мансийский автономный округ — Югра,
-            h4.h4 Приемная
-            p г. Ханты-Мансийск, ул. Рознина, д. 71
-            .flex
-              .flex
-                .subunit-phone__name Телефон:
-                .subunit-phone__items
-                  .phone +7 3467 <b>35-62-73</b>
-                  .phone +7 3467 <b>36-30-33</b>
-              .email E-mail: <a href="#">office@ugratimber.ru</a>
-
-          .subunit
-            .subunit__name Подразделение «ЮграТрансСервис»
-            h4.h4 Приемная
-            p г. Советский, Южная промзона, нижний склад №2
-            .flex
-              .flex
-                .subunit-phone__name Телефон:
-                .subunit-phone__items
-                  .phone +7 3467 <b>53-70-02</b>
-              .email E-mail: <a href="#">uts@ugratimber.ru</a>
-
-          .subunit
-            .subunit__name Подразделение «Лесопильные заводы Югры»
-            h4.h4 Приемная
-            p г. Советский, ул. Ленина, д. 47
-            .flex
-              .flex
-                .subunit-phone__name Телефон:
-                .subunit-phone__items
-                  .phone +7 3467 <b>53-80-64</b>
-              .email E-mail: <a href="#">lzu@ugratimber.ru</a>
-
-          .subunit
-            .subunit__name Подразделение «ЛВЛ-Югра»
-            h4.h4 Приемная
-            p г. Нягань, ул. Лазарева, д. 28
-            .flex
-              .flex
-                .subunit-phone__name Телефон:
-                .subunit-phone__items
-                  .phone +7 3467 <b>29-75-79</b>
-              .email E-mail: <a href="#">office-lvl@ugratimber.ru</a>
-            .flex
-              .subunit-phone__name Факс:
-              .subunit-phone__items
-                .phone +7 3467 <b>29-74-58</b>
-            br
-            h4.h4 Отдел Реализации
-            p г. Нягань, ул. Лазарева, д. 28
+        .subunit.line
+          .subunit__name Дирекция
+          p.
+            АО «Югорский лесопромышленный холдинг»<br>
+            628011, Россия, Тюменская область, Ханты-Мансийский автономный округ — Югра,
+          h4.h4 Приемная
+          p г. Ханты-Мансийск, ул. Рознина, д. 71
+          .flex
             .flex
               .subunit-phone__name Телефон:
               .subunit-phone__items
-                .phone +7 3467 <b>29-74-63</b>
+                .phone +7 3467 <b>35-62-73</b>
+                .phone +7 3467 <b>36-30-33</b>
+            .email E-mail: <a href="#">office@ugratimber.ru</a>
 
-          .subunit
-            .subunit__name Подразделение «Югра-Плит»
-            h4.h4 Приемная
-            p г. Советский, Северная промзона, промбаза № 2,стр.1
-            .flex
-              .flex
-                .subunit-phone__name Телефон:
-                .subunit-phone__items
-                  .phone +7 3467 <b>53-79-90</b>
-              .email E-mail: <a href="#">office-upl@ugratimber.ru</a>
+        .subunit
+          .subunit__name Подразделение «ЮграТрансСервис»
+          h4.h4 Приемная
+          p г. Советский, Южная промзона, нижний склад №2
+          .flex
             .flex
               .subunit-phone__name Телефон:
               .subunit-phone__items
-                .phone <b>3-45-11</b> вн. (101)
-            br
-            h4.h4 Отдел Реализации
-            p г. Советский, Северная промзона, промбаза № 2,стр.1
+                .phone +7 3467 <b>53-70-02</b>
+            .email E-mail: <a href="#">uts@ugratimber.ru</a>
+
+        .subunit
+          .subunit__name Подразделение «Лесопильные заводы Югры»
+          h4.h4 Приемная
+          p г. Советский, ул. Ленина, д. 47
+          .flex
+            .flex
+              .subunit-phone__name Телефон:
+              .subunit-phone__items
+                .phone +7 3467 <b>53-80-64</b>
+            .email E-mail: <a href="#">lzu@ugratimber.ru</a>
+
+        .subunit
+          .subunit__name Подразделение «ЛВЛ-Югра»
+          h4.h4 Приемная
+          p г. Нягань, ул. Лазарева, д. 28
+          .flex
+            .flex
+              .subunit-phone__name Телефон:
+              .subunit-phone__items
+                .phone +7 3467 <b>29-75-79</b>
+            .email E-mail: <a href="#">office-lvl@ugratimber.ru</a>
+          .flex
+            .subunit-phone__name Факс:
+            .subunit-phone__items
+              .phone +7 3467 <b>29-74-58</b>
+          br
+          h4.h4 Отдел Реализации
+          p г. Нягань, ул. Лазарева, д. 28
+          .flex
+            .subunit-phone__name Телефон:
+            .subunit-phone__items
+              .phone +7 3467 <b>29-74-63</b>
+
+        .subunit
+          .subunit__name Подразделение «Югра-Плит»
+          h4.h4 Приемная
+          p г. Советский, Северная промзона, промбаза № 2,стр.1
+          .flex
             .flex
               .subunit-phone__name Телефон:
               .subunit-phone__items
                 .phone +7 3467 <b>53-79-90</b>
-            .flex
-              .subunit-phone__name Телефон:
-              .subunit-phone__items
-                .phone <b>3-45-11</b> вн. (149)
+            .email E-mail: <a href="#">office-upl@ugratimber.ru</a>
+          .flex
+            .subunit-phone__name Телефон:
+            .subunit-phone__items
+              .phone <b>3-45-11</b> вн. (101)
+          br
+          h4.h4 Отдел Реализации
+          p г. Советский, Северная промзона, промбаза № 2,стр.1
+          .flex
+            .subunit-phone__name Телефон:
+            .subunit-phone__items
+              .phone +7 3467 <b>53-79-90</b>
+          .flex
+            .subunit-phone__name Телефон:
+            .subunit-phone__items
+              .phone <b>3-45-11</b> вн. (149)
 
-          .detail-block
-            h2.h2 Задать вопрос
-            form(action="#").form
-              .form-flex
-                .form-control
-                  input(type="text", id="input-1", value="Активное поле").form__input.text
-                  label(for="input-1").form__label ФИО
-                .form-control.err
-                  input(type="text", id="input-2", value="joran99").form__input.text
-                  label(for="input-2").form__label E-mail
-                  span Неверно указан e-mail
-                .form-control
-                  input(type="text", id="input-3").form__input
-                  label(for="input-3").form__label Телефон
-              .form-control.full
-                input(id="input-4").form__input
-                label(for="input-4").form__label Сообщение
-              .form-flex
-                .form-control
-                  input(type="checkbox", id="check-1").form__input
-                  label(for="check-1").form__label Даю согласие на обработку персональных данных
-                .form-captcha
-                  // подразумевается вставка блока кода гугла вместо img
-                  img(src="images/captcha.jpg")
-                button(type="button").button Отправить
+        .detail-block
+          +form('Задать вопрос')
 
-      section.map
-        button(type="button", data-target="#first-popup", style="left: 536px; top: 305px").map__button.js-touch
-        button(type="button", data-target="#second-popup", style="left: 577px; top: 257px").map__button.js-touch
-        button(type="button", data-target="#third-popup", style="left: 710px; top: 216px").map__button.js-touch
-        button(type="button", data-target="#fourth-popup", style="left: 831px; top: 338px").map__button.js-touch
-        #first-popup.display-none
-          .map-popup
-            h4.h4 Малиновский лесопильный завод 1
-            .greeting__position Советский р-он, п. Малиновский 1
-        #second-popup.display-none
-          .map-popup
-            h4.h4 Малиновский лесопильный завод 2
-            .greeting__position Советский р-он, п. Малиновский 2
-        #third-popup.display-none
-          .map-popup
-            h4.h4 Малиновский лесопильный завод 3
-            .greeting__position Советский р-он, п. Малиновский 3
-        #fourth-popup.display-none
-          .map-popup
-            h4.h4 Малиновский лесопильный завод 4
-            .greeting__position Советский р-он, п. Малиновский 4
-
-    footer.footer
-      .wrapper
-        .footer-block
-          .footer-left
-            p.
-              628011, Россия, Тюменская область, Ханты-Мансийский автономный округ — Югра,
-              г. Ханты-Мансийск, ул. Рознина, д. 71
-            p Телефон: +7 (3467) <b>35-62-73</b>, Факс: + 7 (3467) <b>36-30-33</b>
-          .footer-right
-            a(href="#").uw
-        .footer-bottom © Copyright АО «Югорский Лесопромышленный Холдинг», 2005-2017
+    section.map
+      button(type="button", data-target="#first-popup", style="left: 536px; top: 305px").map__button.js-touch
+      button(type="button", data-target="#second-popup", style="left: 577px; top: 257px").map__button.js-touch
+      button(type="button", data-target="#third-popup", style="left: 710px; top: 216px").map__button.js-touch
+      button(type="button", data-target="#fourth-popup", style="left: 831px; top: 338px").map__button.js-touch
+      #first-popup.display-none
+        .map-popup
+          h4.h4 Малиновский лесопильный завод 1
+          .greeting__position Советский р-он, п. Малиновский 1
+      #second-popup.display-none
+        .map-popup
+          h4.h4 Малиновский лесопильный завод 2
+          .greeting__position Советский р-он, п. Малиновский 2
+      #third-popup.display-none
+        .map-popup
+          h4.h4 Малиновский лесопильный завод 3
+          .greeting__position Советский р-он, п. Малиновский 3
+      #fourth-popup.display-none
+        .map-popup
+          h4.h4 Малиновский лесопильный завод 4
+          .greeting__position Советский р-он, п. Малиновский 4
