@@ -128,7 +128,8 @@ a {
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  min-height: 100vh;
+  height: 100%;
   overflow-y: auto;
 }
 
@@ -1154,7 +1155,6 @@ a.main-news__item {
 }
 
 .footer {
-  margin-top: auto;
   background-color: #161a1a;
   padding: 2.375rem 0 3rem;
   color: #ccc;
@@ -3379,6 +3379,10 @@ div.jfilestyle {
     width: 321px;
     height: 380px;
     background: url('../images/back-grey.svg') no-repeat center;
+
+    @media @desktop-mini {
+      display: none;
+    }
   }
 
   &-right {
