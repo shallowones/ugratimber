@@ -963,6 +963,18 @@ a {
   left: 100%;
   top: 0;
 }
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  position: relative;
+}
+.main > .wrapper {
+  background-color: #fff;
+  position: relative;
+  z-index: 10;
+  padding-top: 6px;
+}
 .main-slider {
   width: calc(100% - 22.875rem);
   height: 100%;
@@ -1027,6 +1039,9 @@ a {
 }
 .main-slider-thumbs .swiper-slide:hover {
   cursor: pointer;
+}
+.main-slider-thumbs .swiper-slide .main-slider__wrap {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .main-slider-thumbs .swiper-slide.swiper-slide-active .main-slider__wrap {
   background-color: #1f613b;
@@ -2722,7 +2737,6 @@ a.breadcrumbs__item:hover {
 }
 .popup-left {
   width: 30rem;
-  background-color: #005532;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2733,6 +2747,7 @@ a.breadcrumbs__item:hover {
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
+  background: #005532 no-repeat center;
 }
 .popup-left > img {
   max-width: 100%;
@@ -2820,6 +2835,22 @@ a.breadcrumbs__item:hover {
     margin-bottom: 1rem;
   }
 }
+@media (max-width: 1024px) {
+  .popup.plus-form .form-flex {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media (max-width: 480px) {
+  .popup.plus-form .form-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .popup__button {
   background: #fff;
   border: 4px solid #e6e6e6;
@@ -2827,26 +2858,12 @@ a.breadcrumbs__item:hover {
   font-weight: bold;
   text-transform: uppercase;
   padding: 21px 37px;
-  position: absolute;
-  left: 5rem;
-  bottom: 2rem;
   outline: none;
   transition: .3s;
 }
 .popup__button:hover {
   cursor: pointer;
   background-color: #e6e6e6;
-}
-@media (max-width: 1024px) {
-  .popup__button {
-    bottom: 1rem;
-    left: 2rem;
-  }
-}
-@media (max-width: 768px) {
-  .popup__button {
-    position: static;
-  }
 }
 .popup .detail {
   margin-bottom: 0;
@@ -3712,4 +3729,22 @@ div.jfilestyle.jfilestyle-corner span:last-child > label {
     font-size: 18px;
     padding: .75rem 0;
   }
+}
+.rhombus-left,
+.rhombus-right {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 321px;
+  height: 380px;
+  background: url('../images/back-grey.svg') no-repeat center;
+}
+.rhombus-right {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
 }

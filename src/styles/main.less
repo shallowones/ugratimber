@@ -548,6 +548,15 @@ a {
 }
 
 .main {
+  flex: 1 0 auto;
+  position: relative;
+
+  & > .wrapper {
+    background-color: #fff;
+    position: relative;
+    z-index: 10;
+    padding-top: 6px;
+  }
 
   &-slider {
     width: ~"calc(100% - 22.875rem)";
@@ -609,6 +618,10 @@ a {
 
         &:hover {
           cursor: pointer;
+        }
+
+        & .main-slider__wrap {
+          background-color: rgba(0, 0, 0, .4);
         }
 
         &.swiper-slide-active {
@@ -2322,11 +2335,11 @@ a.breadcrumbs__item {
 
   &-left {
     width: 30rem;
-    background-color: #005532;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background: #005532 no-repeat center;
 
     & > img {
       max-width: 100%;
@@ -2408,6 +2421,17 @@ a.breadcrumbs__item {
         margin-bottom: 1rem;
       }
     }
+
+    & .form-flex {
+
+      @media @plan {
+        flex-direction: row;
+      }
+
+      @media @mobile {
+        flex-direction: column;
+      }
+    }
   }
 
   &__button {
@@ -2417,24 +2441,12 @@ a.breadcrumbs__item {
     font-weight: bold;
     text-transform: uppercase;
     padding: 21px 37px;
-    position: absolute;
-    left: 5rem;
-    bottom: 2rem;
     outline: none;
     transition: .3s;
 
     &:hover {
       cursor: pointer;
       background-color: #e6e6e6;
-    }
-
-    @media @plan {
-      bottom: 1rem;
-      left: 2rem;
-    }
-
-    @media @plan-mini {
-      position: static;
     }
   }
 
@@ -3354,5 +3366,26 @@ div.jfilestyle {
       font-size: 18px;
       padding: .75rem 0;
     }
+  }
+}
+
+.rhombus {
+
+  &-left, &-right {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 321px;
+    height: 380px;
+    background: url('../images/back-grey.svg') no-repeat center;
+  }
+
+  &-right {
+    transform: rotate(180deg);
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 0;
   }
 }
