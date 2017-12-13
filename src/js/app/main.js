@@ -67,7 +67,7 @@
         loopedSlides: countSliders,
         slidesPerView: 1
         //autoplay: 2000
-      });
+      })
 
       const detailSliderThumbs = new Swiper('.detail-gal-thumbs', {
         slidesPerView: 'auto',
@@ -77,14 +77,14 @@
         loopedSlides: countSliders,
         onSlideChangeEnd: function (swiper) {
           if (swiper.activeIndex === (countSliders * 2)) {
-            swiper.update(true);
+            swiper.update(true)
             swiper.slideTo(0, 0)
           }
         }
-      });
+      })
 
-      detailSlider.params.control = detailSliderThumbs;
-      detailSliderThumbs.params.control = detailSlider;
+      detailSlider.params.control = detailSliderThumbs
+      detailSliderThumbs.params.control = detailSlider
     }
 
     // кастомим селект выбора языка сайта
@@ -125,7 +125,7 @@
           })
         }
       })()
-      fileCustom( $(inputFileSelector) )
+      fileCustom($(inputFileSelector))
 
       const popupSelector = '.js-popup'
       new jBox('Modal', {
@@ -144,7 +144,7 @@
               this.close()
             })
             $content.find(inputFormSelector).on('change', inputFocus)
-            fileCustom( $content.find(inputFileSelector) )
+            fileCustom($content.find(inputFileSelector))
           } else {
             this.close()
           }
@@ -179,7 +179,7 @@
             this.close()
           }
         }
-      });
+      })
     }
 
     // поиск
@@ -194,7 +194,7 @@
 
     // работа с мобильным меню
     {
-      const $mobileMenu = $('#mobile-menu')
+      /*const $mobileMenu = $('#mobile-menu')
       const $menuItems = $mobileMenu.find('.menu__item')
       const step = 30
       let delay = 500
@@ -206,6 +206,22 @@
       })
       $mobileMenu.find('.form-control.search').css({
         'transition-delay': delay.toString() + 'ms'
+      })*/
+
+      const $mobileMenu = $('#mobile-menu')
+      $mobileMenu.find('div.menu__item > span').on('click', (e) => {
+        const $this = $(e.currentTarget)
+        const $menuItem = $this.parent()
+        $menuItem.toggleClass('open')
+        const isActive = $menuItem.hasClass('open')
+        $menuItem.children().each((index, el) => {
+          const $children = $(el)
+          if ($children.hasClass('mobile-sub')) {
+            $children.slideToggle(isActive)
+            $children.find('div.menu__item').removeClass('open')
+              .find('.mobile-sub').removeAttr('style')
+          }
+        })
       })
       $('.js-mobile').on('click', () => {
         $('html').toggleClass('menu-open')

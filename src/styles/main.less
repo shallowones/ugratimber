@@ -24,11 +24,6 @@ html {
       top: 0;
       border-radius: 0;
       visibility: visible;
-
-      & .menu__item, & .form-control.search {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     & .mobile__button span {
@@ -131,6 +126,7 @@ a {
   min-height: 100vh;
   height: 100%;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .wrapper {
@@ -1837,9 +1833,6 @@ a.breadcrumbs__item {
       position: relative;
       padding-top: 0;
       height: 64px;
-      opacity: 0;
-      transform: translateY(10px);
-      transition: opacity .5s ease-out, transform .5s ease-out;
 
       & .form__input {
         border-color: #35a664;
@@ -3309,6 +3302,10 @@ div.jfilestyle {
     top: 0;
   }
 
+  &-sub {
+    display: none;
+  }
+
   @media @plan-mini {
     display: block;
   }
@@ -3349,16 +3346,15 @@ div.jfilestyle {
 
   & .menu__item {
     font-size: 20px;
+    line-height: 20px;
     padding: 1rem 0;
-    opacity: 0;
-    transition: opacity .5s ease-out, transform .5s ease-out;
-    transform: translateY(10px);
+    white-space: normal;
 
     &:hover {
       color: #fff;
     }
 
-    &:focus, &:active {
+    &:focus, &:active, &.active {
       color: #ffbb00;
     }
 
@@ -3367,6 +3363,59 @@ div.jfilestyle {
       padding: .75rem 0;
     }
   }
+
+  & div.menu__item {
+    padding: 0;
+    transition: background-color .3s, border-radius .3s;
+
+    &.open {
+      background-color: #298c53;
+      border-radius: 4px;
+
+      & > span {
+        color: #ffbb00;
+
+        & > .arrow {
+          background-image: data-uri('../images/svg/mobile-arrow-active.svg');
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    & > span {
+      display: block;
+      padding: .75rem 0;
+
+      & > span {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    &.active, &:hover {
+      cursor: pointer;
+      color: #fff;
+    }
+
+    & div.menu__item {
+      border-radius: 0 0 4px 4px;
+
+      &.open {
+        background-color: #3ab16c;
+      }
+    }
+  }
+}
+
+.arrow {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 15px;
+  background: data-uri('../images/svg/mobile-arrow.svg') no-repeat center;
+  background-size: 12px;
+  margin-left: 5px;
+  transition: .3s;
 }
 
 .rhombus {
@@ -3391,5 +3440,12 @@ div.jfilestyle {
     right: 0;
     top: auto;
     bottom: 0;
+  }
+}
+
+.bx-panel {
+
+  @media @plan {
+    display: none;
   }
 }

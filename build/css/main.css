@@ -465,12 +465,6 @@ html.menu-open #mobile-menu {
   border-radius: 0;
   visibility: visible;
 }
-html.menu-open #mobile-menu .menu__item,
-html.menu-open #mobile-menu .form-control.search {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
 html.menu-open .mobile__button span {
   background-color: #fff;
 }
@@ -563,6 +557,7 @@ a {
   min-height: 100vh;
   height: 100%;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .wrapper {
   width: 1200px;
@@ -2260,12 +2255,6 @@ a.breadcrumbs__item:hover {
   position: relative;
   padding-top: 0;
   height: 64px;
-  opacity: 0;
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
-  transition: opacity 0.5s ease-out, -webkit-transform 0.5s ease-out;
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
 }
 .form-control.search .form__input {
   border-color: #35a664;
@@ -3664,6 +3653,9 @@ div.jfilestyle.jfilestyle-corner span:last-child > label {
   left: 0;
   top: 0;
 }
+.mobile-sub {
+  display: none;
+}
 @media (max-width: 768px) {
   .mobile {
     display: block;
@@ -3709,19 +3701,16 @@ div.jfilestyle.jfilestyle-corner span:last-child > label {
 }
 #mobile-menu .menu__item {
   font-size: 20px;
+  line-height: 20px;
   padding: 1rem 0;
-  opacity: 0;
-  transition: opacity 0.5s ease-out, -webkit-transform 0.5s ease-out;
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
+  white-space: normal;
 }
 #mobile-menu .menu__item:hover {
   color: #fff;
 }
 #mobile-menu .menu__item:focus,
-#mobile-menu .menu__item:active {
+#mobile-menu .menu__item:active,
+#mobile-menu .menu__item.active {
   color: #ffbb00;
 }
 @media (max-width: 480px) {
@@ -3729,6 +3718,51 @@ div.jfilestyle.jfilestyle-corner span:last-child > label {
     font-size: 18px;
     padding: .75rem 0;
   }
+}
+#mobile-menu div.menu__item {
+  padding: 0;
+  transition: background-color 0.3s, border-radius 0.3s;
+}
+#mobile-menu div.menu__item.open {
+  background-color: #298c53;
+  border-radius: 4px;
+}
+#mobile-menu div.menu__item.open > span {
+  color: #ffbb00;
+}
+#mobile-menu div.menu__item.open > span > .arrow {
+  background-image: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0A%3C!--%20Generator%3A%20Adobe%20Illustrator%2016.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200)%20%20--%3E%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.1%22%20id%3D%22Capa_1%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22512px%22%20height%3D%22512px%22%20viewBox%3D%220%200%20444.819%20444.819%22%20style%3D%22enable-background%3Anew%200%200%20444.819%20444.819%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cg%3E%0A%09%3Cpath%20d%3D%22M434.252%2C114.203l-21.409-21.416c-7.419-7.04-16.084-10.561-25.975-10.561c-10.095%2C0-18.657%2C3.521-25.7%2C10.561%20%20%20L222.41%2C231.549L83.653%2C92.791c-7.042-7.04-15.606-10.561-25.697-10.561c-9.896%2C0-18.559%2C3.521-25.979%2C10.561l-21.128%2C21.416%20%20%20C3.615%2C121.436%2C0%2C130.099%2C0%2C140.188c0%2C10.277%2C3.619%2C18.842%2C10.848%2C25.693l185.864%2C185.865c6.855%2C7.23%2C15.416%2C10.848%2C25.697%2C10.848%20%20%20c10.088%2C0%2C18.75-3.617%2C25.977-10.848l185.865-185.865c7.043-7.044%2C10.567-15.608%2C10.567-25.693%20%20%20C444.819%2C130.287%2C441.295%2C121.629%2C434.252%2C114.203z%22%20fill%3D%22%23ffbb00%22%2F%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A");
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+#mobile-menu div.menu__item > span {
+  display: block;
+  padding: .75rem 0;
+}
+#mobile-menu div.menu__item > span > span {
+  display: inline-block;
+  vertical-align: middle;
+}
+#mobile-menu div.menu__item.active,
+#mobile-menu div.menu__item:hover {
+  cursor: pointer;
+  color: #fff;
+}
+#mobile-menu div.menu__item div.menu__item {
+  border-radius: 0 0 4px 4px;
+}
+#mobile-menu div.menu__item div.menu__item.open {
+  background-color: #3ab16c;
+}
+.arrow {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 15px;
+  background: url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22iso-8859-1%22%3F%3E%0A%3C!--%20Generator%3A%20Adobe%20Illustrator%2016.0.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200)%20%20--%3E%0A%3C!DOCTYPE%20svg%20PUBLIC%20%22-%2F%2FW3C%2F%2FDTD%20SVG%201.1%2F%2FEN%22%20%22http%3A%2F%2Fwww.w3.org%2FGraphics%2FSVG%2F1.1%2FDTD%2Fsvg11.dtd%22%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20version%3D%221.1%22%20id%3D%22Capa_1%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22512px%22%20height%3D%22512px%22%20viewBox%3D%220%200%20444.819%20444.819%22%20style%3D%22enable-background%3Anew%200%200%20444.819%20444.819%3B%22%20xml%3Aspace%3D%22preserve%22%3E%0A%3Cg%3E%0A%09%3Cpath%20d%3D%22M434.252%2C114.203l-21.409-21.416c-7.419-7.04-16.084-10.561-25.975-10.561c-10.095%2C0-18.657%2C3.521-25.7%2C10.561%20%20%20L222.41%2C231.549L83.653%2C92.791c-7.042-7.04-15.606-10.561-25.697-10.561c-9.896%2C0-18.559%2C3.521-25.979%2C10.561l-21.128%2C21.416%20%20%20C3.615%2C121.436%2C0%2C130.099%2C0%2C140.188c0%2C10.277%2C3.619%2C18.842%2C10.848%2C25.693l185.864%2C185.865c6.855%2C7.23%2C15.416%2C10.848%2C25.697%2C10.848%20%20%20c10.088%2C0%2C18.75-3.617%2C25.977-10.848l185.865-185.865c7.043-7.044%2C10.567-15.608%2C10.567-25.693%20%20%20C444.819%2C130.287%2C441.295%2C121.629%2C434.252%2C114.203z%22%20fill%3D%22%23FFFFFF%22%2F%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3Cg%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A") no-repeat center;
+  background-size: 12px;
+  margin-left: 5px;
+  transition: .3s;
 }
 .rhombus-left,
 .rhombus-right {
@@ -3753,4 +3787,9 @@ div.jfilestyle.jfilestyle-corner span:last-child > label {
   right: 0;
   top: auto;
   bottom: 0;
+}
+@media (max-width: 1024px) {
+  .bx-panel {
+    display: none;
+  }
 }

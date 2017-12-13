@@ -1,14 +1,42 @@
 #mobile-menu
   .wrapper
     .mobile-block
-      a(href="#").menu__item О компании
+      .menu__item
+        span
+          span О компании
+          i.arrow
+        nav.mobile-sub
+          a(href="#").menu__item Основная деятельность
+          a(href="#").menu__item История холдинга
+          a(href="#").menu__item Подразделения
+          a(href="#").menu__item Органы управления и контроля
+          .menu__item
+            span
+              span Персонал
+              i.arrow
+            nav.mobile-sub
+              a(href="#").menu__item Вакансии
+              a(href="#").menu__item Конкурсы
       a(href="#").menu__item Продукция
       a(href="#").menu__item Раскрытие информации
       a(href="#").menu__item Закупки
       a(href="#").menu__item Реализация активов
-      a(href="#").menu__item Пресс центр
-      a(href="#").menu__item Вакансии
-      a(href="#").menu__item Контакты
+      .menu__item
+        span
+          span Пресс центр
+          i.arrow
+        nav.mobile-sub
+          a(href="#").menu__item Основная деятельность
+          a(href="#").menu__item История холдинга
+          a(href="#").menu__item Подразделения
+          a(href="#").menu__item Органы управления и контроля
+          .menu__item
+            span
+              span Персонал
+              i.arrow
+            nav.mobile-sub
+              a(href="#").menu__item Вакансии
+              a(href="#").menu__item Конкурсы
 
     form(action="#").form
       .form-control.search
