@@ -15,7 +15,7 @@ html {
   &.menu-open {
     overflow: hidden;
 
-    & body {
+    & body, & .page {
       overflow: hidden;
     }
 
@@ -56,6 +56,10 @@ html {
       & .ui-icon {
         background-image: data-uri('../images/svg/arrow-white.svg');
       }
+    }
+
+    & .header-logo {
+      opacity: 0;
     }
   }
 
@@ -141,6 +145,8 @@ a {
 
 .header {
   margin-bottom: 4px;
+  position: relative;
+  z-index: 100;
 
   &-top {
     display: flex;
@@ -173,6 +179,8 @@ a {
     line-height: 1.25rem;
     color: #1f613b;
     text-transform: uppercase;
+    transition: opacity .3s;
+
     & > span {
 
       @media @plan-mini {
