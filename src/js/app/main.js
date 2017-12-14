@@ -130,6 +130,9 @@
       const popupSelector = '.js-popup'
       new jBox('Modal', {
         attach: popupSelector,
+        onInit: function () {
+          $(document).on('click', '.jBox-Modal .popup__button', this.close.bind(this))
+        },
         onOpen: function () {
           const $source = this.source
           const $content = this.content
@@ -139,10 +142,6 @@
           if (typeof html !== 'undefined' && html.length) {
             $popup.remove()
             this.setContent(html)
-            $content.find('.popup__button').on('click', (e) => {
-              e.preventDefault()
-              this.close()
-            })
             $content.find(inputFormSelector).on('change', inputFocus)
             fileCustom($content.find(inputFileSelector))
           } else {
@@ -223,8 +222,21 @@
           }
         })
       })
+
+      const $html = $('html')
+      const menuOpenClass = 'menu-open'
       $('.js-mobile').on('click', () => {
-        $('html').toggleClass('menu-open')
+        $html.toggleClass(menuOpenClass)
+      })
+
+      $window.resize((e) => {
+        const width = e.currentTarget.innerWidth
+        const menuOpen = $html.hasClass(menuOpenClass)
+        if (width > 768 && menuOpen) {
+          $html.removeClass(menuOpenClass)
+          $mobileMenu.find('div.menu__item').removeClass('open')
+          $mobileMenu.find('.mobile-sub').removeAttr('style')
+        }
       })
     }
 
