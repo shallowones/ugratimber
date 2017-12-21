@@ -11,7 +11,8 @@
     {
       const countSliders = 4
       const mobileWidth = 1200
-      let mainSlider = new Swiper('.main-slider', {
+      const windowWidth = $window.width()
+      const mainSlider = new Swiper('.main-slider', {
         loop: true,
         loopedSlides: countSliders,
         loopedAdditionalSlides: countSliders,
@@ -19,7 +20,8 @@
         grabCursor: true,
         //autoplay: 3000
       })
-      const swiperParams = {
+      let swiperParams = {
+        init: windowWidth > mobileWidth,
         spaceBetween: countSliders,
         centeredSlides: true,
         slidesPerView: countSliders,
@@ -34,7 +36,9 @@
         },
         on: {
           init: function () {
-            mainSlider.controller.control = this
+            if (windowWidth > mobileWidth) {
+              mainSlider.controller.control = this
+            }
           },
           slideChangeTransitionEnd: function () {
             const index = this.snapIndex
@@ -44,7 +48,8 @@
           }
         }
       }
-      const swiperParamsMobile = {
+      let swiperParamsMobile = {
+        init: windowWidth <= mobileWidth,
         spaceBetween: countSliders,
         slidesPerView: countSliders,
         touchRatio: 0.2,
@@ -57,54 +62,27 @@
         },
         on: {
           init: function () {
-            mainSlider.controller.control = this
-          },
-          slideChangeTransitionEnd: function () {
-            const index = this.snapIndex
-            if (index + countSliders > this.slides.length || index - countSliders < 0) {
-              this.slideTo(this.realIndex, 0)
+            if ($window.width() <= mobileWidth) {
+              mainSlider.controller.control = this
             }
           }
         }
       }
-      let mainSliderThumbs = new Swiper(
-        '.main-slider-thumbs',
-        ($window.width() > mobileWidth) ? swiperParams : swiperParamsMobile
-      )
-      if (is(mainSlider.container) && is(mainSliderThumbs.container)) {
-        const hover = ((swiper) => {
-          $(swiper.container).hover(() => {
-            mainSlider.stopAutoplay()
-            mainSliderThumbs.stopAutoplay()
-          }, () => {
-            mainSlider.startAutoplay()
-            mainSliderThumbs.startAutoplay()
-          })
-        })
-        hover(mainSlider)
-        hover(mainSliderThumbs)
-      }
 
-      const reInit = (() => {
-        setTimeout(() => {
-          mainSliderThumbs.destroy(false, true)
-        }, 100)
-        setTimeout(() => {
-          mainSliderThumbs = new Swiper(
-            '.main-slider-thumbs',
-            ($window.width() > mobileWidth) ? swiperParams : swiperParamsMobile)
-        }, 200)
-      })
+      const desktop = new Swiper('.slider-desktop', swiperParams)
+      const mobile = new Swiper('.slider-mobile', swiperParamsMobile);
 
-      let isMobile = false
+      let change = false
       $window.resize((e) => {
         const width = e.currentTarget.innerWidth
-        if (width > mobileWidth && isMobile) {
-          reInit()
-          isMobile = false
-        } else if (width < mobileWidth && !isMobile) {
-          reInit()
-          isMobile = true
+        if (width > mobileWidth && change) {
+          desktop.init()
+          mainSlider.controller.control = desktop
+          change = false
+        } else if (width <= mobileWidth && !change) {
+          mobile.init()
+          mainSlider.controller.control = mobile
+          change = true
         }
       })
     }

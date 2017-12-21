@@ -636,7 +636,7 @@ a {
           background-color: rgba(0, 0, 0, .4);
         }
 
-        &.swiper-slide-active {
+        &.swiper-slide-active, /*&.swiper-slide-duplicate-active*/ {
 
           & .main-slider__wrap {
             background-color: #1f613b;
@@ -650,6 +650,21 @@ a {
 
         @media @plan {
           width: 22.375rem;
+        }
+      }
+
+      &.slider-mobile {
+        display: none;
+
+        @media @desktop-mini {
+          display: block;
+        }
+      }
+
+      &.slider-desktop {
+
+        @media @desktop-mini {
+          display: none;
         }
       }
 

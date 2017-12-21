@@ -37,7 +37,14 @@ block content
             .swiper-slide
               .main-slider__img(style="background-image: url('images/" + item + ".jpg')")
               .main-slider__wrap
-      .swiper-container.main-slider-thumbs
+      .swiper-container.main-slider-thumbs.slider-desktop
+        .swiper-wrapper
+          each item in mainSliderThumbs
+            .swiper-slide
+              .main-slider__img(style="background-image: url('images/" + item.img + ".jpg')")
+              .main-slider__wrap
+              .main-slider__desc= item.name
+      .swiper-container.main-slider-thumbs.slider-mobile
         .swiper-wrapper
           each item in mainSliderThumbs
             .swiper-slide

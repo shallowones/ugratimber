@@ -1066,6 +1066,19 @@ a {
     width: 22.375rem;
   }
 }
+.main-slider-thumbs.slider-mobile {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .main-slider-thumbs.slider-mobile {
+    display: block;
+  }
+}
+@media (max-width: 1200px) {
+  .main-slider-thumbs.slider-desktop {
+    display: none;
+  }
+}
 @media (max-width: 1200px) {
   .main-slider-thumbs {
     width: 100%;
