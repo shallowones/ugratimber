@@ -2,32 +2,48 @@ extends layout
 
 block content
 
+  -
+    var mainSlider = [
+      'slider-1',
+      'slider-2',
+      'slider-3',
+      'slider-4'
+    ]
+
+    var mainSliderThumbs = [
+      {
+        name: 'Лесозаготовка и вывозка',
+        img: 'slider-1-small'
+      },
+      {
+        name: 'Лесопильное производство',
+        img: 'slider-2'
+      },
+      {
+        name: 'Производство ламинированной дсп',
+        img: 'slider-3'
+      },
+      {
+        name: 'Производство бруса лвл',
+        img: 'slider-4'
+      }
+    ]
+
   main.main
     .main-sliders
       .swiper-container.main-slider
         .swiper-wrapper
-          .swiper-slide(style="background-image: url('images/slider-1.jpg')")
-            .main-slider__wrap
-          .swiper-slide(style="background-image: url('images/slider-2.jpg')")
-            .main-slider__wrap
-          .swiper-slide(style="background-image: url('images/slider-3.jpg')")
-            .main-slider__wrap
-          .swiper-slide(style="background-image: url('images/slider-4.jpg')")
-            .main-slider__wrap
+          each item in mainSlider
+            .swiper-slide
+              .main-slider__img(style="background-image: url('images/" + item + ".jpg')")
+              .main-slider__wrap
       .swiper-container.main-slider-thumbs
         .swiper-wrapper
-          .swiper-slide(style="background-image: url('images/slider-1-small.jpg')")
-            .main-slider__wrap
-            .main-slider__desc Лесозаготовка и вывозка
-          .swiper-slide(style="background-image: url('images/slider-2.jpg')")
-            .main-slider__wrap
-            .main-slider__desc Лесопильное производство
-          .swiper-slide(style="background-image: url('images/slider-3.jpg')")
-            .main-slider__wrap
-            .main-slider__desc Производство ламинированной дсп
-          .swiper-slide(style="background-image: url('images/slider-4.jpg')")
-            .main-slider__wrap
-            .main-slider__desc Производство бруса лвл
+          each item in mainSliderThumbs
+            .swiper-slide
+              .main-slider__img(style="background-image: url('images/" + item.img + ".jpg')")
+              .main-slider__wrap
+              .main-slider__desc= item.name
 
     .wrapper
 

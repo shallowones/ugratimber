@@ -10,14 +10,16 @@
     // инициализация слайдера на главной
     {
       const countSliders = 4
-      const mainSlider = new Swiper('.main-slider', {
+      const mobileWidth = 1200
+      let mainSlider = new Swiper('.main-slider', {
         loop: true,
         loopedSlides: countSliders,
+        loopedAdditionalSlides: countSliders,
         slidesPerView: 1,
         grabCursor: true,
-        autoplay: 3000
+        //autoplay: 3000
       })
-      const mainSliderThumbs = new Swiper('.main-slider-thumbs', {
+      const swiperParams = {
         spaceBetween: countSliders,
         centeredSlides: true,
         slidesPerView: countSliders,
@@ -26,24 +28,50 @@
         direction: 'vertical',
         loop: true,
         loopedSlides: countSliders,
-        onSlideChangeEnd: function (swiper) {
-          const index = swiper.realIndex
-          if (index + countSliders > swiper.slides.length || index - countSliders < 0) {
-            setTimeout(swiper.fixLoop, 100)
-          }
+        loopedAdditionalSlides: countSliders,
+        controller: {
+          control: mainSlider
         },
-        breakpoints: {
-          1200: {
-            direction: 'horizontal',
-            centeredSlides: false
+        on: {
+          init: function () {
+            mainSlider.controller.control = this
+          },
+          slideChangeTransitionEnd: function () {
+            const index = this.snapIndex
+            if (index + countSliders > this.slides.length || index - countSliders < 0) {
+              this.slideTo(this.realIndex, 0)
+            }
           }
         }
-      })
-
+      }
+      const swiperParamsMobile = {
+        spaceBetween: countSliders,
+        slidesPerView: countSliders,
+        touchRatio: 0.2,
+        slideToClickedSlide: true,
+        loop: true,
+        loopedSlides: countSliders,
+        loopedAdditionalSlides: countSliders,
+        controller: {
+          control: mainSlider
+        },
+        on: {
+          init: function () {
+            mainSlider.controller.control = this
+          },
+          slideChangeTransitionEnd: function () {
+            const index = this.snapIndex
+            if (index + countSliders > this.slides.length || index - countSliders < 0) {
+              this.slideTo(this.realIndex, 0)
+            }
+          }
+        }
+      }
+      let mainSliderThumbs = new Swiper(
+        '.main-slider-thumbs',
+        ($window.width() > mobileWidth) ? swiperParams : swiperParamsMobile
+      )
       if (is(mainSlider.container) && is(mainSliderThumbs.container)) {
-        mainSlider.params.control = mainSliderThumbs
-        mainSliderThumbs.params.control = mainSlider
-
         const hover = ((swiper) => {
           $(swiper.container).hover(() => {
             mainSlider.stopAutoplay()
@@ -56,6 +84,29 @@
         hover(mainSlider)
         hover(mainSliderThumbs)
       }
+
+      const reInit = (() => {
+        setTimeout(() => {
+          mainSliderThumbs.destroy(false, true)
+        }, 100)
+        setTimeout(() => {
+          mainSliderThumbs = new Swiper(
+            '.main-slider-thumbs',
+            ($window.width() > mobileWidth) ? swiperParams : swiperParamsMobile)
+        }, 200)
+      })
+
+      let isMobile = false
+      $window.resize((e) => {
+        const width = e.currentTarget.innerWidth
+        if (width > mobileWidth && isMobile) {
+          reInit()
+          isMobile = false
+        } else if (width < mobileWidth && !isMobile) {
+          reInit()
+          isMobile = true
+        }
+      })
     }
 
     // инициализация слайдера на детальных
@@ -94,7 +145,7 @@
 
     // инициализация слайдера на детальных страницах
     {
-      $('.gallery').swiper({
+      new Swiper('.gallery', {
         slidesPerView: 'auto'
       })
     }

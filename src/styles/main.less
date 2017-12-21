@@ -572,6 +572,11 @@ a {
       width: 100%;
       height: 100%;
       position: relative;
+    }
+
+    &__img {
+      width: 100%;
+      height: 100%;
       background: no-repeat center;
       background-size: cover;
     }
@@ -579,6 +584,9 @@ a {
     &__wrap {
       width: 100%;
       height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
     }
 
     &__desc {
@@ -619,8 +627,6 @@ a {
 
       & .swiper-slide {
         height: 122px;
-        background: no-repeat center;
-        background-size: cover;
 
         &:hover {
           cursor: pointer;
