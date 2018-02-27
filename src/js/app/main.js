@@ -324,5 +324,16 @@
       }
     }
 
+    // tabs
+    {
+      const $tabs = $('.js-tabs')
+      $tabs.responsiveTabs({
+        startCollapsed: 'accordion',
+        load: () => {
+          $tabs.responsiveTabs('activate', 0);
+        }
+      })
+    }
+
   })
 })(jQuery, jBox, Swiper)
