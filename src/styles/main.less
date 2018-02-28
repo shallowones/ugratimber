@@ -3637,3 +3637,75 @@ div.jfilestyle {
   }
 }
 
+.accordion {
+
+  &__button {
+    display: block;
+    width: 100%;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+    color: #999;
+    position: relative;
+    text-align: center;
+    padding: 1.125rem 1rem 1rem;
+    min-height: 3.25rem;
+    z-index: 1;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #e6e6e6;
+    outline: none;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: -2px;
+      width: ~"calc(100% + 4px)";
+      height: 4px;
+      background-color: #1f613b;
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    &.active {
+      color: #333;
+
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &-block {
+    border: 2px solid #e6e6e6;
+    border-bottom: none;
+  }
+
+  &-hidden {
+    display: none;
+    padding: 1rem;
+    border-bottom: 2px solid #e6e6e6;
+  }
+}
+
+.search {
+
+  & .form {
+
+    &-flex {
+      justify-content: flex-start;
+    }
+
+    &__input {
+      max-width: 100%;
+      width: 20rem;
+      margin-right: 2rem;
+      margin-top: 24px;
+    }
+  }
+}

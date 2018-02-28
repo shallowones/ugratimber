@@ -335,5 +335,16 @@
       })
     }
 
+    // accordion
+    {
+      $('.js-accordion').on('click', (e) => {
+        const $this = $(e.currentTarget)
+        const isActive = $this.hasClass('active')
+        $this
+          .toggleClass('active', !isActive)
+          .parent().find('.accordion-hidden').slideToggle(isActive)
+      })
+    }
+
   })
 })(jQuery, jBox, Swiper)
