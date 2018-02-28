@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+  main.main
+    .wrapper
+      +breadcrumbs('Главная', 'Страница не найдена')
+      .detail
+        h2.h2 Страница не найдена
+        .center
+          img(src="images/404.png").not-found
+          p.
+            Страница, которую Вы ищете, не существует или была перемещена.<br>
+            Попробуйте <a href="#">воспользоваться поиском</a> или вернуться на
+            <a href="#">главную страницу</a>.

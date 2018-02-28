@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Югорский лесопромышленный холдинг</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="stylesheet" href="fonts/bundle.css">
+    <link rel="stylesheet" href="js/vendor/jquery-ui/jquery-ui.min.css">
+    <link rel="stylesheet" href="js/vendor/swiper/swiper.min.css">
+    <link rel="stylesheet" href="js/vendor/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="js/vendor/jbox/jBox.css">
+    <link rel="stylesheet" href="js/vendor/jquery-filestyle/jquery-filestyle.min.css">
+    <link rel="stylesheet" href="js/vendor/responsive-tabs/responsive-tabs.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div class="page">
+      <div id="mobile-menu">
+        <div class="wrapper">
+          <div class="mobile-block">
+            <div class="menu__item"><span><span>О компании</span><i class="arrow"></i></span>
+              <nav class="mobile-sub"><a class="menu__item" href="#">Основная деятельность</a><a class="menu__item" href="#">История холдинга</a><a class="menu__item" href="#">Подразделения</a><a class="menu__item" href="#">Органы управления и контроля</a>
+                <div class="menu__item"><span><span>Персонал</span><i class="arrow"></i></span>
+                  <nav class="mobile-sub"><a class="menu__item" href="#">Вакансии</a><a class="menu__item" href="#">Конкурсы</a></nav>
+                </div>
+              </nav>
+            </div><a class="menu__item" href="#">Продукция</a><a class="menu__item" href="#">Раскрытие информации</a><a class="menu__item" href="#">Закупки</a><a class="menu__item" href="#">Реализация активов</a>
+            <div class="menu__item"><span><span>Пресс центр</span><i class="arrow"></i></span>
+              <nav class="mobile-sub"><a class="menu__item" href="#">Основная деятельность</a><a class="menu__item" href="#">История холдинга</a><a class="menu__item" href="#">Подразделения</a><a class="menu__item" href="#">Органы управления и контроля</a>
+                <div class="menu__item"><span><span>Персонал</span><i class="arrow"></i></span>
+                  <nav class="mobile-sub"><a class="menu__item" href="#">Вакансии</a><a class="menu__item" href="#">Конкурсы</a></nav>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <form class="form" action="#">
+            <div class="form-control search">
+              <input class="form__input" type="text" name="search">
+              <button class="icon" type="submit"></button>
+            </div>
+          </form>
+        </div>
+        <div class="mobile-wrap"></div>
+      </div>
+      <header class="header">
+        <div class="header-top wrapper">
+          <div class="mobile">
+            <button class="mobile__button js-mobile" type="button"><span></span><span></span><span></span><span></span></button>
+          </div><a class="header-logo" href="#"><span>Югорский<br>лесопромышленный холдинг</span></a>
+          <div class="header-contacts">
+            <div class="header-contacts__item"><i>E-mail:</i><a href="#"> office@ugratimber.ru</a></div>
+            <div class="header-contacts__item"><i>Телефон:</i><span> +7 3467<b> 35-62-73</b></span></div>
+            <div class="header-contacts__item"><i>Факс:</i><span> +7 3467<b> 36-30-33</b></span></div>
+          </div>
+          <select id="lang">
+            <option value="ru" selected>RU</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+        <nav class="menu">
+          <ul class="wrapper">
+            <li><a class="menu__item" href="#">О компании</a>
+              <ul class="submenu">
+                <li><a class="submenu__item" href="#">Основная деятельность</a></li>
+                <li><a class="submenu__item" href="#">История холдинга</a></li>
+                <li><a class="submenu__item" href="#">Подразделения</a></li>
+                <li><a class="submenu__item" href="#">Органы управления и контроля</a></li>
+                <li class="parent"><a class="submenu__item" href="#">Персонал</a>
+                  <ul class="submenu">
+                    <li><a class="submenu__item" href="#">Вакансии</a></li>
+                    <li><a class="submenu__item" href="#">Конкурсы</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a class="menu__item" href="#">Продукция</a></li>
+            <li><a class="menu__item" href="#">Раскрытие информации</a></li>
+            <li><a class="menu__item" href="#">Закупки</a></li>
+            <li><a class="menu__item" href="#">Реализация активов</a></li>
+            <li><a class="menu__item" href="#">Пресс центр</a>
+              <ul class="submenu">
+                <li><a class="submenu__item" href="#">Основная деятельность</a></li>
+                <li><a class="submenu__item" href="#">История холдинга</a></li>
+                <li><a class="submenu__item" href="#">Подразделения</a></li>
+                <li><a class="submenu__item" href="#">Органы управления и контроля</a></li>
+                <li class="parent"><a class="submenu__item" href="#">Персонал</a>
+                  <ul class="submenu">
+                    <li><a class="submenu__item" href="#">Вакансии</a></li>
+                    <li><a class="submenu__item" href="#">Конкурсы</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a class="menu__item" href="#">Вакансии</a></li>
+            <li><a class="menu__item" href="#">Контакты</a></li>
+            <li>
+              <button class="menu__item search js-search" type="button" data-target="#search"></button>
+              <form class="search-form" action="#" id="search">
+                <input class="search-form__input" type="text">
+                <button class="search-form__button">Найти</button>
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <main class="main">
+        <div class="wrapper">
+              <div class="breadcrumbs"><a class="breadcrumbs__item" href="#">Главная</a><span class="breadcrumbs__item">Страница не найдена</span>
+              </div>
+          <div class="detail">
+            <h2 class="h2">Страница не найдена</h2>
+            <div class="center"><img class="not-found" src="images/404.png">
+              <p>
+                Страница, которую Вы ищете, не существует или была перемещена.<br>
+                Попробуйте <a href="#">воспользоваться поиском</a> или вернуться на
+                <a href="#">главную страницу</a>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="wrapper">
+          <div class="footer-block">
+            <div class="footer-left">
+              <p>
+                628011, Россия, Тюменская область, Ханты-Мансийский автономный округ — Югра,
+                г. Ханты-Мансийск, ул. Рознина, д. 71
+              </p>
+              <p>Телефон: +7 (3467) <b>35-62-73</b>, Факс: + 7 (3467) <b>36-30-33</b></p>
+            </div>
+            <div class="footer-right"><a class="uw" href="#"></a></div>
+          </div>
+          <div class="footer-bottom">© Copyright АО «Югорский Лесопромышленный Холдинг», 2005-2017</div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="js/vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="js/vendor/swiper/swiper.min.js"></script>
+    <script src="js/vendor/fancybox/jquery.fancybox.min.js"></script>
+    <script src="js/vendor/jbox/jBox.min.js"></script>
+    <script src="js/vendor/jquery-filestyle/jquery-filestyle.min.js"></script>
+    <script src="js/vendor/responsive-tabs/jquery.responsiveTabs.min.js"></script>
+    <script src="js/app/main.js"></script>
+  </body>
+</html>
