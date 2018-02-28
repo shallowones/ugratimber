@@ -89,31 +89,27 @@
 
     // инициализация слайдера на детальных
     {
-      const countSliders = 4
-
-      const detailSlider = new Swiper('.detail-gal', {
+      const countSlides = 6
+      const slider = new Swiper('.detail-gal', {
         loop: true,
-        loopedSlides: countSliders,
-        slidesPerView: 1
-        //autoplay: 2000
+        loopedSlides: countSlides,
+        slidesPerView: 'auto'
       })
-
-      const detailSliderThumbs = new Swiper('.detail-gal-thumbs', {
+      new Swiper('.detail-gal-thumbs', {
+        loop: true,
+        loopedSlides: countSlides,
         slidesPerView: 'auto',
         touchRatio: 0.2,
-        loop: true,
         slideToClickedSlide: true,
-        loopedSlides: countSliders,
-        onSlideChangeEnd: function (swiper) {
-          if (swiper.activeIndex === (countSliders * 2)) {
-            swiper.update(true)
-            swiper.slideTo(0, 0)
+        controller: {
+          control: slider
+        },
+        on: {
+          init: function () {
+            slider.controller.control = this
           }
         }
       })
-
-      detailSlider.params.control = detailSliderThumbs
-      detailSliderThumbs.params.control = detailSlider
     }
 
     // кастомим селект выбора языка сайта
