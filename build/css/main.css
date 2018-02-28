@@ -1983,6 +1983,11 @@ a.breadcrumbs__item:hover {
   width: 100%;
   margin-bottom: 2rem;
 }
+@media (max-width: 480px) {
+  .file:last-child {
+    margin-bottom: 0;
+  }
+}
 @media (max-width: 1024px) {
   .file {
     width: 50%;
@@ -1998,6 +2003,7 @@ a.breadcrumbs__item:hover {
   .file {
     width: 100%;
     margin-bottom: 2rem;
+    padding-right: 0;
   }
 }
 .file[href$='.doc']:before {
@@ -3983,6 +3989,7 @@ div.jfilestyle.jfilestyle-corner span:last-child > label {
   border: none;
   border-bottom: 2px solid #e6e6e6;
   outline: none;
+  transition: color 0.3s, background-color 0.3s;
 }
 .accordion__button:before {
   content: '';
@@ -4003,6 +4010,8 @@ div.jfilestyle.jfilestyle-corner span:last-child > label {
 }
 .accordion__button:hover {
   cursor: pointer;
+  color: #333;
+  background-color: #f2f2f2;
 }
 .accordion-block {
   border: 2px solid #e6e6e6;
@@ -4023,4 +4032,9 @@ div.jfilestyle.jfilestyle-corner span:last-child > label {
   width: 20rem;
   margin-right: 2rem;
   margin-top: 24px;
+}
+@media (max-width: 768px) {
+  .search .form__input {
+    margin: 0 0 1rem 0;
+  }
 }

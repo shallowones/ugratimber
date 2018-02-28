@@ -1573,6 +1573,13 @@ a.breadcrumbs__item {
     margin-bottom: 2rem;
   }
 
+  &:last-child {
+
+    @media @mobile {
+      margin-bottom: 0;
+    }
+  }
+
   @media @plan {
     width: 50%;
     margin-bottom: 1rem;
@@ -1585,6 +1592,7 @@ a.breadcrumbs__item {
   @media @mobile {
     width: 100%;
     margin-bottom: 2rem;
+    padding-right: 0;
   }
 }
 
@@ -3655,6 +3663,7 @@ div.jfilestyle {
     border: none;
     border-bottom: 2px solid #e6e6e6;
     outline: none;
+    transition: color .3s, background-color .3s;
 
     &:before {
       content: '';
@@ -3678,6 +3687,8 @@ div.jfilestyle {
 
     &:hover {
       cursor: pointer;
+      color: #333;
+      background-color: #f2f2f2;
     }
   }
 
@@ -3706,6 +3717,10 @@ div.jfilestyle {
       width: 20rem;
       margin-right: 2rem;
       margin-top: 24px;
+
+      @media @plan-mini {
+        margin: 0 0 1rem 0;
+      }
     }
   }
 }
