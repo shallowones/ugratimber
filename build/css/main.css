@@ -1916,6 +1916,9 @@ a.breadcrumbs__item:hover {
 .detail-gal-thumbs__item:hover {
   cursor: pointer;
 }
+.detail img {
+  max-width: 100%;
+}
 @media (max-width: 1024px) {
   .detail {
     margin-bottom: 2rem;
