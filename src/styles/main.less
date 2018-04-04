@@ -3764,8 +3764,9 @@ div.jfilestyle {
   vertical-align: top;
   width: 378px;
   height: 240px;
-  margin: 0 0 2rem 2rem;
+  margin: 2rem 0 2rem 2rem;
   position: relative;
+  outline: none;
 
   &-block {
     display: flex;
@@ -3782,6 +3783,10 @@ div.jfilestyle {
     height: 100%;
     background-color: #000;
     opacity: .3;
+
+    @media @mobile {
+      display: none;
+    }
   }
 
   &:after {
@@ -3801,5 +3806,10 @@ div.jfilestyle {
     &:after {
       background-image: data-uri('../images/svg/play-button-active.svg');
     }
+  }
+
+  @media @mobile {
+    height: auto;
+    width: auto;
   }
 }
