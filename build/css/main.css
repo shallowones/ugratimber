@@ -3504,6 +3504,14 @@ a.breadcrumbs__item:hover {
     margin-bottom: 1.25rem;
   }
 }
+.photo .video {
+  width: 300px;
+  height: 200px;
+  margin: 0 0 1.375rem 0;
+}
+.photo .video > img {
+  margin-bottom: 1rem;
+}
 @media (max-width: 480px) {
   .photo {
     margin-left: 0;
