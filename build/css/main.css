@@ -3449,8 +3449,9 @@ a.breadcrumbs__item:hover {
 .photo-item {
   display: inline-block;
   vertical-align: top;
-  width: 24.125rem;
+  width: 23.125rem;
   margin: 0 0 1rem 1.25rem;
+  text-align: center;
 }
 .photo-item__img {
   max-width: 100%;
@@ -3511,6 +3512,11 @@ a.breadcrumbs__item:hover {
 }
 .photo .video > img {
   margin-bottom: 1rem;
+}
+@media (max-width: 1200px) {
+  .photo {
+    text-align: left;
+  }
 }
 @media (max-width: 480px) {
   .photo {
